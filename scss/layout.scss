@@ -1,0 +1,60 @@
+// Display
+.db{display: block;}
+.di{display: inline;}
+.dib{display: inline-block;}
+.df{display: flex;}
+.dif{display: inline-flex;}
+
+// Position
+.pa{position: absolute;}
+.pr{position: relative;}
+.pf{position: fixed;}
+.ps{position: sticky;}
+
+// Flex
+.fr{display: flex;flex-direction: row;}
+.fc{display: flex;flex-direction: column;}
+
+@for $i from 1 through 10 {
+  .f-#{$i}{flex: #{$i};}
+}
+
+.as{align-items: flex-start;}
+.ac{align-items: center;}
+.ae{align-items: flex-end;}
+
+.js{justify-content: flex-start;}
+.jc{justify-content: center;}
+.je{justify-content: flex-end;}
+
+.center{display: flex;align-items: center;justify-content: center;}
+
+.tl{text-align: left;}
+.tc{text-align: center;}
+.tr{text-align: right;}
+
+.vt{vertical-align: top;}
+.vc{vertical-align: center;}
+.vb{vertical-align: bottom;}
+
+.vh{visibility: hidden;}
+.vv{visibility: visible;}
+
+.wf{width: 100%;}
+.hf{height: 100%;}
+.overlap{position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+
+.ma{margin: 0 auto;}
+
+.oh{overflow: hidden;}
+.ov{overflow: visible;}
+.os{overflow: auto;}
+.osx{overflow-x: auto;overflow-y: hidden;}
+.osy{overflow-x: hidden;overflow-y: auto;}
+
+.toe{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.pen{pointer-events: none;}
+.pea{pointer-events: auto;}
+
+.pre{white-space: pre-wrap}
+.tlf{table-layout: fixed;}

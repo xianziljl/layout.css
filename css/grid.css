@@ -1,0 +1,119 @@
+.dg { display: grid; }
+
+.gr-1 { grid-template-rows: repeat(1, 1fr); }
+
+.gc-1 { grid-template-columns: repeat(1, 1fr); }
+
+.gr-2 { grid-template-rows: repeat(2, 1fr); }
+
+.gc-2 { grid-template-columns: repeat(2, 1fr); }
+
+.gr-3 { grid-template-rows: repeat(3, 1fr); }
+
+.gc-3 { grid-template-columns: repeat(3, 1fr); }
+
+.gr-4 { grid-template-rows: repeat(4, 1fr); }
+
+.gc-4 { grid-template-columns: repeat(4, 1fr); }
+
+.gr-5 { grid-template-rows: repeat(5, 1fr); }
+
+.gc-5 { grid-template-columns: repeat(5, 1fr); }
+
+.gr-6 { grid-template-rows: repeat(6, 1fr); }
+
+.gc-6 { grid-template-columns: repeat(6, 1fr); }
+
+.gr-7 { grid-template-rows: repeat(7, 1fr); }
+
+.gc-7 { grid-template-columns: repeat(7, 1fr); }
+
+.gr-8 { grid-template-rows: repeat(8, 1fr); }
+
+.gc-8 { grid-template-columns: repeat(8, 1fr); }
+
+.gr-9 { grid-template-rows: repeat(9, 1fr); }
+
+.gc-9 { grid-template-columns: repeat(9, 1fr); }
+
+.gr-10 { grid-template-rows: repeat(10, 1fr); }
+
+.gc-10 { grid-template-columns: repeat(10, 1fr); }
+
+.gr-11 { grid-template-rows: repeat(11, 1fr); }
+
+.gc-11 { grid-template-columns: repeat(11, 1fr); }
+
+.gr-12 { grid-template-rows: repeat(12, 1fr); }
+
+.gc-12 { grid-template-columns: repeat(12, 1fr); }
+
+.grs-1 { grid-row: span 1; }
+
+.gcs-1 { grid-column: span 1; }
+
+.grs-2 { grid-row: span 2; }
+
+.gcs-2 { grid-column: span 2; }
+
+.grs-3 { grid-row: span 3; }
+
+.gcs-3 { grid-column: span 3; }
+
+.grs-4 { grid-row: span 4; }
+
+.gcs-4 { grid-column: span 4; }
+
+.grs-5 { grid-row: span 5; }
+
+.gcs-5 { grid-column: span 5; }
+
+.grs-6 { grid-row: span 6; }
+
+.gcs-6 { grid-column: span 6; }
+
+.grs-7 { grid-row: span 7; }
+
+.gcs-7 { grid-column: span 7; }
+
+.grs-8 { grid-row: span 8; }
+
+.gcs-8 { grid-column: span 8; }
+
+.grs-9 { grid-row: span 9; }
+
+.gcs-9 { grid-column: span 9; }
+
+.grs-10 { grid-row: span 10; }
+
+.gcs-10 { grid-column: span 10; }
+
+.grs-11 { grid-row: span 11; }
+
+.gcs-11 { grid-column: span 11; }
+
+.grs-12 { grid-row: span 12; }
+
+.gcs-12 { grid-column: span 12; }
+
+.gg-2 { grid-gap: 2px; }
+
+.gg-3 { grid-gap: 3px; }
+
+.gg-5 { grid-gap: 5px; }
+
+.gg-7 { grid-gap: 7px; }
+
+.gg-10 { grid-gap: 10px; }
+
+.gg-15 { grid-gap: 15px; }
+
+.gg-20 { grid-gap: 20px; }
+
+.gg-25 { grid-gap: 25px; }
+
+.gg-30 { grid-gap: 30px; }
+
+.gg-40 { grid-gap: 40px; }
+
+/*# sourceMappingURL=grid.css.map */
