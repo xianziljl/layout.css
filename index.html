@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/init.css">
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/values.css">
   <title>Layout.css</title>
@@ -11,6 +12,35 @@
   </style>
 </head>
 <body>
-  <div class="dib bd bc-2 c-10 p-10 m-20 r-10">aldjflajdflajlj</div>
+  <div class="main c-8 f-14 p-20">
+    <h1>这是一级标题</h1>
+    <h2>这是二级标题</h2>
+    <h3>这是三级标题</h3>
+    <h4>这是四级标题</h4>
+    <p>这里是正文</p>
+    <div>
+      <input type="text" class="p-5 bd bc-2 m-10 r-4" placeholder="请输入">
+      <select name="" id="" class="p-5 bd bc-2 m-10 r-4">
+        <option value="1">你好</option>
+      </select>
+    </div>
+    <div>
+      <textarea class="p-10 bd bc-2 m-10 r-4" name="" id="" cols="30" rows="3"></textarea>
+      <textarea class="p-10 bg-2 m-10 r-4" name="" id="" cols="30" rows="3"></textarea>
+    </div>
+    <ul>
+      <li class="p-10 hv-1 bb bc-1">你好，我是一个列表</li>
+      <li class="p-10 hv-1 bb bc-1">你好，我是一个列表</li>
+      <li class="p-10 hv-1 bb bc-1">你好，我是一个列表</li>
+    </ul>
+  </div>
+
+
+  <script>
+    var main = document.querySelector('.main').cloneNode(true)
+    main.classList.add('dk')
+    main.style.backgroundColor = '#222'
+    document.body.appendChild(main)
+  </script>
 </body>
 </html>
