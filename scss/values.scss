@@ -41,22 +41,22 @@ $o-nums: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
   }
 }
 
-@for $i from 1 through 10 {
-  .bg-#{$i}{background-color: RGBA(0, 0, 0, #{$i / 30})}
+@for $i from 1 through 5 {
+  .bg-#{$i}{background-color: RGBA(0, 0, 0, #{$i / 25})}
 }
 .dk{
-  @for $i from 1 through 10 {
-    &.bg-#{$i}, .bg-#{$i}{background-color: RGBA(255, 255, 255, #{$i / 30})}
+  @for $i from 1 through 5 {
+    &.bg-#{$i}, .bg-#{$i}{background-color: RGBA(255, 255, 255, #{$i / 25})}
   }
 }
 
 // border
-.bd, .bt, .br, .bb, .bl{border-style: solid;border-width: 0;}
+.bd, .bt, .br, .bb, .bl{border-width: 0;border-style: solid;}
 .bd{border-width: 1px;}
 .bt{border-top-width: 1px;}
-.br{border-top-width: 1px;}
-.bb{border-top-width: 1px;}
-.bl{border-top-width: 1px;}
+.br{border-right-width: 1px;}
+.bb{border-bottom-width: 1px;}
+.bl{border-left-width: 1px;}
 
 @for $i from 1 through 10 {
   .bc-#{$i}{border-color: RGBA(0, 0, 0, #{$i / 10});}

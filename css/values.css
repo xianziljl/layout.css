@@ -375,48 +375,33 @@
 .dk.c-9, .dk .c-9, .c-9 .dk { color: RGBA(255, 255, 255, 0.9); }
 .dk.c-10, .dk .c-10, .c-10 .dk { color: RGBA(255, 255, 255, 1); }
 
-.bg-1 { background-color: RGBA(0, 0, 0, 0.0333333333); }
+.bg-1 { background-color: RGBA(0, 0, 0, 0.04); }
 
-.bg-2 { background-color: RGBA(0, 0, 0, 0.0666666667); }
+.bg-2 { background-color: RGBA(0, 0, 0, 0.08); }
 
-.bg-3 { background-color: RGBA(0, 0, 0, 0.1); }
+.bg-3 { background-color: RGBA(0, 0, 0, 0.12); }
 
-.bg-4 { background-color: RGBA(0, 0, 0, 0.1333333333); }
+.bg-4 { background-color: RGBA(0, 0, 0, 0.16); }
 
-.bg-5 { background-color: RGBA(0, 0, 0, 0.1666666667); }
+.bg-5 { background-color: RGBA(0, 0, 0, 0.2); }
 
-.bg-6 { background-color: RGBA(0, 0, 0, 0.2); }
+.dk.bg-1, .dk .bg-1 { background-color: RGBA(255, 255, 255, 0.04); }
+.dk.bg-2, .dk .bg-2 { background-color: RGBA(255, 255, 255, 0.08); }
+.dk.bg-3, .dk .bg-3 { background-color: RGBA(255, 255, 255, 0.12); }
+.dk.bg-4, .dk .bg-4 { background-color: RGBA(255, 255, 255, 0.16); }
+.dk.bg-5, .dk .bg-5 { background-color: RGBA(255, 255, 255, 0.2); }
 
-.bg-7 { background-color: RGBA(0, 0, 0, 0.2333333333); }
-
-.bg-8 { background-color: RGBA(0, 0, 0, 0.2666666667); }
-
-.bg-9 { background-color: RGBA(0, 0, 0, 0.3); }
-
-.bg-10 { background-color: RGBA(0, 0, 0, 0.3333333333); }
-
-.dk.bg-1, .dk .bg-1 { background-color: RGBA(255, 255, 255, 0.0333333333); }
-.dk.bg-2, .dk .bg-2 { background-color: RGBA(255, 255, 255, 0.0666666667); }
-.dk.bg-3, .dk .bg-3 { background-color: RGBA(255, 255, 255, 0.1); }
-.dk.bg-4, .dk .bg-4 { background-color: RGBA(255, 255, 255, 0.1333333333); }
-.dk.bg-5, .dk .bg-5 { background-color: RGBA(255, 255, 255, 0.1666666667); }
-.dk.bg-6, .dk .bg-6 { background-color: RGBA(255, 255, 255, 0.2); }
-.dk.bg-7, .dk .bg-7 { background-color: RGBA(255, 255, 255, 0.2333333333); }
-.dk.bg-8, .dk .bg-8 { background-color: RGBA(255, 255, 255, 0.2666666667); }
-.dk.bg-9, .dk .bg-9 { background-color: RGBA(255, 255, 255, 0.3); }
-.dk.bg-10, .dk .bg-10 { background-color: RGBA(255, 255, 255, 0.3333333333); }
-
-.bd, .bt, .br, .bb, .bl { border-style: solid; border-width: 0; }
+.bd, .bt, .br, .bb, .bl { border-width: 0; border-style: solid; }
 
 .bd { border-width: 1px; }
 
 .bt { border-top-width: 1px; }
 
-.br { border-top-width: 1px; }
+.br { border-right-width: 1px; }
 
-.bb { border-top-width: 1px; }
+.bb { border-bottom-width: 1px; }
 
-.bl { border-top-width: 1px; }
+.bl { border-left-width: 1px; }
 
 .bc-1 { border-color: RGBA(0, 0, 0, 0.1); }
 
