@@ -7,8 +7,8 @@
   .gc-#{$i}{grid-template-columns: repeat(#{$i}, 1fr);}
 }
 @for $i from 1 through 12 {
-  .grs-#{$i}{grid-row: span #{$i};}
-  .gcs-#{$i}{grid-column: span #{$i};}
+  .rs-#{$i}{grid-row: span #{$i};}
+  .cs-#{$i}{grid-column: span #{$i};}
 }
 $nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 @each $num in $nums {
