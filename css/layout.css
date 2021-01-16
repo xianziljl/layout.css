@@ -94,6 +94,8 @@
 
 .pea { pointer-events: auto; }
 
+.usn { user-select: none; }
+
 .pre { white-space: pre-wrap; }
 
 .tlf { table-layout: fixed; }

@@ -496,4 +496,17 @@
 .dk.hv-3:hover, .dk .hv-3:hover { background-color: RGBA(255, 255, 255, 0.15); }
 .dk.hv-4:hover, .dk .hv-4:hover { background-color: RGBA(255, 255, 255, 0.2); }
 
+.at-1:active { background-color: RGBA(0, 0, 0, 0.1); }
+
+.at-2:active { background-color: RGBA(0, 0, 0, 0.15); }
+
+.at-3:active { background-color: RGBA(0, 0, 0, 0.2); }
+
+.at-4:active { background-color: RGBA(0, 0, 0, 0.25); }
+
+.dk.at-1:active, .dk .at-1:active { background-color: RGBA(255, 255, 255, 0.1); }
+.dk.at-2:active, .dk .at-2:active { background-color: RGBA(255, 255, 255, 0.15); }
+.dk.at-3:active, .dk .at-3:active { background-color: RGBA(255, 255, 255, 0.2); }
+.dk.at-4:active, .dk .at-4:active { background-color: RGBA(255, 255, 255, 0.25); }
+
 /*# sourceMappingURL=values.css.map */
