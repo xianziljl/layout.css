@@ -1,17 +1,14 @@
-// Display
 .db{display: block;}
 .di{display: inline;}
 .dib{display: inline-block;}
 .df{display: flex;}
 .dif{display: inline-flex;}
 
-// Position
 .pa{position: absolute;}
 .pr{position: relative;}
 .pf{position: fixed;}
 .ps{position: sticky;}
 
-// Flex
 .fr{display: flex;flex-direction: row;}
 .fc{display: flex;flex-direction: column;}
 
@@ -26,8 +23,7 @@
 .js{justify-content: flex-start;}
 .jc{justify-content: center;}
 .je{justify-content: flex-end;}
-
-.center{display: flex;align-items: center;justify-content: center;}
+.ct{display: flex;align-items: center;justify-content: center;}
 
 .tl{text-align: left;}
 .tc{text-align: center;}
@@ -42,7 +38,7 @@
 
 .wf{width: 100%;}
 .hf{height: 100%;}
-.overlap{position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+.full{width: 100%;height: 100%;left: 0;top: 0;}
 
 .ma{margin: 0 auto;}
 

@@ -52,7 +52,7 @@
 
 .je { justify-content: flex-end; }
 
-.center { display: flex; align-items: center; justify-content: center; }
+.ct { display: flex; align-items: center; justify-content: center; }
 
 .tl { text-align: left; }
 
@@ -74,7 +74,7 @@
 
 .hf { height: 100%; }
 
-.overlap { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.full { width: 100%; height: 100%; left: 0; top: 0; }
 
 .ma { margin: 0 auto; }
 

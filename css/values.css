@@ -496,16 +496,4 @@
 .dk.hv-3:hover, .dk .hv-3:hover { background-color: RGBA(255, 255, 255, 0.15); }
 .dk.hv-4:hover, .dk .hv-4:hover { background-color: RGBA(255, 255, 255, 0.2); }
 
-.ts { transition: all .3s; }
-
-.ts-1 { transition: all 0.1s; }
-
-.ts-2 { transition: all 0.2s; }
-
-.ts-3 { transition: all 0.3s; }
-
-.ts-4 { transition: all 0.4s; }
-
-.ts-5 { transition: all 0.5s; }
-
 /*# sourceMappingURL=values.css.map */

@@ -1,5 +1,9 @@
 .dg { display: grid; }
 
+.gfr { grid-auto-flow: row; }
+
+.gfc { grid-auto-flow: column; }
+
 .gr-1 { grid-template-rows: repeat(1, 1fr); }
 
 .gc-1 { grid-template-columns: repeat(1, 1fr); }
@@ -96,9 +100,13 @@
 
 .gcs-12 { grid-column: span 12; }
 
+.gg-1 { grid-gap: 1px; }
+
 .gg-2 { grid-gap: 2px; }
 
 .gg-3 { grid-gap: 3px; }
+
+.gg-4 { grid-gap: 4px; }
 
 .gg-5 { grid-gap: 5px; }
 
@@ -115,5 +123,7 @@
 .gg-30 { grid-gap: 30px; }
 
 .gg-40 { grid-gap: 40px; }
+
+.gg-50 { grid-gap: 50px; }
 
 /*# sourceMappingURL=grid.css.map */
