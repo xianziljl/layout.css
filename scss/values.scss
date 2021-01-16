@@ -8,67 +8,81 @@ $lh-nums: 10, 12, 14, 16, 18, 20, 22, 24;
   .lh-#{$num}{line-height: #{$num / 10}em;}
 }
 
+// opacity
+$o-nums: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+.o-05{opacity: 0.05;}
+@each $num in $o-nums{
+  .o-#{$num}{opacity: $num / 10;}
+}
+
+// color
+$black: rgba(0, 0, 0, 0);
+$white: rgba(255, 255, 255, 0);
+$light-bg: #fff;
+$dark-bg: #222;
+
+@for $i from 1 through 10 {
+  .c-#{$i}{color: opacify($black, $i / 10)}
+}
+.dk{
+  @for $i from 1 through 10 {
+    &.c-#{$i}, .c-#{$i}, .c-#{$i} &{color: opacify($white, $i / 10)}
+  }
+}
+
+.bg-f{background-color: $light-bg}
+
+@for $i from 1 through 5 {
+  .bg-#{$i}{background-color: opacify($black, $i / 25)}
+}
+.dk{
+  &.bg-f, .bg-f{background-color: $dark-bg}
+  @for $i from 1 through 5 {
+    &.bg-#{$i}, .bg-#{$i}{background-color: opacify($white, $i / 25)}
+  }
+}
+
 // margin, padding
 $mp-nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
 @each $num in $mp-nums {
   .m-#{$num}{margin: #{$num}px}
+  .mx-#{$num}{margin-left: #{$num}px;margin-right: #{$num}px;}
+  .my-#{$num}{margin-top: #{$num}px;margin-bottom: #{$num}px}
   .mt-#{$num}{margin-top: #{$num}px}
   .mr-#{$num}{margin-right: #{$num}px}
   .mb-#{$num}{margin-bottom: #{$num}px}
   .ml-#{$num}{margin-left: #{$num}px}
 
   .p-#{$num}{padding: #{$num}px}
+  .px-#{$num}{padding-left: #{$num}px;padding-right: #{$num}px;}
+  .py-#{$num}{padding-top: #{$num}px;padding-bottom: #{$num}px}
   .pt-#{$num}{padding-top: #{$num}px}
   .pr-#{$num}{padding-right: #{$num}px}
   .pb-#{$num}{padding-bottom: #{$num}px}
   .pl-#{$num}{padding-left: #{$num}px}
 }
 
-// opacity
-$o-nums: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-.o-05{opacity: 0.05;}
-@each $num in $o-nums{
-  .o-#{$num}{opacity: #{$num / 10};}
-}
-
-// color
-@for $i from 1 through 10 {
-  .c-#{$i}{color: RGBA(0, 0, 0, #{$i / 10})}
-}
-.dk{
-  @for $i from 1 through 10 {
-    &.c-#{$i}, .c-#{$i}, .c-#{$i} &{color: RGBA(255, 255, 255, #{$i / 10})}
-  }
-}
-
-@for $i from 1 through 5 {
-  .bg-#{$i}{background-color: RGBA(0, 0, 0, #{$i / 25})}
-}
-.dk{
-  @for $i from 1 through 5 {
-    &.bg-#{$i}, .bg-#{$i}{background-color: RGBA(255, 255, 255, #{$i / 25})}
-  }
-}
-
 // border
-.bd, .bt, .br, .bb, .bl{border-width: 0;border-style: solid;}
+.bd, .bx, .by, .bt, .br, .bb, .bl{border-width: 0;border-style: solid;}
 .bd{border-width: 1px;}
+.bx{border-left-width: 1px;border-right-width: 1px;}
+.by{border-top-width: 1px;border-bottom-width: 1px;}
 .bt{border-top-width: 1px;}
 .br{border-right-width: 1px;}
 .bb{border-bottom-width: 1px;}
 .bl{border-left-width: 1px;}
 
 @for $i from 1 through 10 {
-  .bc-#{$i}{border-color: RGBA(0, 0, 0, #{$i / 10});}
+  .bc-#{$i}{border-color: opacify($black, $i / 10);}
 }
 .dk{
   @for $i from 1 through 10 {
-    &.bc-#{$i}, .bc-#{$i}{border-color: RGBA(255, 255, 255, #{$i / 10});}
+    &.bc-#{$i}, .bc-#{$i}{border-color: opacify($white, $i / 10);}
   }
 }
 
 // border-radius
-$r-nums: 2, 4, 6, 8, 10, 12;
+$r-nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 30, 40;
 @each $r in $r-nums {
   .r-#{$r}{border-radius: #{$r}px}
 }
@@ -81,19 +95,30 @@ $z-nums: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
 // hover
 @for $i from 1 through 4 {
-  .hv-#{$i}:hover{background-color: RGBA(0, 0, 0, #{$i / 20});}
+  .hv-#{$i}:hover{background-color: opacify($black, $i / 20);}
 }
 .dk{
   @for $i from 1 through 4 {
-    &.hv-#{$i}:hover, .hv-#{$i}:hover{background-color: RGBA(255, 255, 255, #{$i / 20});}
+    &.hv-#{$i}:hover, .hv-#{$i}:hover{background-color: opacify($white, $i / 20);}
   }
 }
 // active
 @for $i from 1 through 4 {
-  .at-#{$i}:active{background-color: RGBA(0, 0, 0, #{$i / 20 + 0.05});}
+  .at-#{$i}:active{background-color: opacify($black, $i / 20 + 0.05);}
 }
 .dk{
   @for $i from 1 through 4 {
-    &.at-#{$i}:active, .at-#{$i}:active{background-color: RGBA(255, 255, 255, #{$i / 20 + 0.05});}
+    &.at-#{$i}:active, .at-#{$i}:active{background-color: opacify($white, $i / 20 + 0.05);}
+  }
+}
+
+// box-shadow
+$sd-nums: 1, 2, 3, 4, 5;
+@each $sd in $sd-nums {
+  .bs-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify($black, 0.15), 0 0 #{$sd * 3 / 2}px opacify($black, 0.1);}
+}
+.dk{
+  @each $sd in $sd-nums {
+    .bs-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify($white, 0.15), 0 0 #{$sd * 3 / 2}px opacify($white, 0.1);}
   }
 }
