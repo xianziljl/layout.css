@@ -6,6 +6,6 @@
   "scripts": {
     "dev": "scss --watch scss:css --style compact"
   },
-  "author": "",
+  "author": "xianziycg@gmail.com",
   "license": "ISC"
 }

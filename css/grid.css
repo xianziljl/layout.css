@@ -1,104 +1,150 @@
-.dg { display: grid; }
+.gfr { display: grid; grid-auto-flow: row; }
 
-.gfr { grid-auto-flow: row; }
-
-.gfc { grid-auto-flow: column; }
+.gfc { display: grid; grid-auto-flow: column; }
 
 .gr-1 { grid-template-rows: repeat(1, 1fr); }
 
 .gc-1 { grid-template-columns: repeat(1, 1fr); }
 
-.gr-2 { grid-template-rows: repeat(2, 1fr); }
-
-.gc-2 { grid-template-columns: repeat(2, 1fr); }
-
-.gr-3 { grid-template-rows: repeat(3, 1fr); }
-
-.gc-3 { grid-template-columns: repeat(3, 1fr); }
-
-.gr-4 { grid-template-rows: repeat(4, 1fr); }
-
-.gc-4 { grid-template-columns: repeat(4, 1fr); }
-
-.gr-5 { grid-template-rows: repeat(5, 1fr); }
-
-.gc-5 { grid-template-columns: repeat(5, 1fr); }
-
-.gr-6 { grid-template-rows: repeat(6, 1fr); }
-
-.gc-6 { grid-template-columns: repeat(6, 1fr); }
-
-.gr-7 { grid-template-rows: repeat(7, 1fr); }
-
-.gc-7 { grid-template-columns: repeat(7, 1fr); }
-
-.gr-8 { grid-template-rows: repeat(8, 1fr); }
-
-.gc-8 { grid-template-columns: repeat(8, 1fr); }
-
-.gr-9 { grid-template-rows: repeat(9, 1fr); }
-
-.gc-9 { grid-template-columns: repeat(9, 1fr); }
-
-.gr-10 { grid-template-rows: repeat(10, 1fr); }
-
-.gc-10 { grid-template-columns: repeat(10, 1fr); }
-
-.gr-11 { grid-template-rows: repeat(11, 1fr); }
-
-.gc-11 { grid-template-columns: repeat(11, 1fr); }
-
-.gr-12 { grid-template-rows: repeat(12, 1fr); }
-
-.gc-12 { grid-template-columns: repeat(12, 1fr); }
-
 .rs-1 { grid-row: span 1; }
 
 .cs-1 { grid-column: span 1; }
+
+.gcs-1 { grid-column-start: 1; }
+
+.grs-1 { grid-row-start: 1; }
+
+.gr-2 { grid-template-rows: repeat(2, 1fr); }
+
+.gc-2 { grid-template-columns: repeat(2, 1fr); }
 
 .rs-2 { grid-row: span 2; }
 
 .cs-2 { grid-column: span 2; }
 
+.gcs-2 { grid-column-start: 2; }
+
+.grs-2 { grid-row-start: 2; }
+
+.gr-3 { grid-template-rows: repeat(3, 1fr); }
+
+.gc-3 { grid-template-columns: repeat(3, 1fr); }
+
 .rs-3 { grid-row: span 3; }
 
 .cs-3 { grid-column: span 3; }
+
+.gcs-3 { grid-column-start: 3; }
+
+.grs-3 { grid-row-start: 3; }
+
+.gr-4 { grid-template-rows: repeat(4, 1fr); }
+
+.gc-4 { grid-template-columns: repeat(4, 1fr); }
 
 .rs-4 { grid-row: span 4; }
 
 .cs-4 { grid-column: span 4; }
 
+.gcs-4 { grid-column-start: 4; }
+
+.grs-4 { grid-row-start: 4; }
+
+.gr-5 { grid-template-rows: repeat(5, 1fr); }
+
+.gc-5 { grid-template-columns: repeat(5, 1fr); }
+
 .rs-5 { grid-row: span 5; }
 
 .cs-5 { grid-column: span 5; }
+
+.gcs-5 { grid-column-start: 5; }
+
+.grs-5 { grid-row-start: 5; }
+
+.gr-6 { grid-template-rows: repeat(6, 1fr); }
+
+.gc-6 { grid-template-columns: repeat(6, 1fr); }
 
 .rs-6 { grid-row: span 6; }
 
 .cs-6 { grid-column: span 6; }
 
+.gcs-6 { grid-column-start: 6; }
+
+.grs-6 { grid-row-start: 6; }
+
+.gr-7 { grid-template-rows: repeat(7, 1fr); }
+
+.gc-7 { grid-template-columns: repeat(7, 1fr); }
+
 .rs-7 { grid-row: span 7; }
 
 .cs-7 { grid-column: span 7; }
+
+.gcs-7 { grid-column-start: 7; }
+
+.grs-7 { grid-row-start: 7; }
+
+.gr-8 { grid-template-rows: repeat(8, 1fr); }
+
+.gc-8 { grid-template-columns: repeat(8, 1fr); }
 
 .rs-8 { grid-row: span 8; }
 
 .cs-8 { grid-column: span 8; }
 
+.gcs-8 { grid-column-start: 8; }
+
+.grs-8 { grid-row-start: 8; }
+
+.gr-9 { grid-template-rows: repeat(9, 1fr); }
+
+.gc-9 { grid-template-columns: repeat(9, 1fr); }
+
 .rs-9 { grid-row: span 9; }
 
 .cs-9 { grid-column: span 9; }
+
+.gcs-9 { grid-column-start: 9; }
+
+.grs-9 { grid-row-start: 9; }
+
+.gr-10 { grid-template-rows: repeat(10, 1fr); }
+
+.gc-10 { grid-template-columns: repeat(10, 1fr); }
 
 .rs-10 { grid-row: span 10; }
 
 .cs-10 { grid-column: span 10; }
 
+.gcs-10 { grid-column-start: 10; }
+
+.grs-10 { grid-row-start: 10; }
+
+.gr-11 { grid-template-rows: repeat(11, 1fr); }
+
+.gc-11 { grid-template-columns: repeat(11, 1fr); }
+
 .rs-11 { grid-row: span 11; }
 
 .cs-11 { grid-column: span 11; }
 
+.gcs-11 { grid-column-start: 11; }
+
+.grs-11 { grid-row-start: 11; }
+
+.gr-12 { grid-template-rows: repeat(12, 1fr); }
+
+.gc-12 { grid-template-columns: repeat(12, 1fr); }
+
 .rs-12 { grid-row: span 12; }
 
 .cs-12 { grid-column: span 12; }
+
+.gcs-12 { grid-column-start: 12; }
+
+.grs-12 { grid-row-start: 12; }
 
 .gg-1 { grid-gap: 1px; }
 

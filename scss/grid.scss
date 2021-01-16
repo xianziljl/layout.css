@@ -1,15 +1,17 @@
-.dg{display: grid;}
-.gfr{grid-auto-flow: row;}
-.gfc{grid-auto-flow: column;}
+.gfr{display: grid;grid-auto-flow: row;}
+.gfc{display: grid;grid-auto-flow: column;}
 
 @for $i from 1 through 12 {
   .gr-#{$i}{grid-template-rows: repeat(#{$i}, 1fr);}
   .gc-#{$i}{grid-template-columns: repeat(#{$i}, 1fr);}
-}
-@for $i from 1 through 12 {
+
   .rs-#{$i}{grid-row: span #{$i};}
   .cs-#{$i}{grid-column: span #{$i};}
+
+  .gcs-#{$i}{grid-column-start: $i;}
+  .grs-#{$i}{grid-row-start: $i;}
 }
+
 $nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 @each $num in $nums {
   .gg-#{$num}{grid-gap: #{$num}px}
