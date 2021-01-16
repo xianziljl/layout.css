@@ -364,16 +364,16 @@
 
 .c-10 { color: RGBA(0, 0, 0, 1); }
 
-.dk.c-1, .dk .c-1 { color: RGBA(255, 255, 255, 0.1); }
-.dk.c-2, .dk .c-2 { color: RGBA(255, 255, 255, 0.2); }
-.dk.c-3, .dk .c-3 { color: RGBA(255, 255, 255, 0.3); }
-.dk.c-4, .dk .c-4 { color: RGBA(255, 255, 255, 0.4); }
-.dk.c-5, .dk .c-5 { color: RGBA(255, 255, 255, 0.5); }
-.dk.c-6, .dk .c-6 { color: RGBA(255, 255, 255, 0.6); }
-.dk.c-7, .dk .c-7 { color: RGBA(255, 255, 255, 0.7); }
-.dk.c-8, .dk .c-8 { color: RGBA(255, 255, 255, 0.8); }
-.dk.c-9, .dk .c-9 { color: RGBA(255, 255, 255, 0.9); }
-.dk.c-10, .dk .c-10 { color: RGBA(255, 255, 255, 1); }
+.dk.c-1, .dk .c-1, .c-1 .dk { color: RGBA(255, 255, 255, 0.1); }
+.dk.c-2, .dk .c-2, .c-2 .dk { color: RGBA(255, 255, 255, 0.2); }
+.dk.c-3, .dk .c-3, .c-3 .dk { color: RGBA(255, 255, 255, 0.3); }
+.dk.c-4, .dk .c-4, .c-4 .dk { color: RGBA(255, 255, 255, 0.4); }
+.dk.c-5, .dk .c-5, .c-5 .dk { color: RGBA(255, 255, 255, 0.5); }
+.dk.c-6, .dk .c-6, .c-6 .dk { color: RGBA(255, 255, 255, 0.6); }
+.dk.c-7, .dk .c-7, .c-7 .dk { color: RGBA(255, 255, 255, 0.7); }
+.dk.c-8, .dk .c-8, .c-8 .dk { color: RGBA(255, 255, 255, 0.8); }
+.dk.c-9, .dk .c-9, .c-9 .dk { color: RGBA(255, 255, 255, 0.9); }
+.dk.c-10, .dk .c-10, .c-10 .dk { color: RGBA(255, 255, 255, 1); }
 
 .bg-1 { background-color: RGBA(0, 0, 0, 0.0333333333); }
 
