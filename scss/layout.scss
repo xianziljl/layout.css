@@ -11,6 +11,7 @@
 
 .fr{display: flex;flex-direction: row;}
 .fc{display: flex;flex-direction: column;}
+.fw{flex-wrap: wrap;}
 
 @for $i from 1 through 10 {
   .f-#{$i}{flex: #{$i};}
