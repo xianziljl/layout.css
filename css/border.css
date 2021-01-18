@@ -1,0 +1,48 @@
+.bd, .bx, .by, .bt, .br, .bb, .bl { border-width: 0; border-style: solid; }
+
+.bd { border-width: 1px; }
+
+.bx { border-left-width: 1px; border-right-width: 1px; }
+
+.by { border-top-width: 1px; border-bottom-width: 1px; }
+
+.bt { border-top-width: 1px; }
+
+.br { border-right-width: 1px; }
+
+.bb { border-bottom-width: 1px; }
+
+.bl { border-left-width: 1px; }
+
+.bc-1 { border-color: rgba(0, 0, 0, 0.1); }
+
+.bc-2 { border-color: rgba(0, 0, 0, 0.2); }
+
+.bc-3 { border-color: rgba(0, 0, 0, 0.3); }
+
+.bc-4 { border-color: rgba(0, 0, 0, 0.4); }
+
+.bc-5 { border-color: rgba(0, 0, 0, 0.5); }
+
+.bc-6 { border-color: rgba(0, 0, 0, 0.6); }
+
+.bc-7 { border-color: rgba(0, 0, 0, 0.7); }
+
+.bc-8 { border-color: rgba(0, 0, 0, 0.8); }
+
+.bc-9 { border-color: rgba(0, 0, 0, 0.9); }
+
+.bc-10 { border-color: black; }
+
+.dk.bc-1, .dk .bc-1 { border-color: rgba(255, 255, 255, 0.1); }
+.dk.bc-2, .dk .bc-2 { border-color: rgba(255, 255, 255, 0.2); }
+.dk.bc-3, .dk .bc-3 { border-color: rgba(255, 255, 255, 0.3); }
+.dk.bc-4, .dk .bc-4 { border-color: rgba(255, 255, 255, 0.4); }
+.dk.bc-5, .dk .bc-5 { border-color: rgba(255, 255, 255, 0.5); }
+.dk.bc-6, .dk .bc-6 { border-color: rgba(255, 255, 255, 0.6); }
+.dk.bc-7, .dk .bc-7 { border-color: rgba(255, 255, 255, 0.7); }
+.dk.bc-8, .dk .bc-8 { border-color: rgba(255, 255, 255, 0.8); }
+.dk.bc-9, .dk .bc-9 { border-color: rgba(255, 255, 255, 0.9); }
+.dk.bc-10, .dk .bc-10 { border-color: white; }
+
+/*# sourceMappingURL=border.css.map */

@@ -1,0 +1,18 @@
+// border-color
+.bd, .bx, .by, .bt, .br, .bb, .bl{border-width: 0;border-style: solid;}
+.bd{border-width: 1px;}
+.bx{border-left-width: 1px;border-right-width: 1px;}
+.by{border-top-width: 1px;border-bottom-width: 1px;}
+.bt{border-top-width: 1px;}
+.br{border-right-width: 1px;}
+.bb{border-bottom-width: 1px;}
+.bl{border-left-width: 1px;}
+
+@for $i from 1 through 10 {
+  .bc-#{$i}{border-color: opacify(#00000000, $i / 10);}
+}
+.dk{
+  @for $i from 1 through 10 {
+    &.bc-#{$i}, .bc-#{$i}{border-color: opacify(#ffffff00, $i / 10);}
+  }
+}
