@@ -1,6 +1,7 @@
 // margin, padding
-$mp-nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
-@each $num in $mp-nums {
+@import './variable';
+
+@each $num in $margin {
   .m-#{$num}{margin: #{$num}px}
   .mx-#{$num}{margin-left: #{$num}px;margin-right: #{$num}px;}
   .my-#{$num}{margin-top: #{$num}px;margin-bottom: #{$num}px}
@@ -8,7 +9,9 @@ $mp-nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
   .mr-#{$num}{margin-right: #{$num}px}
   .mb-#{$num}{margin-bottom: #{$num}px}
   .ml-#{$num}{margin-left: #{$num}px}
+}
 
+@each $num in $padding {
   .p-#{$num}{padding: #{$num}px}
   .px-#{$num}{padding-left: #{$num}px;padding-right: #{$num}px;}
   .py-#{$num}{padding-top: #{$num}px;padding-bottom: #{$num}px}

@@ -1,0 +1,43 @@
+// 输出 .fs-12{ font-size: 12px }
+$font-size: 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40;
+
+// 12 输出 .lh-12{ font-size: 1.2em }
+$line-height: 10, 12, 14, 16, 18, 20, 22, 24;
+
+// opacity 5 输出 .o-5{ opacity: 0.5 }
+$opacity: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+// z-index 5 输出 .z-5{ z-index: 0.5 }
+$z-index: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+// border-radius 5 输出 .r-5{ border-radius: 5px }
+$border-radius: 1, 2, 3, 4, 5, 7, 10, 15, 20, 30, 40;
+
+// margin
+$margin: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
+
+// padding
+$padding: $margin;
+
+// flex 输出 .f-1{ flex: 1 }
+$flex: 10;
+
+// grid
+$grid: 12;
+$grid-gap: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
+
+// 颜色相关
+$text-color: #000000;         // 文字颜色
+$text-color-dark: #ffffff;    // 深色模式下文字颜色
+
+$bg-color: #222222;           // 背景颜色
+$bg-color-dark: #ffffff;      // 深色模式下背景颜色
+
+$border-color: #000000;       // 边框颜色
+$border-color-dark: #ffffff;  // 深色模式下边框颜色
+
+// 颜色的变化范围 例如 5: rgba(..., 0.5)
+$text-color-value: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$bg-color-value: 1, 2, 3, 4, 5;    // 背景的透明度为：实际数值 / 25
+$border-color-value: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; 
+

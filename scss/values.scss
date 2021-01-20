@@ -1,39 +1,21 @@
-// font-size
-$fs-nums: 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40;
-@each $num in $fs-nums {
-  .fs-#{$num}{font-size: #{$num}px}
-}
-$lh-nums: 10, 12, 14, 16, 18, 20, 22, 24;
-@each $num in $lh-nums {
-  .lh-#{$num}{line-height: #{$num / 10}em;}
+@import './variable';
+
+@each $n in $font-size {
+  .fs-#{$n}{font-size: #{$n}px}
 }
 
-// opacity
-$o-nums: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-.o-05{opacity: 0.05;}
-@each $num in $o-nums{
-  .o-#{$num}{opacity: $num / 10;}
+@each $n in $line-height {
+  .lh-#{$n}{line-height: #{$n / 10}em;}
 }
 
-// border-radius
-$r-nums: 1, 2, 3, 4, 5, 7, 10, 15, 20, 30, 40;
-@each $r in $r-nums {
+@each $n in $opacity{
+  .o-#{$n}{opacity: $n / 10;}
+}
+
+@each $r in $border-radius {
   .r-#{$r}{border-radius: #{$r}px}
 }
 
-// z-index
-$z-nums: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-@each $z in $z-nums {
-  .z-#{$z}{z-index: #{$z}}
-}
-
-// box-shadow
-$sd-nums: 1, 2, 3, 4, 5;
-@each $sd in $sd-nums {
-  .bs-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
-}
-.dk{
-  @each $sd in $sd-nums {
-    .bs-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#ffffff00, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#ffffff00, 0.1);}
-  }
+@each $n in $z-index {
+  .z-#{$n}{z-index: #{$n}}
 }

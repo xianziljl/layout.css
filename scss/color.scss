@@ -1,46 +1,26 @@
-// color
-$black: #00000000;
-$white: #ffffff00;
-$light-bg: #ffffff;
-$dark-bg: #222222;
+@import './variable';
 
-@for $i from 1 through 10 {
-  .c-#{$i}{color: opacify($black, $i / 10)}
-}
-.dk{
-  @for $i from 1 through 10 {
-    &.c-#{$i}, .c-#{$i}, .c-#{$i} &{color: opacify($white, $i / 10)}
-  }
+@each $n in $text-color-value {
+  .c-#{$n}{color: transparentize($text-color, 1 - $n / 10)}
 }
 
-.bg-f{background-color: $light-bg}
-
-@for $i from 1 through 5 {
-  .bg-#{$i}{background-color: opacify($black, $i / 25)}
-}
-.dk{
-  &.bg-f, .bg-f{background-color: $dark-bg}
-  @for $i from 1 through 5 {
-    &.bg-#{$i}, .bg-#{$i}{background-color: opacify($white, $i / 25)}
-  }
+@each $n in $bg-color-value {
+  .bg-#{$n}{background-color: transparentize($bg-color, 1 - $n / 25)}
 }
 
+@each $n in $border-color-value {
+  .bc-#{$n}{border-color: transparentize($border-color, 1 - $n / 10);}
+}
 
-// hover
-@for $i from 1 through 4 {
-  .hv-#{$i}:hover{background-color: opacify($black, $i / 20);}
+@each $n in $text-color-value {
+  .dk.c-#{$n}, .c-#{$n} .dk, .dk .c-#{$n}{color: transparentize($text-color-dark, 1 - $n / 10)}
 }
-.dk{
-  @for $i from 1 through 4 {
-    &.hv-#{$i}:hover, .hv-#{$i}:hover{background-color: opacify($white, $i / 20);}
-  }
+
+@each $n in $bg-color-value {
+  .dk.bg-#{$n}, .dk .bg-#{$n}{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
 }
-// active
-@for $i from 1 through 4 {
-  .at-#{$i}:active{background-color: opacify($black, $i / 20 + 0.05);}
+
+@each $n in $border-color-value {
+  .dk.bc-#{$n}, .dk .bc-#{$n}{border-color: transparentize($border-color-dark, 1 - $n / 10);}
 }
-.dk{
-  @for $i from 1 through 4 {
-    &.at-#{$i}:active, .at-#{$i}:active{background-color: opacify($white, $i / 20 + 0.05);}
-  }
-}
+
