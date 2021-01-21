@@ -16,6 +16,7 @@ input, button, textarea, select, button{
   font-size: inherit;outline: none;
   background-color: transparent;
   font-family: inherit;box-sizing: border-box;
+  appearance: none;-webkit-appearance:none;
 }
 
 ::placeholder{color: inherit;opacity: 0.6;}
