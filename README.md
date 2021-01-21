@@ -95,3 +95,13 @@ npm run build
 - `hv:` = `hover`
 - `at:` = `active`
 - `fo:` = `focus`
+
+## 媒体查询
+待完成
+
+## 杂项
+在 `layout.scss` 中包含了`display`,`position`, `overflow` 等常用的class
+
+## 自定义
+若要自定义需要的部分，可以再 `scss/index.scss` 中选择性导入相应的文件。  
+若要自定义可选数值，可在 `scss/variable.scss` 中定义
