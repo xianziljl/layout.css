@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "scss --watch --sourcemap=none ./scss/index.scss:./css/index.css --style compact",
-    "build": "scss --sourcemap=none ./scss/index.scss:./css/index.min.css --style compressed"
+    "dev": "npx node-sass -w --output-style=compact scss/index.scss dist/layout.css",
+    "build": "npx node-sass --output-style=compressed scss/index.scss dist/layout.min.css"
   },
   "author": "xianziycg@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
 }

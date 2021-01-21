@@ -1,4 +1,6 @@
 .sass-cache
 .DS_Store
-css/*.map
-css/*.min.css
+.vscode
+css
+node_modules
+dist
