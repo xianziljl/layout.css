@@ -854,6 +854,8 @@ th, td { text-align: left; }
 
 .bg-5 { background-color: rgba(34, 34, 34, 0.2); }
 
+.bc-0 { border-color: rgba(0, 0, 0, 0); }
+
 .bc-1 { border-color: rgba(0, 0, 0, 0.1); }
 
 .bc-2 { border-color: rgba(0, 0, 0, 0.2); }
@@ -903,6 +905,8 @@ th, td { text-align: left; }
 .dk.bg-4, .dk .bg-4 { background-color: rgba(255, 255, 255, 0.16); }
 
 .dk.bg-5, .dk .bg-5 { background-color: rgba(255, 255, 255, 0.2); }
+
+.dk.bc-0, .dk .bc-0 { border-color: rgba(255, 255, 255, 0); }
 
 .dk.bc-1, .dk .bc-1 { border-color: rgba(255, 255, 255, 0.1); }
 
@@ -1037,6 +1041,12 @@ th, td { text-align: left; }
 .at\:bg-5:active { background-color: rgba(34, 34, 34, 0.2); }
 
 .fo\:bg-5:focus { background-color: rgba(34, 34, 34, 0.2); }
+
+.hv\:bc-0:hover { border-color: rgba(0, 0, 0, 0); }
+
+.at\:bc-0:active { border-color: rgba(0, 0, 0, 0); }
+
+.fo\:bc-0:focus { border-color: rgba(0, 0, 0, 0); }
 
 .hv\:bc-1:hover { border-color: rgba(0, 0, 0, 0.1); }
 
@@ -1188,6 +1198,12 @@ th, td { text-align: left; }
 
 .dk.fo\:bg-5:focus, .dk .fo\:bg-5:focus { background-color: rgba(255, 255, 255, 0.2); }
 
+.dk.hv\:bc-0:hover, .dk .hv\:bc-0:hover { border-color: rgba(255, 255, 255, 0); }
+
+.dk.at\:bc-0:active, .dk .at\:bc-0:active { border-color: rgba(255, 255, 255, 0); }
+
+.dk.fo\:bc-0:focus, .dk .fo\:bc-0:focus { border-color: rgba(255, 255, 255, 0); }
+
 .dk.hv\:bc-1:hover, .dk .hv\:bc-1:hover { border-color: rgba(255, 255, 255, 0.1); }
 
 .dk.at\:bc-1:active, .dk .at\:bc-1:active { border-color: rgba(255, 255, 255, 0.1); }
@@ -1247,5 +1263,3 @@ th, td { text-align: left; }
 .dk.at\:bc-10:active, .dk .at\:bc-10:active { border-color: white; }
 
 .dk.fo\:bc-10:focus, .dk .fo\:bc-10:focus { border-color: white; }
-
-/*# sourceMappingURL=index.css.map */
