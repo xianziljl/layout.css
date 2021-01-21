@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "scss --watch ./scss/index.scss:./css/index.css --style compact",
-    "build": "scss ./scss/index.scss:./css/index.min.css --style compressed"
+    "dev": "scss --watch --sourcemap=none ./scss/index.scss:./css/index.css --style compact",
+    "build": "scss --sourcemap=none ./scss/index.scss:./css/index.min.css --style compressed"
   },
   "author": "xianziycg@gmail.com",
   "license": "ISC"
