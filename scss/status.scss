@@ -41,7 +41,3 @@
   .dk.a\:bc-#{$n}:active, .dk .a\:bc-#{$n}:active{border-color: $c}
   .dk.f\:bc-#{$n}:focus, .dk .f\:bc-#{$n}:focus{border-color: $c}
 }
-
-@each $n in $opacity {
-  .d\:.o-#{$n}:disabled{opacity: $n;}
-}
