@@ -2,42 +2,42 @@
 
 @each $n in $text-color-value {
   $c: transparentize($text-color, 1 - $n / 10);
-  .hv\:c-#{$n}:hover{color: $c}
-  .at\:c-#{$n}:active{color: $c}
-  .fo\:c-#{$n}:focus{color: $c}
+  .h\:c-#{$n}:hover{color: $c}
+  .a\:c-#{$n}:active{color: $c}
+  .f\:c-#{$n}:focus{color: $c}
 }
 
 @each $n in $bg-color-value {
   $c: transparentize($bg-color, 1 - $n / 25);
-  .hv\:bg-#{$n}:hover{background-color: $c}
-  .at\:bg-#{$n}:active{background-color: $c}
-  .fo\:bg-#{$n}:focus{background-color: $c}
+  .h\:bg-#{$n}:hover{background-color: $c}
+  .a\:bg-#{$n}:active{background-color: $c}
+  .f\:bg-#{$n}:focus{background-color: $c}
 }
 
 @each $n in $border-color-value {
   $c:transparentize($border-color, 1 - $n / 10);
-  .hv\:bc-#{$n}:hover{border-color: $c}
-  .at\:bc-#{$n}:active{border-color: $c}
-  .fo\:bc-#{$n}:focus{border-color: $c}
+  .h\:bc-#{$n}:hover{border-color: $c}
+  .a\:bc-#{$n}:active{border-color: $c}
+  .f\:bc-#{$n}:focus{border-color: $c}
 }
 
 @each $n in $text-color-value {
   $c: transparentize($text-color-dark, 1 - $n / 10);
-  .dk.hv\:c-#{$n}:hover, .hv\:c-#{$n} .dk:hover, .dk .hv\:c-#{$n}:hover{color: $c}
-  .dk.at\:c-#{$n}:active, .at\:c-#{$n} .dk:active, .dk .at\:c-#{$n}:active{color: $c}
-  .dk.fo\:c-#{$n}:focus, .fo\:c-#{$n} .dk:focus, .dk .fo\:c-#{$n}:active{color: $c}
+  .dk.h\:c-#{$n}:hover, .h\:c-#{$n} .dk:hover, .dk .h\:c-#{$n}:hover{color: $c}
+  .dk.a\:c-#{$n}:active, .a\:c-#{$n} .dk:active, .dk .a\:c-#{$n}:active{color: $c}
+  .dk.f\:c-#{$n}:focus, .f\:c-#{$n} .dk:focus, .dk .f\:c-#{$n}:active{color: $c}
 }
 
 @each $n in $bg-color-value {
   $c: transparentize($bg-color-dark, 1 - $n / 25);
-  .dk.hv\:bg-#{$n}:hover, .dk .hv\:bg-#{$n}:hover{background-color: $c}
-  .dk.at\:bg-#{$n}:active, .dk .at\:bg-#{$n}:active{background-color: $c}
-  .dk.fo\:bg-#{$n}:focus, .dk .fo\:bg-#{$n}:focus{background-color: $c}
+  .dk.h\:bg-#{$n}:hover, .dk .h\:bg-#{$n}:hover{background-color: $c}
+  .dk.a\:bg-#{$n}:active, .dk .a\:bg-#{$n}:active{background-color: $c}
+  .dk.f\:bg-#{$n}:focus, .dk .f\:bg-#{$n}:focus{background-color: $c}
 }
 
 @each $n in $border-color-value {
   $c:transparentize($border-color-dark, 1 - $n / 10);
-  .dk.hv\:bc-#{$n}:hover, .dk .hv\:bc-#{$n}:hover{border-color: $c}
-  .dk.at\:bc-#{$n}:active, .dk .at\:bc-#{$n}:active{border-color: $c}
-  .dk.fo\:bc-#{$n}:focus, .dk .fo\:bc-#{$n}:focus{border-color: $c}
+  .dk.h\:bc-#{$n}:hover, .dk .h\:bc-#{$n}:hover{border-color: $c}
+  .dk.a\:bc-#{$n}:active, .dk .a\:bc-#{$n}:active{border-color: $c}
+  .dk.f\:bc-#{$n}:focus, .dk .f\:bc-#{$n}:focus{border-color: $c}
 }
