@@ -4,16 +4,16 @@
 .gfc{display: grid;grid-auto-flow: column;}
 
 @for $n from 1 through $grid {
-  .gr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
-  .gc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
+  .gtr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
+  .gtc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 
-  .rs-#{$n}{grid-row: span #{$n};}
-  .cs-#{$n}{grid-column: span #{$n};}
+  .gr-#{$n}{grid-row: span #{$n};}
+  .gc-#{$n}{grid-column: span #{$n};}
 
-  .gcs-#{$n}{grid-column-start: $n;}
   .grs-#{$n}{grid-row-start: $n;}
+  .gcs-#{$n}{grid-column-start: $n;}
 }
 
 @each $n in $grid-gap {
-  .gg-#{$n}{grid-gap: #{$n}px}
+  .gp-#{$n}{grid-gap: #{$n}px}
 }
