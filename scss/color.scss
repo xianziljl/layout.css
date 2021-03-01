@@ -13,14 +13,15 @@
 }
 
 @each $n in $text-color-value {
-  .dk.c-#{$n}, .c-#{$n} .dk, .dk .c-#{$n}{color: transparentize($text-color-dark, 1 - $n / 10)}
+  .dk.c-#{$n}, .c-#{$n} .dk, .dk .c-#{$n}, .c-lt-#{$n}{color: transparentize($text-color-dark, 1 - $n / 10)}
 }
 
 @each $n in $bg-color-value {
-  .dk.bg-#{$n}, .dk .bg-#{$n}{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+  .dk.bg-#{$n}, .dk .bg-#{$n}, .bg-lt-#{$n}{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
 }
 
 @each $n in $border-color-value {
-  .dk.bc-#{$n}, .dk .bc-#{$n}{border-color: transparentize($border-color-dark, 1 - $n / 10);}
+  .dk.bc-#{$n}, .dk .bc-#{$n}, .bc-lt-#{$n}{border-color: transparentize($border-color-dark, 1 - $n / 10);}
 }
+
 

@@ -18,8 +18,8 @@ npm run build
 
 ## grid 布局
 ```html
-<div class="dgf gr-2 gc-2 gg-10">
-  <div class="cs-2 rs-1"></div>
+<div class="gfr gtr-2 gtc-2 gg-10">
+  <div class="gc-2 gr-1"></div>
   <div></div>
   <div></div>
 </div>
@@ -90,13 +90,13 @@ npm run build
 
 若要实现鼠标交互效果，只需要在颜色类前面添加相应的装饰，例如：
 ```html
-<div class="bg-2 hv:bg-3"></div>
+<div class="bg-2 h:bg-3"></div>
 <!-- 即正常为浅色背景，鼠标移上后为略深一些的颜色 -->
 ```
 可使用的交互前缀为有：
-- `hv:` = `hover`
-- `at:` = `active`
-- `fo:` = `focus`
+- `h:` = `hover`
+- `a:` = `active`
+- `f:` = `focus`
 
 ## 媒体查询
 待完成

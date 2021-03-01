@@ -36,8 +36,17 @@ $bg-color-dark: #ffffff;      // 深色模式下背景颜色
 $border-color: #000000;       // 边框颜色
 $border-color-dark: #ffffff;  // 深色模式下边框颜色
 
+// $blue: #008cff;
+// $cyan: #00f1dd;
+// $green: #00d369;
+// $yellow: #ffff00;
+// $orange: #ffbb00;
+// $red: #ff4111;
+
 // 颜色的变化范围 例如 5: rgba(..., 0.5)
 $text-color-value: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 $bg-color-value: 1, 2, 3, 4, 5;    // 背景的透明度为：实际数值 / 25
 $border-color-value: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; 
 
+// media query
+// $sm: ;
