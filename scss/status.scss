@@ -1,9 +1,9 @@
 @import './variable';
 
-.h\:.a, .a\:.a, .f\:.a{cursor: pointer;}
-.h\:.b, .a\:.b, .f\:.b{font-weight: bold;}
-.h\:.u, .a\:.u, .f\:.u{text-decoration: underline;}
-.h\:.i, .a\:.i, .f\:.i{font-style: italic;}
+.h\:.a:hover, .a\:.a:active, .f\:.a:focus{cursor: pointer;}
+.h\:.b:hover, .a\:.b:active, .f\:.b:focus{font-weight: bold;}
+.h\:.u:hover, .a\:.u:active, .f\:.u:focus{text-decoration: underline;}
+.h\:.i:hover, .a\:.i:active, .f\:.i:focus{font-style: italic;}
 
 @each $n in $text-color-value {
   $c: transparentize($text-color, 1 - $n / 10);
