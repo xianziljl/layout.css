@@ -1,0 +1,28 @@
+@import './variable';
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    // flex
+    .#{$key}\:fr{display: flex;flex-direction: row;}
+    .#{$key}\:fc{display: flex;flex-direction: column;}
+    .#{$key}\:fw{flex-wrap: wrap;}
+    @for $i from 1 through $flex {
+      .#{$key}\:f-#{$i}{flex: #{$i};}
+    }
+
+    // grid
+    .#{$key}\:gfr{display: grid;grid-auto-flow: row;}
+    .#{$key}\:gfc{display: grid;grid-auto-flow: column;}
+
+    @for $n from 1 through $grid {
+      .#{$key}\:gtr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
+      .#{$key}\:gtc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
+
+      .#{$key}\:gr-#{$n}{grid-row: span #{$n};}
+      .#{$key}\:gc-#{$n}{grid-column: span #{$n};}
+
+      .#{$key}\:grs-#{$n}{grid-row-start: $n;}
+      .#{$key}\:gcs-#{$n}{grid-column-start: $n;}
+    }
+  }
+}
