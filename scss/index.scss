@@ -24,10 +24,11 @@
 @import 'background/bg-color-dark-status';  // 背景色在暗色模式下的不同鼠标状态
 @import 'background/bg-image';              // 背景图
 
-@import 'border/border-color';              // 背景色
-@import 'border/border-color-dark';         // 背景色的暗色模式
-@import 'border/border-color-status';       // 背景色的不同鼠标状态
-@import 'border/border-color-dark-status';  // 背景色在暗色模式下的不同鼠标状态
+@import 'border/border';                    // 边框
+@import 'border/border-color';              // 边框颜色
+@import 'border/border-color-dark';         // 边框颜色的暗色模式
+@import 'border/border-color-status';       // 边框颜色的不同鼠标状态
+@import 'border/border-color-dark-status';  // 边框颜色在暗色模式下的不同鼠标状态
 @import 'border/border-radius';             // border-radius
 
 @import 'others/opacity';                   // opacity
