@@ -1,0 +1,15 @@
+@import '../variable';
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    @each $num in $margin {
+      .#{$key}\:m-#{$num}{margin: #{$num}px}
+      .#{$key}\:mx-#{$num}{margin-left: #{$num}px;margin-right: #{$num}px;}
+      .#{$key}\:my-#{$num}{margin-top: #{$num}px;margin-bottom: #{$num}px}
+      .#{$key}\:mt-#{$num}{margin-top: #{$num}px}
+      .#{$key}\:mr-#{$num}{margin-right: #{$num}px}
+      .#{$key}\:mb-#{$num}{margin-bottom: #{$num}px}
+      .#{$key}\:ml-#{$num}{margin-left: #{$num}px}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import '../variable';
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    @each $num in $margin {
+      .#{$key}\:p-#{$num}{padding: #{$num}px}
+      .#{$key}\:px-#{$num}{padding-left: #{$num}px;padding-right: #{$num}px;}
+      .#{$key}\:py-#{$num}{padding-top: #{$num}px;padding-bottom: #{$num}px}
+      .#{$key}\:pt-#{$num}{padding-top: #{$num}px}
+      .#{$key}\:pr-#{$num}{padding-right: #{$num}px}
+      .#{$key}\:pb-#{$num}{padding-bottom: #{$num}px}
+      .#{$key}\:pl-#{$num}{padding-left: #{$num}px}
+    }
+  }
+}

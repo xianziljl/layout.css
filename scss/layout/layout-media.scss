@@ -1,0 +1,50 @@
+@import '../variable';
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    .#{$key}\:db{display: block;}
+    .#{$key}\:dn{display: none;}
+    .#{$key}\:di{display: inline;}
+    .#{$key}\:dib{display: inline-block;}
+    .#{$key}\:df{display: flex;}
+    .#{$key}\:dif{display: inline-flex;}
+
+    .#{$key}\:pr{position: relative;}
+    .#{$key}\:ps{position: sticky;}
+    .#{$key}\:pf{position: fixed;}
+    .#{$key}\:pa{position: absolute;}
+
+    .#{$key}\:ct{display: flex;align-items: center;justify-content: center;} // center
+
+    .#{$key}\:tl{text-align: left;}
+    .#{$key}\:tc{text-align: center;}
+    .#{$key}\:tr{text-align: right;}
+
+    .#{$key}\:vt{vertical-align: top;}
+    .#{$key}\:vc{vertical-align: center;}
+    .#{$key}\:vb{vertical-align: bottom;}
+
+    .#{$key}\:vh{visibility: hidden;}
+    .#{$key}\:vv{visibility: visible;}
+
+    .#{$key}\:wf{width: 100%;}
+    .#{$key}\:hf{height: 100%;}
+    .#{$key}\:fu{width: 100%;height: 100%;left: 0;top: 0;} // full
+
+    .#{$key}\:ma{margin: 0 auto;}
+
+    .#{$key}\:oh{overflow: hidden;}
+    .#{$key}\:ov{overflow: visible;}
+    .#{$key}\:os{overflow: auto;}
+    .#{$key}\:osx{overflow-x: auto;overflow-y: hidden;}
+    .#{$key}\:osy{overflow-x: hidden;overflow-y: auto;}
+
+    .#{$key}\:toe{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    .#{$key}\:pen{pointer-events: none;}
+    .#{$key}\:pea{pointer-events: auto;}
+    .#{$key}\:usn{user-select: none;}
+
+    .#{$key}\:pre{white-space: pre-wrap}
+    .#{$key}\:tlf{table-layout: fixed;}
+  }
+}
