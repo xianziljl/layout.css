@@ -4,4 +4,10 @@
   .h\:bg-#{$n}:hover,
   .a\:bg-#{$n}:active,
   .f\:bg-#{$n}:focus{background-color: transparentize($bg-color, 1 - $n / 25)}
+
+  @each $key, $val in $colors{
+    .h\:bg-#{$key}-#{$n}:hover,
+    .a\:bg-#{$key}-#{$n}:active,
+    .f\:bg-#{$key}-#{$n}:focus{background-color: transparentize($val, 1 - $n / 10)}
+  }
 }

@@ -4,4 +4,10 @@
   .h\:c-#{$n}:hover,
   .a\:c-#{$n}:active,
   .f\:c-#{$n}:focus{color: transparentize($text-color, 1 - $n / 10)}
+
+  @each $key, $val in $colors{
+    .h\:c-#{$key}-#{$n}:hover,
+    .a\:c-#{$key}-#{$n}:active,
+    .f\:c-#{$key}-#{$n}:focus{color: transparentize($val, 1 - $n / 10)}
+  }
 }

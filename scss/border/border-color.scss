@@ -2,4 +2,8 @@
 
 @each $n in $border-color-value {
   .bc-#{$n}{border-color: transparentize($border-color, 1 - $n / 10);}
+
+  @each $key, $val in $colors{
+    .bc-#{$key}-#{$n}{border-color: transparentize($val, 1 - $n / 10)}
+  }
 }

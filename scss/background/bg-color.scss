@@ -2,4 +2,8 @@
 
 @each $n in $bg-color-value {
   .bg-#{$n}{background-color: transparentize($bg-color, 1 - $n / 25)}
+
+  @each $key, $val in $colors{
+    .bg-#{$key}-#{$n}{background-color: transparentize($val, 1 - $n / 10)}
+  }
 }
