@@ -1,0 +1,5 @@
+@import '../variable';
+
+@each $r in $border-radius {
+  .r-#{$r}{border-radius: #{$r}px}
+}

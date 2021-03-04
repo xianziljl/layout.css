@@ -1,0 +1,5 @@
+@import '../variable';
+
+@each $n in $line-height {
+  .lh-#{$n}{line-height: #{$n / 10}em;}
+}

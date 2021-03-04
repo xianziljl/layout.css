@@ -1,0 +1,5 @@
+@import '../variable';
+
+@each $n in $z-index {
+  .z-#{$n}{z-index: #{$n}}
+}

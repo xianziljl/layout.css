@@ -23,7 +23,7 @@ $padding: $margin;
 $flex: 10;
 
 // grid
-$grid: 24;
+$grid: 12;
 $grid-gap: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 
 // 颜色相关
@@ -50,8 +50,8 @@ $border-color-value: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
 // media query
 $media-query: (
-  xl: 9999,
-  lg: 1920,
+  // xl: 9999,
+  // lg: 1920,
   md: 1366,
   sm: 1000,
   xs: 768,

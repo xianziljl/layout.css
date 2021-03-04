@@ -1,0 +1,5 @@
+@import '../variable';
+
+@each $n in $font-size {
+  .fs-#{$n}{font-size: #{$n}px}
+}

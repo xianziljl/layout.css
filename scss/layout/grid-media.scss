@@ -1,15 +1,7 @@
-@import './variable';
+@import '../variable';
 
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
-    // flex
-    .#{$key}\:fr{display: flex;flex-direction: row;}
-    .#{$key}\:fc{display: flex;flex-direction: column;}
-    .#{$key}\:fw{flex-wrap: wrap;}
-    @for $i from 1 through $flex {
-      .#{$key}\:f-#{$i}{flex: #{$i};}
-    }
-
     // grid
     .#{$key}\:gfr{display: grid;grid-auto-flow: row;}
     .#{$key}\:gfc{display: grid;grid-auto-flow: column;}

@@ -1,0 +1,5 @@
+@import '../variable';
+
+@each $n in $opacity{
+  .o-#{$n}{opacity: $n / 10;}
+}

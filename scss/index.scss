@@ -1,12 +1,35 @@
-@import 'init.scss';
-@import 'layout.scss';
-@import 'grid.scss';
-@import 'values.scss';
-@import 'margin-padding.scss';
-@import 'border.scss';
-@import 'color.scss';
-@import 'box-shadow.scss';
-@import 'other.scss';
+@import 'init';                             // 初始化样式
 
-@import 'status.scss';
-@import 'media-query.scss';
+@import 'layout/layout';                    // 常用的布局属性，绝对布局，超出滚动，宽度占满，等。
+@import 'layout/flex';                      // flex 布局
+@import 'layout/flex-media';                // flex 布局响应式
+@import 'layout/grid';                      // grid 布局
+@import 'layout/grid-media';                // grid 布局响应式
+
+@import 'margin-padding/margin';            // margin
+@import 'margin-padding/padding';           // padding
+
+@import 'font/font-size';                   // 文字大小
+@import 'font/font-style';                  // 文字加粗斜体等
+@import 'font/font-style-status';           // 文字在不同鼠标状态下加粗斜体等
+@import 'font/font-color';                  // 文字颜色
+@import 'font/font-color-dark';             // 文字颜色的暗色模式
+@import 'font/font-color-status';           // 文字颜色的不同鼠标状态
+@import 'font/font-color-dark-status';      // 文字颜色在暗色模式下的不同鼠标状态
+@import 'font/line-height';                 // 行高
+
+@import 'background/bg-color';              // 背景色
+@import 'background/bg-color-dark';         // 背景色的暗色模式
+@import 'background/bg-color-status';       // 背景色的不同鼠标状态
+@import 'background/bg-color-dark-status';  // 背景色在暗色模式下的不同鼠标状态
+@import 'background/bg-image';              // 背景图
+
+@import 'border/border-color';              // 背景色
+@import 'border/border-color-dark';         // 背景色的暗色模式
+@import 'border/border-color-status';       // 背景色的不同鼠标状态
+@import 'border/border-color-dark-status';  // 背景色在暗色模式下的不同鼠标状态
+@import 'border/border-radius';             // border-radius
+
+@import 'others/opacity';                   // opacity
+@import 'others/z-index';                   // z-index
+@import 'others/box-shadow';                // box-shadow

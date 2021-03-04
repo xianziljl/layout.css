@@ -1,0 +1,6 @@
+@import '../variable';
+
+@each $n in $bg-color-value {
+  .dk.bg-#{$n},
+  .dk .bg-#{$n}{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+}

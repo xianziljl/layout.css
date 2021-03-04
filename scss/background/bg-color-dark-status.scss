@@ -1,0 +1,7 @@
+@import '../variable';
+
+@each $n in $bg-color-value {
+  .dk.h\:bg-#{$n}:hover, .dk .h\:bg-#{$n}:hover,
+  .dk.a\:bg-#{$n}:active, .dk .a\:bg-#{$n}:active,
+  .dk.f\:bg-#{$n}:focus, .dk .f\:bg-#{$n}:focus{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+}

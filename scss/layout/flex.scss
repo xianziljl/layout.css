@@ -1,0 +1,17 @@
+@import '../variable';
+
+@for $i from 1 through $flex {
+  .f-#{$i}{flex: #{$i};}
+}
+
+.fr{display: flex;flex-direction: row;}
+.fc{display: flex;flex-direction: column;}
+.fw{flex-wrap: wrap;}
+
+.as{align-items: flex-start;}
+.ac{align-items: center;}
+.ae{align-items: flex-end;}
+
+.js{justify-content: flex-start;}
+.jc{justify-content: center;}
+.je{justify-content: flex-end;}

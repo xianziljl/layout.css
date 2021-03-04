@@ -1,0 +1,7 @@
+@import '../variable';
+
+@each $n in $text-color-value {
+  .dk.h\:c-#{$n}:hover, .h\:c-#{$n} .dk:hover, .dk .h\:c-#{$n}:hover,
+  .dk.a\:c-#{$n}:active, .a\:c-#{$n} .dk:active, .dk .a\:c-#{$n}:active,
+  .dk.f\:c-#{$n}:focus, .f\:c-#{$n} .dk:focus, .dk .f\:c-#{$n}:active{color: transparentize($text-color-dark, 1 - $n / 10)}
+}

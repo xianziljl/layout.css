@@ -1,0 +1,7 @@
+@import '../variable';
+
+@each $n in $text-color-value {
+  .h\:c-#{$n}:hover,
+  .a\:c-#{$n}:active,
+  .f\:c-#{$n}:focus{color: transparentize($text-color, 1 - $n / 10)}
+}

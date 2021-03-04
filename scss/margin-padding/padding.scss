@@ -1,0 +1,11 @@
+@import '../variable';
+
+@each $num in $padding {
+  .p-#{$num}{padding: #{$num}px}
+  .px-#{$num}{padding-left: #{$num}px;padding-right: #{$num}px;}
+  .py-#{$num}{padding-top: #{$num}px;padding-bottom: #{$num}px}
+  .pt-#{$num}{padding-top: #{$num}px}
+  .pr-#{$num}{padding-right: #{$num}px}
+  .pb-#{$num}{padding-bottom: #{$num}px}
+  .pl-#{$num}{padding-left: #{$num}px}
+}

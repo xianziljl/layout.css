@@ -1,0 +1,7 @@
+@import '../variable';
+
+@each $n in $border-color-value {
+  .h\:bc-#{$n}:hover,
+  .a\:bc-#{$n}:active,
+  .f\:bc-#{$n}:focus{border-color: transparentize($border-color, 1 - $n / 10)}
+}
