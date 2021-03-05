@@ -1,15 +1,27 @@
 @import '../variable';
 
 @each $n in $text-color-value {
-  .h\:c-#{$n}:hover,
-  .a\:c-#{$n}:active,
+  .h\:c-#{$n}:hover{color: transparentize($text-color, 1 - $n / 10)}
+}
+@each $n in $text-color-value {
   .f\:c-#{$n}:focus{color: transparentize($text-color, 1 - $n / 10)}
+}
+@each $n in $text-color-value {
+  .a\:c-#{$n}:active{color: transparentize($text-color, 1 - $n / 10)}
 }
 
 @each $n in $colors-value {
   @each $key, $val in $colors{
-    .h\:c-#{$key}-#{$n}:hover,
-    .a\:c-#{$key}-#{$n}:active,
+    .h\:c-#{$key}-#{$n}:hover{color: transparentize($val, 1 - $n / 10)}
+  }
+}
+@each $n in $colors-value {
+  @each $key, $val in $colors{
     .f\:c-#{$key}-#{$n}:focus{color: transparentize($val, 1 - $n / 10)}
+  }
+}
+@each $n in $colors-value {
+  @each $key, $val in $colors{
+    .a\:c-#{$key}-#{$n}:active{color: transparentize($val, 1 - $n / 10)}
   }
 }
