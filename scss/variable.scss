@@ -29,12 +29,15 @@ $grid-gap: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 // 颜色相关
 $text-color: #000000;         // 文字颜色
 $text-color-dark: #ffffff;    // 深色模式下文字颜色
+$text-color-value: 2, 4, 6, 8, 10;
 
 $bg-color: #222222;           // 背景颜色
 $bg-color-dark: #ffffff;      // 深色模式下背景颜色
+$bg-color-value: 1, 2, 3, 4, 5;    // 背景的透明度为：实际数值 / 25
 
 $border-color: #000000;       // 边框颜色
 $border-color-dark: #ffffff;  // 深色模式下边框颜色
+$border-color-value: 1, 2, 3, 4, 5, 0;
 
 // 此处的颜色并不会收黑色模式的影响
 $colors: (
@@ -46,11 +49,7 @@ $colors: (
   orange: #ffbb00,
   red: #ff4111,
 );
-
-// 颜色的变化范围 例如 5: rgba(..., 0.5)
-$text-color-value: 2, 4, 6, 8, 10;
-$bg-color-value: 1, 2, 3, 4, 5;    // 背景的透明度为：实际数值 / 25
-$border-color-value: 0, 1, 2, 3, 4, 5;
+$colors-value: 2, 4, 6, 8, 10;
 
 // media query
 $media-query: (

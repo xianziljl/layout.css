@@ -2,7 +2,9 @@
 
 @each $n in $text-color-value {
   .c-#{$n}{color: transparentize($text-color, 1 - $n / 10)}
+}
 
+@each $n in $colors-value {
   @each $key, $val in $colors{
     .c-#{$key}-#{$n}{color: transparentize($val, 1 - $n / 10)}
   }
