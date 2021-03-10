@@ -15,5 +15,5 @@
 }
 
 @each $n in $grid-gap {
-  .gp-#{$n}{grid-gap: #{$n}px}
+  .gap-#{$n}{grid-gap: #{$n}px}
 }
