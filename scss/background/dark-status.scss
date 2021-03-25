@@ -1,0 +1,13 @@
+@import '../variable';
+
+@each $n in $bg-color-value {
+  .h\:bg-#{$n}:hover{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+}
+
+@each $n in $bg-color-value {
+  .f\:bg-#{$n}:focus{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+}
+
+@each $n in $bg-color-value {
+  .a\:bg-#{$n}:active{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+}

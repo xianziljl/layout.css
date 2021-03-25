@@ -1,27 +1,25 @@
 @import '../variable';
 
-@each $n in $border-color-value {
-  .h\:bc-#{$n}:hover{border-color: transparentize($border-color, 1 - $n / 10)}
-}
-@each $n in $border-color-value {
-  .f\:bc-#{$n}:focus{border-color: transparentize($border-color, 1 - $n / 10)}
-}
-@each $n in $border-color-value {
-  .a\:bc-#{$n}:active{border-color: transparentize($border-color, 1 - $n / 10)}
-}
 
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+@each $key, $val in $colors{
+  .h\:bc-#{$key}:hover{border-color: $val;}
+  @each $n in $colors-value {
     .h\:bc-#{$key}-#{$n}:hover{border-color: transparentize($val, 1 - $n / 10)}
   }
 }
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+
+
+@each $key, $val in $colors{
+  .f\:bc-#{$key}:focus{border-color: $val;}
+  @each $n in $colors-value {
     .f\:bc-#{$key}-#{$n}:focus{border-color: transparentize($val, 1 - $n / 10)}
   }
 }
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+
+
+@each $key, $val in $colors{
+  .a\:bc-#{$key}:active{border-color: $val;}
+  @each $n in $colors-value {
     .a\:bc-#{$key}-#{$n}:active{border-color: transparentize($val, 1 - $n / 10)}
   }
 }

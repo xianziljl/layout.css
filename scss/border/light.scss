@@ -1,0 +1,5 @@
+@import '../variable';
+
+@each $n in $border-color-value {
+  .bc-#{$n}{border-color: transparentize($border-color, 1 - $n / 10);}
+}

@@ -1,0 +1,21 @@
+@import '../variable';
+
+$trans: (
+  all: all,
+  c: color,
+  bg: background-color,
+  o: opacity,
+  bc: border-color,
+  bs: box-shadow,
+  tsfm: transform
+);
+
+[class*="trans"]{transition: all .3s;}
+
+@each $key, $val in $trans{
+  .trans-#{$key}{transition-property: $val;}
+}
+
+@each $n in $transition-during {
+  .dur-#{$n}{transition-duration: #{$n}ms;}
+}

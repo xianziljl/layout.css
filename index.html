@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./dist/layout.css">
+  <link id="style" rel="stylesheet" href="./dist/light.css">
+  <link rel="stylesheet" href="./dist/color.css">
+
   <title>Layout.css</title>
   <style>
     textarea{resize: none;}
@@ -12,8 +15,9 @@
 <body>
   <!-- <h1 tabindex="1" class="m-10 bc-1 c-5 bd h:bg-1 a:c-9 f:bc-4">测试文字</h1> -->
   <div class="main c-8 fr fs-14 usn">
-    <div class="pr f-1 p-30 bg-f">
+    <div class="pr f-1 p-30">
       <div class="p-10">
+        <button id="switch" class="mb-20 p-5 px-15 bc-1 a r-3 h:bg-2">切换</button>
         <h1>这是一级标题</h1>
         <h2>这是二级标题</h2>
         <h3>这是三级标题</h3>
@@ -21,31 +25,31 @@
         <p>这里是正文</p>
       </div>
       <div class="fr p-10">
-        <div class="p-20 f-1 md:f-3 bg-red-2 bd bc-red-4"></div>
+        <div class="p-20 f-1 md:f-3 bg-red-2 bd bc-red-4 h:bg-red"></div>
         <div class="bg-f p-5"></div>
         <div class="p-20 f-3 md:f-1 bg-orange-2 bd bc-orange-4"></div>
       </div>
       <div class="fr ac">
-        <input type="text" class="p-10 bc-1 m-10 r-4 f:bc-blue-10" placeholder="请输入">
+        <input type="text" class="p-10 bc-1 m-10 r-4 f:bc-blue" placeholder="请输入">
         <select class="p-10 bc-2 m-10 r-4">
           <option value="1">你好</option>
         </select>
-        <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-2">Button</button>
+        <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-2 h:bs-3 trans-bs">Button</button>
         <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bc-2">Button</button>
-        <button class="m-10 px-15 py-10 r-4 bg-blue-8 c-white-10 h:bg-blue-10 a:bg-blue-8">Button</button>
-        <a class="m-10" href="#">链接</a>
+        <button class="m-10 px-15 py-10 r-4 bg-blue-8 c-white h:bg-blue a:bg-blue-8 trans">Button</button>
+        <a class="m-10 toe h:c-blue trans-c" href="#">链接</a>
       </div>
       <div class="fr as">
-        <textarea class="p-10 bc-1 m-10 r-5 f:bc-blue-10" placeholder="请输入" cols="30" rows="3"></textarea>
-        <textarea class="p-10 bg-1 m-10 r-5 f:bc-blue-10 f:bg-blue-1" placeholder="请输入" cols="30" rows="3"></textarea>
+        <textarea class="p-10 bc-1 m-10 r-5 f:bc-blue" placeholder="请输入" cols="30" rows="3"></textarea>
+        <textarea class="p-10 bg-1 m-10 r-5 f:bc-blue f:bg-blue-1 h:bc-1 trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
       </div>
-      <div class="gfr gtc-4 gr-3 gp-10 m-10" style="height:300px;">
-        <div class="bg-blue-6 c-white-10 ct">网格布局</div>
-        <div class="bg-orange-6 c-white-10 gc-1 grs-2"></div>
-        <div class="bg-green-6 c-white-10 gc-2 gr-2"></div>
-        <div class="bg-blue-6 c-white-10 gc-1 gr-2"></div>
-        <div class="bg-orange-6 c-white-10 gc-2 gr-1"></div>
-        <div class="bg-red-6 c-white-10 gc-2 gr-1"></div>
+      <div class="gfr gtc-4 gr-3 gap-10 m-10" style="height:300px;">
+        <div class="bg-blue-6 c-white ct">网格布局</div>
+        <div class="bg-orange-6 c-white gc-1 grs-2"></div>
+        <div class="bg-green-6 c-white gc-2 gr-2"></div>
+        <div class="bg-blue-6 c-white gc-1 gr-2"></div>
+        <div class="bg-orange-6 c-white gc-2 gr-1"></div>
+        <div class="bg-red-6 c-white gc-2 gr-1"></div>
       </div>
       <div class="m-10 mt-30">
         <table class="wf">
@@ -70,13 +74,16 @@
       </div>
     </div>
   </div>
-
-
   <script>
-    var right = document.querySelector('.main>.f-1').cloneNode(true)
-    right.classList.add('dk')
-    right.style.backgroundColor = '#111'
-    document.querySelector('.main').appendChild(right)
+    let isDark = false
+    const style = document.querySelector('#style')
+    const btn = document.querySelector('#switch')
+    const main = document.querySelector('.main')
+    btn.addEventListener('click', () => {
+      isDark = !isDark
+      style.setAttribute('href', isDark ? './dist/dark.css' : './dist/light.css')
+      main.style.backgroundColor = isDark ? '#222' : '#fff'
+    })
   </script>
 </body>
 </html>

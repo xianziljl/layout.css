@@ -1,11 +1,8 @@
 @import '../variable';
 
-@each $n in $bg-color-value {
-  .bg-#{$n}{background-color: transparentize($bg-color, 1 - $n / 25)}
-}
-
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+@each $key, $val in $colors{
+  .bg-#{$key}{background-color: $val;}
+  @each $n in $colors-value {
     .bg-#{$key}-#{$n}{background-color: transparentize($val, 1 - $n / 10)}
   }
 }

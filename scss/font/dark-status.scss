@@ -1,0 +1,11 @@
+@import '../variable';
+
+@each $n in $text-color-value {
+  .h\:c-#{$n}:hover{color: transparentize($text-color-dark, 1 - $n / 10)}
+}
+@each $n in $text-color-value {
+  .f\:c-#{$n}:active{color: transparentize($text-color-dark, 1 - $n / 10)}
+}
+@each $n in $text-color-value {
+  .a\:c-#{$n}:active{color: transparentize($text-color-dark, 1 - $n / 10)}
+}

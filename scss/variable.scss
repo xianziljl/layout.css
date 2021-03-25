@@ -26,6 +26,9 @@ $flex: 10;
 $grid: 12;
 $grid-gap: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 
+// transition
+$transition-during: 100, 200, 300, 400, 500;
+
 // 颜色相关
 $text-color: #000000;         // 文字颜色
 $text-color-dark: #ffffff;    // 深色模式下文字颜色
@@ -47,7 +50,7 @@ $colors: (
   orange: #ffbb00,
   red: #ff4111,
 );
-$colors-value: 1, 2, 4, 6, 8, 10;
+$colors-value: 1, 2, 4, 6, 8;
 
 // media query
 $media-query: (

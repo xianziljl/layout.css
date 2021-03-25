@@ -1,0 +1,8 @@
+@import '../variable';
+
+@each $key, $val in $colors{
+  .c-#{$key}{color: $val;}
+  @each $n in $colors-value {
+    .c-#{$key}-#{$n}{color: transparentize($val, 1 - $n / 10)}
+  }
+}

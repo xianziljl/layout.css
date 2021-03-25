@@ -1,7 +1,0 @@
-@import '../variable';
-
-@each $n in $text-color-value {
-  .dk.c-#{$n},
-  .c-#{$n} .dk,
-  .dk .c-#{$n}{color: transparentize($text-color-dark, 1 - $n / 10)}
-}

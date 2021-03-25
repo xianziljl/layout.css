@@ -1,28 +1,25 @@
 @import '../variable';
 
-@each $n in $bg-color-value {
-  .h\:bg-#{$n}:hover{background-color: transparentize($bg-color, 1 - $n / 25)}
-}
-@each $n in $bg-color-value {
-  .f\:bg-#{$n}:focus{background-color: transparentize($bg-color, 1 - $n / 25)}
-}
-@each $n in $bg-color-value {
-  .a\:bg-#{$n}:active{background-color: transparentize($bg-color, 1 - $n / 25)}
-}
 
-
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+@each $key, $val in $colors{
+  .h\:bg-#{$key}:hover{background-color: $val;}
+  @each $n in $colors-value {
     .h\:bg-#{$key}-#{$n}:hover{background-color: transparentize($val, 1 - $n / 10)}
   }
 }
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+
+
+@each $key, $val in $colors{
+  .f\:bg-#{$key}:focus{background-color: $val;}
+  @each $n in $colors-value {
     .f\:bg-#{$key}-#{$n}:focus{background-color: transparentize($val, 1 - $n / 10)}
   }
 }
-@each $n in $colors-value {
-  @each $key, $val in $colors{
+
+
+@each $key, $val in $colors{
+  .a\:bg-#{$key}:active{background-color: $val;}
+  @each $n in $colors-value {
     .a\:bg-#{$key}-#{$n}:active{background-color: transparentize($val, 1 - $n / 10)}
   }
 }
