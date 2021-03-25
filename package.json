@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx node-sass -w --output-style=compact -i scss/build -o dist",
-    "build": "npx node-sass --output-style=compressed -i scss/build -o dist"
+    "dev": "npx node-sass -w --output-style=compact scss/build -o dist",
+    "build": "npx node-sass --output-style=compressed scss/build -o dist"
   },
   "author": "xianziycg@gmail.com",
   "license": "ISC",
