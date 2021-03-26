@@ -13,11 +13,11 @@ $z-index: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 // border-radius 5 输出 .r-5{ border-radius: 5px }
 $border-radius: 1, 2, 3, 4, 5, 7, 10, 15, 20, 30, 40;
 
-// margin
-$margin: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
-
 // padding
-$padding: $margin;
+$padding: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
+
+// margin
+$margin: -1, 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;;
 
 // flex 输出 .f-1{ flex: 1 }
 $flex: 10;
@@ -44,11 +44,12 @@ $border-color-value: 1, 2, 3, 4, 5, 0;
 
 // 此处的颜色并不会收黑色模式的影响
 $colors: (
-  white: #ffffff,
-  blue: #008cff,
-  green: #00d369,
-  orange: #ffbb00,
-  red: #ff4111,
+  w: #ffffff, // white
+  b: #008cff, // blue
+  g: #00d369, // green
+  o: #ffbb00, // orange
+  r: #ff4111, // red
+  blk: #000000, // black  
 );
 $colors-value: 1, 2, 4, 6, 8;
 

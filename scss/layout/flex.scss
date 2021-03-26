@@ -3,9 +3,10 @@
 @for $i from 1 through $flex {
   .f-#{$i}{flex: #{$i};}
 }
-
 .fr{display: flex;flex-direction: row;}
 .fc{display: flex;flex-direction: column;}
+.ifr{display: inline-flex;flex-direction: row;}
+.ifc{display: inline-flex;flex-direction: column;}
 .fw{flex-wrap: wrap;}
 
 .as{align-items: flex-start;}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./dist/layout.css">
-  <link id="style" rel="stylesheet" href="./dist/light.css">
+  <link rel="stylesheet" href="./dist/light.css" id="style">
   <link rel="stylesheet" href="./dist/color.css">
 
   <title>Layout.css</title>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!-- <h1 tabindex="1" class="m-10 bc-1 c-5 bd h:bg-1 a:c-9 f:bc-4">测试文字</h1> -->
-  <div class="main c-8 fr fs-14 usn">
+  <div class="main c-8 fr fs-14 usn trans">
     <div class="pr f-1 p-30">
       <div class="p-10">
         <button id="switch" class="mb-20 p-5 px-15 bc-1 a r-3 h:bg-2">切换</button>
@@ -25,53 +25,67 @@
         <p>这里是正文</p>
       </div>
       <div class="gfr gtc-4 gap-10 p-10 as">
-        <div class="bg-blue-6 p-20 sm:gc-4 md:gc-2"></div>
-        <div class="bg-blue-6 p-10 sm:gc-4 md:gc-2"></div>
-        <div class="bg-blue-6 p-10"></div>
-        <div class="bg-blue-6 p-10"></div>
-        <div class="bg-blue-6 p-10"></div>
-        <div class="bg-blue-6 p-10"></div>
-        <div class="bg-blue-6 p-10"></div>
-        <div class="bg-blue-6 p-10"></div>
+        <div class="r-3 bg-b-6 p-10 sm:gc-4 md:gc-2"></div>
+        <div class="r-3 bg-b-6 p-10 sm:gc-4 md:gc-2"></div>
+        <div class="r-3 bg-b-6 p-10"></div>
+        <div class="r-3 bg-b-6 p-10"></div>
+        <div class="r-3 bg-b-6 p-10"></div>
+        <div class="r-3 bg-b-6 p-10"></div>
+        <div class="r-3 bg-b-6 p-10"></div>
+        <div class="r-3 bg-b-6 p-10"></div>
       </div>
       <div class="fr p-10">
-        <div class="p-20 f-1 md:f-3 bg-red-2 bd bc-red-4 h:bg-red"></div>
+        <div class="p-20 f-1 md:f-3 bg-r-2 bd bc-r-4 h:bg-r"></div>
         <div class="bg-f p-5"></div>
-        <div class="p-20 f-3 md:f-1 bg-orange-2 bd bc-orange-4"></div>
+        <div class="p-20 f-3 md:f-1 bg-o-2 bd bc-o-4"></div>
       </div>
       <div class="fr ac">
-        <input type="text" class="p-10 bc-1 m-10 r-4 f:bc-blue" placeholder="请输入">
         <select class="p-10 bc-2 m-10 r-4">
           <option value="1">你好</option>
         </select>
         <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-2 h:bs-3 trans-bs">Button</button>
         <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bc-2">Button</button>
-        <button class="m-10 px-15 py-10 r-4 bg-blue-8 c-white h:bg-blue a:bg-blue-8 trans">Button</button>
-        <a class="m-10 toe h:c-blue h:u trans-c" href="#">链接</a>
+        <button class="m-10 px-15 py-10 r-4 h:bg-b bg-b-8 c-w a:bg-b-8 trans">Button</button>
+        <a class="m-10 toe h:c-b h:u trans-c" href="#">链接</a>
       </div>
-      <div class="fr as">
-        <textarea class="p-10 bc-1 m-10 r-5 f:bc-blue" placeholder="请输入" cols="30" rows="3"></textarea>
-        <textarea class="p-10 bg-1 m-10 r-5 f:bc-blue f:bg-blue-1 h:bc-1 trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
+      <div class="fr ac p-5">
+        <div class="p-2 px-10 r-20 bg-b-1 h:bg-b-2 bd bc-b-2 c-b ml-5">你好</div>
+        <div class="p-2 px-10 r-20 bg-o-1 h:bg-o-2 bd bc-o-2 c-o ml-5">我是</div>
+        <div class="p-2 px-10 r-20 bg-g-1 h:bg-g-2 bd bc-g-2 c-g ml-5">标签</div>
+        <div class="p-2 px-10 r-20 bg-r-1 h:bg-r-2 bd bc-r-2 c-r ml-5">呢！</div>
+      </div>
+      <div class="p-10">
+        <div class="ifr btn-group">
+          <button class="a p-5 px-10 bd bc-1 h:bg-1 rtl-5 rbl-5">This</button>
+          <button class="a p-5 px-10 bd bc-1 h:bg-1 ml--1">is</button>
+          <button class="a p-5 px-10 bd bc-b-4 bg-b-2 ml--1 c-b z-1">Button</button>
+          <button class="a p-5 px-10 bd bc-1 h:bg-1 ml--1 rtr-5 rbr-5">Group</button>
+        </div>
+      </div>
+      <div class="fc as">
+        <input class="p-10 bc-1 m-10 r-4 f:bc-b trans-bc" placeholder="请输入" type="text">
+        <textarea class="p-10 bc-1 m-10 r-5 f:bc-b trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
+        <textarea class="p-10 bg-1 m-10 r-5 f:bc-b f:bg-b-1 h:bc-1 trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
       </div>
       <div class="gfr gtc-4 gr-3 gap-10 m-10" style="height:300px;">
-        <div class="bg-blue-6 c-white ct">网格布局</div>
-        <div class="bg-orange-6 c-white gc-1 grs-2"></div>
-        <div class="bg-green-6 c-white gc-2 gr-2"></div>
-        <div class="bg-blue-6 c-white gc-1 gr-2"></div>
-        <div class="bg-orange-6 c-white gc-2 gr-1"></div>
-        <div class="bg-red-6 c-white gc-2 gr-1"></div>
+        <div class="bg-b-6 c-w ct">网格布局</div>
+        <div class="bg-o-6 c-w gc-1 grs-2"></div>
+        <div class="bg-g-6 c-w gc-2 gr-2"></div>
+        <div class="bg-b-6 c-w gc-1 gr-2"></div>
+        <div class="bg-o-6 c-w gc-2 gr-1"></div>
+        <div class="bg-r-6 c-w gc-2 gr-1"></div>
       </div>
       <div class="m-10 mt-30">
         <table class="wf">
-          <tr class="by bc-1 h:bg-1">
-            <th class="p-5">表格</th>
-            <th class="p-5">Hello</th>
-            <th class="p-5">Hello</th>
+          <tr class="by bc-1 h:bg-1 dur-200">
+            <th class="p-10">表格</th>
+            <th class="p-10">Hello</th>
+            <th class="p-10">Hello</th>
           </tr>
-          <tr class="by bc-1 h:bg-1">
-            <td class="p-5">Hello</td>
-            <td class="p-5">Hello</td>
-            <td class="p-5">Hello</td>
+          <tr class="by bc-1 h:bg-1 dur-200">
+            <td class="p-10">Hello</td>
+            <td class="p-10">Hello</td>
+            <td class="p-10">Hello</td>
           </tr>
         </table>
       </div>
@@ -86,13 +100,10 @@
   </div>
   <script>
     let isDark = false
-    const style = document.querySelector('#style')
-    const btn = document.querySelector('#switch')
-    const main = document.querySelector('.main')
-    btn.addEventListener('click', () => {
+    document.querySelector('#switch').addEventListener('click', () => {
       isDark = !isDark
-      style.setAttribute('href', isDark ? './dist/dark.css' : './dist/light.css')
-      main.style.backgroundColor = isDark ? '#222' : '#fff'
+      document.querySelector('#style').setAttribute('href', isDark ? './dist/dark.css' : './dist/light.css')
+      document.querySelector('.main').style.backgroundColor = isDark ? '#0d1117' : '#fff'
     })
   </script>
 </body>

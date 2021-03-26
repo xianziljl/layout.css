@@ -5,6 +5,8 @@
     // flex
     .#{$key}\:fr{display: flex;flex-direction: row;}
     .#{$key}\:fc{display: flex;flex-direction: column;}
+    .#{$key}\:ifr{display: inline-flex;flex-direction: row;}
+    .#{$key}\:ifc{display: inline-flex;flex-direction: column;}
     .#{$key}\:fw{flex-wrap: wrap;}
     @for $i from 1 through $flex {
       .#{$key}\:f-#{$i}{flex: #{$i};}

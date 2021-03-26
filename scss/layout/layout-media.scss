@@ -6,8 +6,8 @@
     .#{$key}\:dn{display: none;}
     .#{$key}\:di{display: inline;}
     .#{$key}\:dib{display: inline-block;}
-    .#{$key}\:df{display: flex;}
-    .#{$key}\:dif{display: inline-flex;}
+    // .#{$key}\:df{display: flex;}
+    // .#{$key}\:dif{display: inline-flex;}
 
     .#{$key}\:pr{position: relative;}
     .#{$key}\:ps{position: sticky;}
@@ -33,18 +33,18 @@
 
     .#{$key}\:ma{margin: 0 auto;}
 
-    .#{$key}\:oh{overflow: hidden;}
-    .#{$key}\:ov{overflow: visible;}
-    .#{$key}\:os{overflow: auto;}
-    .#{$key}\:osx{overflow-x: auto;overflow-y: hidden;}
-    .#{$key}\:osy{overflow-x: hidden;overflow-y: auto;}
+    // .#{$key}\:oh{overflow: hidden;}
+    // .#{$key}\:ov{overflow: visible;}
+    // .#{$key}\:os{overflow: auto;}
+    // .#{$key}\:osx{overflow-x: auto;overflow-y: hidden;}
+    // .#{$key}\:osy{overflow-x: hidden;overflow-y: auto;}
 
-    .#{$key}\:toe{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
-    .#{$key}\:pen{pointer-events: none;}
-    .#{$key}\:pea{pointer-events: auto;}
-    .#{$key}\:usn{user-select: none;}
+    // .#{$key}\:toe{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    // .#{$key}\:pen{pointer-events: none;}
+    // .#{$key}\:pea{pointer-events: auto;}
+    // .#{$key}\:usn{user-select: none;}
 
-    .#{$key}\:pre{white-space: pre-wrap}
-    .#{$key}\:tlf{table-layout: fixed;}
+    // .#{$key}\:pre{white-space: pre-wrap}
+    // .#{$key}\:tlf{table-layout: fixed;}
   }
 }

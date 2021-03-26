@@ -2,4 +2,8 @@
 
 @each $r in $border-radius {
   .r-#{$r}{border-radius: #{$r}px}
+  .rtl-#{$r}{border-top-left-radius: #{$r}px;}
+  .rtr-#{$r}{border-top-right-radius: #{$r}px;}
+  .rbl-#{$r}{border-bottom-left-radius: #{$r}px;}
+  .rbr-#{$r}{border-bottom-right-radius: #{$r}px;}
 }
