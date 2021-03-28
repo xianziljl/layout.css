@@ -30,26 +30,28 @@ $grid-gap: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
 $transition-during: 100, 200, 300, 400, 500;
 
 // 颜色相关
-$text-color: #000000;         // 文字颜色
-$text-color-dark: #ffffff;    // 深色模式下文字颜色
+$text-color: #111;         // 文字颜色
+$text-color-dark: #fff;    // 深色模式下文字颜色
 $text-color-value: 2, 4, 6, 8, 10;
 
-$bg-color: #222222;           // 背景颜色
-$bg-color-dark: #ffffff;      // 深色模式下背景颜色
+$bg-light: #fff;           // 亮色模式下的基础背景色（一般用在body上）
+$bg-dark: #111;            // 暗色模式下的基础背景色（一般用在body上）
+$bg-color: #111;           // 背景颜色
+$bg-color-dark: #fff;      // 深色模式下背景颜色
 $bg-color-value: 1, 2, 3, 4, 5;    // 背景的透明度为：实际数值 / 25
 
-$border-color: #000000;       // 边框颜色
-$border-color-dark: #ffffff;  // 深色模式下边框颜色
+$border-color: #111;       // 边框颜色
+$border-color-dark: #fff;  // 深色模式下边框颜色
 $border-color-value: 1, 2, 3, 4, 5, 0;
 
-// 此处的颜色并不会收黑色模式的影响
+// 此处的颜色并不会受黑色模式的影响
 $colors: (
   w: #ffffff, // white
   b: #008cff, // blue
   g: #00d369, // green
   o: #ffbb00, // orange
   r: #ff4111, // red
-  blk: #000000, // black  
+  blk: #111, // black  
 );
 $colors-value: 1, 2, 4, 6, 8;
 

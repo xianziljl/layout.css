@@ -1,5 +1,6 @@
 @import '../variable';
 
+.bg{background-color: $bg-light;}
 @each $n in $bg-color-value {
   .bg-#{$n}{background-color: transparentize($bg-color, 1 - $n / 25)}
 }

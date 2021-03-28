@@ -12,12 +12,13 @@
     textarea{resize: none;}
   </style>
 </head>
-<body>
+<body class="bg trans-bg">
   <!-- <h1 tabindex="1" class="m-10 bc-1 c-5 bd h:bg-1 a:c-9 f:bc-4">测试文字</h1> -->
-  <div class="main c-8 fr fs-14 usn trans">
+  <div class="pf wf bb bc-1 bg trans-bg z-2" style="height: 60px;"></div>
+  <div class="main c-8 fr fs-14 usn ma pt-50" style="max-width:1200px;">
     <div class="pr f-1 p-30">
       <div class="p-10">
-        <button id="switch" class="mb-20 p-5 px-15 bc-1 a r-3 h:bg-2">切换</button>
+        <button id="switch" class="mb-20 p-5 px-15 bd bc-1 a r-3 h:bg-2">切换</button>
         <h1>这是一级标题</h1>
         <h2>这是二级标题</h2>
         <h3>这是三级标题</h3>
@@ -40,13 +41,17 @@
         <div class="p-20 f-3 md:f-1 bg-o-2 bd bc-o-4"></div>
       </div>
       <div class="fr ac">
-        <select class="p-10 bc-2 m-10 r-4">
+        <select class="p-10 bd bc-2 m-10 r-4">
           <option value="1">你好</option>
         </select>
-        <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-2 h:bs-3 trans-bs">Button</button>
-        <button class="m-10 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bc-2">Button</button>
-        <button class="m-10 px-15 py-10 r-4 h:bg-b bg-b-8 c-w a:bg-b-8 trans">Button</button>
-        <a class="m-10 toe h:c-b h:u trans-c" href="#">链接</a>
+        <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 bd f:bc-2 h:bs-3 trans-bs">Button</button>
+        <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bd bc-2">Button</button>
+        <button class="m-5 px-15 py-10 r-4 h:bg-b bg-b-8 c-w a:bg-b-8 trans">Button</button>
+        <button class="m-5 px-15 py-10 r-4 h:bg-r bg-r-8 c-w a:bg-r-8 trans">Button</button>
+        <a class="m-5 toe h:c-b h:u trans-c" href="#">链接</a>
+      </div>
+      <div>
+        <input type="checkbox">
       </div>
       <div class="fr ac p-5">
         <div class="p-2 px-10 r-20 bg-b-1 h:bg-b-2 bd bc-b-2 c-b ml-5">你好</div>
@@ -62,30 +67,38 @@
           <button class="a p-5 px-10 bd bc-1 h:bg-1 ml--1 rtr-5 rbr-5">Group</button>
         </div>
       </div>
-      <div class="fc as">
-        <input class="p-10 bc-1 m-10 r-4 f:bc-b trans-bc" placeholder="请输入" type="text">
-        <textarea class="p-10 bc-1 m-10 r-5 f:bc-b trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
-        <textarea class="p-10 bg-1 m-10 r-5 f:bc-b f:bg-b-1 h:bc-1 trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
+      <div class="fc">
+        <input class="p-10 bd bc-1 m-10 r-4 f:bc-b trans-bc" placeholder="请输入" type="text">
+        <div class="fr m-10">
+          <div class="ct p-10 rl-4 bg-1 bl bt bb bc-1 c-6">http://</div>
+          <input class="p-10 bc-1 rr-4 f:bc-b bd trans-bc f-1 ml--1" placeholder="请输入" type="text">
+        </div>
+        <textarea class="p-10 bc-1 m-10 r-5 bd f:bc-b trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
+        <textarea class="p-10 bg-1 m-10 r-5 bd f:bc-b f:bg-b-1 h:bc-1 trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
+        <pre class="bg-1 r-5 p-10 m-10 lh-16">
+var a = 0;
+var b = 0;
+console.log(a + b);</pre>
       </div>
-      <div class="gfr gtc-4 gr-3 gap-10 m-10" style="height:300px;">
+      <!-- <div class="gfr gtc-4 gr-3 gap-10 m-10" style="height:300px;">
         <div class="bg-b-6 c-w ct">网格布局</div>
         <div class="bg-o-6 c-w gc-1 grs-2"></div>
         <div class="bg-g-6 c-w gc-2 gr-2"></div>
         <div class="bg-b-6 c-w gc-1 gr-2"></div>
         <div class="bg-o-6 c-w gc-2 gr-1"></div>
         <div class="bg-r-6 c-w gc-2 gr-1"></div>
-      </div>
+      </div> -->
       <div class="m-10 mt-30">
         <table class="wf">
-          <tr class="by bc-1 h:bg-1 dur-200">
-            <th class="p-10">表格</th>
-            <th class="p-10">Hello</th>
-            <th class="p-10">Hello</th>
+          <tr class="h:bg-1 trans-bg dur-200">
+            <th class="p-10 by bc-1">表格</th>
+            <th class="p-10 by bc-1">Hello</th>
+            <th class="p-10 by bc-1">Hello</th>
           </tr>
-          <tr class="by bc-1 h:bg-1 dur-200">
-            <td class="p-10">Hello</td>
-            <td class="p-10">Hello</td>
-            <td class="p-10">Hello</td>
+          <tr class="h:bg-1 trans-bg dur-200">
+            <td class="p-10 by bc-1">Hello</td>
+            <td class="p-10 by bc-1">Hello</td>
+            <td class="p-10 by bc-1">Hello</td>
           </tr>
         </table>
       </div>
@@ -99,11 +112,10 @@
     </div>
   </div>
   <script>
-    let isDark = false
-    document.querySelector('#switch').addEventListener('click', () => {
+    var isDark = false
+    document.querySelector('#switch').addEventListener('click', function() {
       isDark = !isDark
       document.querySelector('#style').setAttribute('href', isDark ? './dist/dark.css' : './dist/light.css')
-      document.querySelector('.main').style.backgroundColor = isDark ? '#0d1117' : '#fff'
     })
   </script>
 </body>
