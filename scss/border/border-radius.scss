@@ -2,6 +2,10 @@
 
 @each $r in $border-radius {
   .r-#{$r}{border-radius: #{$r}px}
+  .rt-#{$r}{border-top-left-radius: #{$r}px;border-top-right-radius: #{$r}px;}
+  .rb-#{$r}{border-bottom-left-radius: #{$r}px;border-bottom-right-radius: #{$r}px;}
+  .rl-#{$r}{border-top-left-radius: #{$r}px;border-bottom-left-radius: #{$r}px;}
+  .rr-#{$r}{border-top-right-radius: #{$r}px;border-bottom-right-radius: #{$r}px;}
   .rtl-#{$r}{border-top-left-radius: #{$r}px;}
   .rtr-#{$r}{border-top-right-radius: #{$r}px;}
   .rbl-#{$r}{border-bottom-left-radius: #{$r}px;}
