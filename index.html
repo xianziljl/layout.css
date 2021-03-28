@@ -12,13 +12,17 @@
     textarea{resize: none;}
   </style>
 </head>
-<body class="bg trans-bg">
+<body class="bg trans-bg c-8 fs-14">
   <!-- <h1 tabindex="1" class="m-10 bc-1 c-5 bd h:bg-1 a:c-9 f:bc-4">测试文字</h1> -->
-  <div class="pf wf bb bc-1 bg trans-bg z-2" style="height: 60px;"></div>
-  <div class="main c-8 fr fs-14 usn ma pt-50" style="max-width:1200px;">
+  <div class="pf wf bb bc-1 bg trans-bg z-2" style="height: 60px;">
+    <div class="ma wf px-40 fr hf ac" style="max-width:1200px;">
+      <h1 class="f-1">LAYOUT.CSS</h1>
+      <button id="switch" class="p-5 px-15 bd bc-1 a r-3 h:bg-2">切换背景</button>
+    </div>
+  </div>
+  <div class="main fr fs-14 usn ma pt-50" style="max-width:1200px;">
     <div class="pr f-1 p-30">
       <div class="p-10">
-        <button id="switch" class="mb-20 p-5 px-15 bd bc-1 a r-3 h:bg-2">切换</button>
         <h1>这是一级标题</h1>
         <h2>这是二级标题</h2>
         <h3>这是三级标题</h3>
@@ -47,17 +51,17 @@
         <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 bd f:bc-2 h:bs-3 trans-bs">Button</button>
         <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bd bc-2">Button</button>
         <button class="m-5 px-15 py-10 r-4 h:bg-b bg-b-8 c-w a:bg-b-8 trans">Button</button>
-        <button class="m-5 px-15 py-10 r-4 h:bg-r bg-r-8 c-w a:bg-r-8 trans">Button</button>
+        <button class="m-5 px-15 py-10 r-4 bd bc-r-2 h:bg-r-2 bg-r-1 c-r a:bg-r-4 trans">Button</button>
         <a class="m-5 toe h:c-b h:u trans-c" href="#">链接</a>
       </div>
       <div>
         <input type="checkbox">
       </div>
       <div class="fr ac p-5">
-        <div class="p-2 px-10 r-20 bg-b-1 h:bg-b-2 bd bc-b-2 c-b ml-5">你好</div>
-        <div class="p-2 px-10 r-20 bg-o-1 h:bg-o-2 bd bc-o-2 c-o ml-5">我是</div>
-        <div class="p-2 px-10 r-20 bg-g-1 h:bg-g-2 bd bc-g-2 c-g ml-5">标签</div>
-        <div class="p-2 px-10 r-20 bg-r-1 h:bg-r-2 bd bc-r-2 c-r ml-5">呢！</div>
+        <div class="p-5 px-10 r-20 bg-b-1 bd bc-b-2 c-b ml-5 fs-16">你好</div>
+        <div class="p-4 px-10 r-20 bg-o-1 bd bc-o-2 c-o ml-5">我是</div>
+        <div class="p-2 px-10 r-20 bg-g-1 bd bc-g-2 c-g ml-5 fs-12">标签</div>
+        <div class="p-2 px-10 r-20 bg-r-1 bd bc-r-2 c-r ml-5">呢！</div>
       </div>
       <div class="p-10">
         <div class="ifr btn-group">
@@ -70,8 +74,9 @@
       <div class="fc">
         <input class="p-10 bd bc-1 m-10 r-4 f:bc-b trans-bc" placeholder="请输入" type="text">
         <div class="fr m-10">
-          <div class="ct p-10 rl-4 bg-1 bl bt bb bc-1 c-6">http://</div>
-          <input class="p-10 bc-1 rr-4 f:bc-b bd trans-bc f-1 ml--1" placeholder="请输入" type="text">
+          <div class="p-10 rl-5 bg-1 bl bt bb bc-1 c-6">http://</div>
+          <input class="p-10 bc-1 f:bc-b bd trans-bc f-1 ml--1" placeholder="请输入" type="text">
+          <div class="p-10 rr-5 bt br bb bc-1 c-6">.com</div>
         </div>
         <textarea class="p-10 bc-1 m-10 r-5 bd f:bc-b trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
         <textarea class="p-10 bg-1 m-10 r-5 bd f:bc-b f:bg-b-1 h:bc-1 trans-bc" placeholder="请输入" cols="30" rows="3"></textarea>
