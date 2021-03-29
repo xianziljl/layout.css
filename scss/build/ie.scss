@@ -17,22 +17,61 @@
   .grs-#{$n}{-ms-grid-row: $n;}
   .gcs-#{$n}{-ms-grid-column: $n;}
 }
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    // grid
+    .#{$key}\:gfr{display: -ms-grid;grid-auto-flow: row;}
+    .#{$key}\:gfc{display: -ms-grid;grid-auto-flow: column;}
 
+    @for $n from 1 through $grid {
+      $arr: ();
+      @for $i from 1 through $n{
+        $arr: append($arr, 1fr);
+      }
+      .#{$key}\:gtr-#{$n}{-ms-grid-rows: $arr;}
+      .#{$key}\:gtc-#{$n}{-ms-grid-columns: $arr;}
+      
+      .#{$key}\:gr-#{$n}{-ms-grid-row-span:#{$n};}
+      .#{$key}\:gc-#{$n}{-ms-grid-column-span:#{$n};}
 
-
-@for $i from 1 through $flex {
-  .f-#{$i}{-ms-flex: #{$i};}
+      .#{$key}\:grs-#{$n}{-ms-grid-row: $n;}
+      .#{$key}\:gcs-#{$n}{-ms-grid-column: $n;}
+    }
+  }
 }
-.fr{display: -ms-flexbox;-ms-flex-direction: row;}
-.fc{display: -ms-flexbox;-ms-flex-direction: column;}
-.ifr{display: -ms-inline-flexbox;-ms-flex-direction: row;}
-.ifc{display: -ms-inline-flexbox;-ms-flex-direction: column;}
-.fw{-ms-flex-wrap: wrap;}
 
-.as{-ms-flex-align: start;}
-.ac{-ms-flex-align: center;}
-.ae{-ms-flex-align: end;}
 
-.js{-ms-flex-pack: start;}
-.jc{-ms-flex-pack: center;}
-.je{-ms-flex-pack: end;}
+
+
+
+// @for $i from 1 through $flex {
+//   .f-#{$i}{-ms-flex: #{$i};}
+// }
+// .fr{display: -ms-flexbox;-ms-flex-direction: row;}
+// .fc{display: -ms-flexbox;-ms-flex-direction: column;}
+// .ifr{display: -ms-inline-flexbox;-ms-flex-direction: row;}
+// .ifc{display: -ms-inline-flexbox;-ms-flex-direction: column;}
+// .fw{-ms-flex-wrap: wrap;}
+
+// .as{-ms-flex-align: start;}
+// .ac{-ms-flex-align: center;}
+// .ae{-ms-flex-align: end;}
+
+// .js{-ms-flex-pack: start;}
+// .jc{-ms-flex-pack: center;}
+// .je{-ms-flex-pack: end;}
+
+
+// @each $key, $val in $media-query{
+//   @media screen and (max-width: #{$val}px) {
+//     // flex
+//     .#{$key}\:fr{display: -ms-flexbox;-ms-flex-direction: row;}
+//     .#{$key}\:fc{display: -ms-flexbox;-ms-flex-direction: column;}
+//     .#{$key}\:ifr{display: -ms-inline-flex;-ms-flex-direction: row;}
+//     .#{$key}\:ifc{display: -ms-inline-flex;-ms-flex-direction: column;}
+//     .#{$key}\:fw{-ms-flex-wrap: wrap;}
+//     @for $i from 1 through $flex {
+//       .#{$key}\:f-#{$i}{-ms-flex: #{$i};}
+//     }
+//   }
+// }
