@@ -1,0 +1,38 @@
+@import '../variable';
+
+.gfr{display: -ms-grid;grid-auto-flow: row;}
+.gfc{display: -ms-grid;grid-auto-flow: column;}
+
+@for $n from 1 through $grid {
+  $arr: ();
+  @for $i from 1 through $n{
+    $arr: append($arr, 1fr);
+  }
+  .gtr-#{$n}{-ms-grid-rows: $arr;}
+  .gtc-#{$n}{-ms-grid-columns: $arr;}
+  
+  .gr-#{$n}{-ms-grid-row-span:#{$n};}
+  .gc-#{$n}{-ms-grid-column-span:#{$n};}
+
+  .grs-#{$n}{-ms-grid-row: $n;}
+  .gcs-#{$n}{-ms-grid-column: $n;}
+}
+
+
+
+@for $i from 1 through $flex {
+  .f-#{$i}{-ms-flex: #{$i};}
+}
+.fr{display: -ms-flexbox;-ms-flex-direction: row;}
+.fc{display: -ms-flexbox;-ms-flex-direction: column;}
+.ifr{display: -ms-inline-flexbox;-ms-flex-direction: row;}
+.ifc{display: -ms-inline-flexbox;-ms-flex-direction: column;}
+.fw{-ms-flex-wrap: wrap;}
+
+.as{-ms-flex-align: start;}
+.ac{-ms-flex-align: center;}
+.ae{-ms-flex-align: end;}
+
+.js{-ms-flex-pack: start;}
+.jc{-ms-flex-pack: center;}
+.je{-ms-flex-pack: end;}
