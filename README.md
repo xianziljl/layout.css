@@ -1,12 +1,12 @@
-# Layout.css
+# Origin.css
 
-## 开发
-```bash
-npm run dev
-```
-## 构建压缩版
+## 打包
 ```bash
 npm run build
+```
+## 打包并压缩
+```bash
+npm run build:compressed
 ```
 ## flex 布局
 ```html
@@ -82,9 +82,9 @@ npm run build
 
 ### 暗色模式下的颜色
 
-要实现暗色模式，只需在根节点添加 `dk` 类。  
+要实现暗色模式，只需将 `light.css` 替换为 `dark.css` 即可。  
 颜色将会是原来的反色：即浅色字体和边框以及深色背景。  
-> `dk` 会影响到所有子节点的颜色
+
 
 ### 交互效果下的颜色
 
@@ -99,7 +99,7 @@ npm run build
 - `f:` = `focus`
 
 ## 媒体查询
-待完成
+默认有三个断点，`md, sm, xs`, 可在变量中设置，支持响应式布局的属性包含，`flex`，`grid`，`padding`，`margin`，以及 `layout.scss` 中包含的属性。
 
 ## 杂项
 在 `layout.scss` 中包含了`display`,`position`, `overflow` 等常用的class
