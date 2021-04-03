@@ -23,7 +23,7 @@
       <button id="switch" class="p-5 px-15 bd bc-1 a r-3 h:bg-2">切换背景</button>
     </div>
   </div>
-  <div class="main fr fs-14 usn ma pt-50" style="max-width:1200px;">
+  <div class="main fr fs-14 ma pt-50" style="max-width:1200px;">
     <div class="pr f-1 p-30">
       <div class="p-10">
         <h1>这是一级标题</h1>
@@ -119,13 +119,25 @@ console.log(a + b);</pre>
         <div class="f-1 bs-5 mx-10"></div>
       </div>
     </div>
+    <!-- <div class="pf wf hf bg-blk-6 z-2 ct" style="left: 0;top: 0;">
+      <div class="p-15 bg r-10 bs-5" style="max-width: 400px;">
+        <div class="fs-18 b p-10">困在时间里的父亲</div>
+        <div class="p-10">安东尼·霍普金斯、奥利维娅·科尔曼将出演，根据法国小说家兼剧作家佛罗莱恩·泽勒的舞台剧《父亲》改编的新片。霍普金斯饰演的角色是一个淘气而又高度独立的男人，随着年龄的增长，他拒绝了女儿安妮(科尔曼饰)的一切帮助。然而，在安妮决定和她的伴侣搬去巴黎后，这种帮助变得至关重要。</div>
+        <div class="fr ac mt-10">
+          <div class="f-1"></div>
+          <button class="h:bg-b-1 a:bg-b-2 px-15 py-7 r-5 ml-10 c-b trans-bg">确定</button>
+          <button class="h:bg-1 a:bg-2 px-15 py-7 r-5 ml-10 trans-bg">取消</button>
+        </div>
+      </div>
+    </div> -->
   </div>
   <script>
     var isDark = false
-    document.querySelector('#switch').addEventListener('click', function() {
+    var sw = function() {
       isDark = !isDark
       document.querySelector('#style').setAttribute('href', isDark ? './dist/dark.css' : './dist/light.css')
-    })
+    }
+    document.querySelector('#switch').addEventListener('click', sw)
   </script>
 </body>
 </html>
