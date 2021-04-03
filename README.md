@@ -100,6 +100,7 @@ npm run build:compressed
 
 ## 媒体查询
 默认有三个断点，`md, sm, xs`, 可在变量中设置，支持响应式布局的属性包含，`flex`，`grid`，`padding`，`margin`，以及 `layout.scss` 中包含的属性。
+使用方式例如：`sm:f-1`
 
 ## 杂项
 在 `layout.scss` 中包含了`display`,`position`, `overflow` 等常用的class
