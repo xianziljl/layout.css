@@ -17,7 +17,8 @@ input, button, textarea, select, button{
   background-color: transparent;
   font-family: inherit;box-sizing: border-box;
   -webkit-appearance:none;appearance: none;
-  border-style: solid;
+  border-style: solid;border-radius: 0;
+  font-weight: inherit;
 }
 textarea{overflow: auto;}
 input::-ms-clear{display: none;}

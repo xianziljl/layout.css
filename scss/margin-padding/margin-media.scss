@@ -4,8 +4,12 @@
   @media screen and (max-width: #{$val}px) {
     @each $num in $margin {
       .#{$key}\:m-#{$num}{margin: #{$num}px}
+    }
+    @each $num in $margin {
       .#{$key}\:mx-#{$num}{margin-left: #{$num}px;margin-right: #{$num}px;}
       .#{$key}\:my-#{$num}{margin-top: #{$num}px;margin-bottom: #{$num}px}
+    }
+    @each $num in $margin {
       .#{$key}\:mt-#{$num}{margin-top: #{$num}px}
       .#{$key}\:mr-#{$num}{margin-right: #{$num}px}
       .#{$key}\:mb-#{$num}{margin-bottom: #{$num}px}

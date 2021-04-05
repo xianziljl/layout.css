@@ -4,8 +4,12 @@
   @media screen and (max-width: #{$val}px) {
     @each $num in $margin {
       .#{$key}\:p-#{$num}{padding: #{$num}px}
+    }
+    @each $num in $margin {
       .#{$key}\:px-#{$num}{padding-left: #{$num}px;padding-right: #{$num}px;}
       .#{$key}\:py-#{$num}{padding-top: #{$num}px;padding-bottom: #{$num}px}
+    }
+    @each $num in $margin {
       .#{$key}\:pt-#{$num}{padding-top: #{$num}px}
       .#{$key}\:pr-#{$num}{padding-right: #{$num}px}
       .#{$key}\:pb-#{$num}{padding-bottom: #{$num}px}

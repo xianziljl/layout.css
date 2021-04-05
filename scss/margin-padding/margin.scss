@@ -2,8 +2,12 @@
 
 @each $num in $margin {
   .m-#{$num}{margin: #{$num}px}
+}
+@each $num in $margin {
   .mx-#{$num}{margin-left: #{$num}px;margin-right: #{$num}px;}
   .my-#{$num}{margin-top: #{$num}px;margin-bottom: #{$num}px}
+}
+@each $num in $margin {
   .mt-#{$num}{margin-top: #{$num}px}
   .mr-#{$num}{margin-right: #{$num}px}
   .mb-#{$num}{margin-bottom: #{$num}px}
