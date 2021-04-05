@@ -4,138 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./dist/layout.css">
-  <link rel="stylesheet" href="./dist/ie.css">
+  <!-- <link rel="stylesheet" href="./dist/ie.css"> -->
   <link rel="stylesheet" href="./dist/light.css" id="style">
   <link rel="stylesheet" href="./dist/color.css">
 
-  <title>Layout.css</title>
+  <title>origin.css</title>
   <style>
-    .dk{color-scheme: dark;}
+    html, body{width: 100%;height: 100%;}
     ::-webkit-scrollbar{width: 10px;height: 10px;}
     ::-webkit-scrollbar-thumb{background-color: rgba(120, 120, 120, 0.3);border: 1px solid rgba(120, 120, 120, 0.2);}
+    ::-webkit-scrollbar-corner{background-color: transparent;}
   </style>
 </head>
-<body class="bg trans-bg c-8 fs-14">
+<body class="bg c-8 fs-14 fc">
   <!-- <h1 tabindex="1" class="m-10 bc-1 c-5 bd h:bg-1 a:c-9 f:bc-4">测试文字</h1> -->
-  <div class="ps wf bb bc-1 bg trans-bg z-2" style="height: 60px;left:0;top:0;">
+  <div class="ps wf bb bc-1 bg z-2" style="height: 60px;left:0;top:0;">
     <div class="ma wf px-40 fr hf ac" style="max-width:1200px;">
-      <h1 class="f-1">LAYOUT.CSS</h1>
-      <button id="switch" class="p-5 px-15 bd bc-1 a r-3 h:bg-2">切换背景</button>
+      <h1 class="f-1">ORIGIN.CSS</h1>
+      <button id="switch" class="p-5 px-15 bd bc-1 a r-3 h:bg-2">切换暗色模式</button>
     </div>
   </div>
-  <div class="main fr fs-14 ma" style="max-width:1200px;">
-    <div class="pr f-1 p-30">
-      <div class="p-10">
-        <h1>这是一级标题</h1>
-        <h2>这是二级标题</h2>
-        <h3>这是三级标题</h3>
-        <h4>这是四级标题</h4>
-        <p>这里是正文</p>
-      </div>
+  <div class="f1 os">
+    <div class="main fr ma" style="max-width:1200px;">
+      <div class="pr f-1 p-30">
+        <!-- <div class="r-3" style="width:1.2em;height:1.2em;background-color: currentColor;"></div> -->
+        <div class="p-10">
+          <h1>这是一级标题</h1>
+          <h2>这是二级标题</h2>
+          <h3>这是三级标题</h3>
+          <h4>这是四级标题</h4>
+          <p>这里是正文</p>
+        </div>
+  
+        <div class="gfr gtc-4 gap-10 p-10 as">
+          <div class="r-3 bg-b-6 p-10 sm:gc-4 md:gc-2"></div>
+          <div class="r-3 bg-b-6 p-10 sm:gc-4 md:gc-2 md:gcs-3 sm:grs-2 sm:gcs-1"></div>
+          <div class="r-3 bg-b-6 p-10"></div>
+          <div class="r-3 bg-b-6 p-10"></div>
+          <div class="r-3 bg-b-6 p-10"></div>
+          <div class="r-3 bg-b-6 p-10"></div>
+          <div class="r-3 bg-b-6 p-10"></div>
+          <div class="r-3 bg-b-6 p-10"></div>
+        </div>
+        <div class="fr p-10">
+          <div class="p-20 f-1 md:f-3 bg-r-2 bd bc-r-4 h:bg-r"></div>
+          <div class="bg-f p-5"></div>
+          <div class="p-20 f-3 md:f-1 bg-o-2 bd bc-o-4"></div>
+        </div>
+        <div class="fr ac fw">
+          <select class="p-10 bd bc-2 m-10 r-4">
+            <option value="1">你好</option>
+            <option value="2">你好111</option>
+          </select>
+          <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 bd f:bc-2 h:bs-3 trans-bs">Button</button>
+          <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bd bc-2">Button</button>
+          <button class="m-5 px-15 py-10 r-4 h:bg-b bg-b-8 c-w a:bg-b-8 trans">Button</button>
+          <button class="m-5 px-15 py-10 r-4 bd bc-r-2 h:bg-r-2 bg-r-1 c-r a:bg-r-4 trans" id="dialog-btn">Dialog</button>
+          <a class="m-5 toe h:c-b h:u trans-c" href="#">链接</a>
+        </div>
+        <div>
+          <input type="checkbox">
+        </div>
+        <div class="fr ac p-5">
+          <div class="p-5 px-10 r-20 bg-b-1 bd bc-b-2 c-b ml-5 fs-16">你好</div>
+          <div class="p-2 px-10 r-20 bg-o-1 bd bc-o-2 c-o ml-5">我是</div>
+          <div class="p-3 px-10 r-20 bg-g c-w ml-5 bs-2">标签</div>
+          <div class="p-2 px-10 r-20 bd bc-r-2 c-r ml-5">呢！</div>
+        </div>
+        <div class="p-10">
+          <div class="ifr btn-group">
+            <button class="a p-5 px-10 bd bc-2 h:bg-1 rtl-5 rbl-5">This</button>
+            <button class="a p-5 px-10 bd bc-2 h:bg-1 ml--1">is</button>
+            <button class="a p-5 px-10 bd bc-b bg-b-1 ml--1 c-b z-1">Button</button>
+            <button class="a p-5 px-10 bd bc-2 h:bg-1 ml--1 rtr-5 rbr-5">Group</button>
+          </div>
+        </div>
+        <div class="p-10">
+          <div class="p-15 bl bc-r-4 c-r bg-r-1 r-5" style="border-left-width: 5px;">以下各章节假设您已使用Vue CLI创建了一个新的Vuetify应用程序，并对Vue、HTML、CSS和JavaScript有基本的了解。 在[安装页面]（/getting-started/Installation/#Vue CLI install）上查找有关使用Vue CLI安装Vuetify的更多信息。</div>
+          <div class="p-15 bl bc-w-4 c-w bg-b-6 r-5 mt-20" style="border-left-width: 5px;">在本页中，"Material 图标"被用来指代谷歌官方图标，“Material Design 图标”指代扩展的第三方库。</div>
+          <div class="p-15 bd bc-o-4 bg-o-1 r-5 fr mt-20 ac xs:fc xs:as">
+            <div class="f-1 c-o">
+              <div class="fs-16 b">We found potential security vulnerabilities in your dependencies.</div>
+              <div class="mt-5">Only the owner of this repository can see this message.</div>
+            </div>
+            <button class="p-5 px-10 bd r-5 bg-o-8 bc-o c-w h:bg-o xs:mt-15">See Dependabot alerts</button>
+          </div>
+        </div>
+        <div class="fc">
+          <div class="fr ac p-10">
+            <input type="text" class="f-1 py-10 bb bc-2 f:bc-b mr-10 trans:b-c" placeholder="请输入">
+            <input class="f-1 p-10 bd bc-1 r-4 f:bc-b trans-bc" placeholder="请输入" type="number">
+          </div>
+          <div class="fr m-10">
+            <div class="p-10 rl-5 bg-1 by bl bc-1 c-6">http://</div>
+            <input class="p-10 bc-1 f:bc-b bd trans-bc f-1 ml--1" placeholder="请输入" type="text">
+            <div class="p-10 rr-5 by br bc-1 c-6">.com</div>
+          </div>
+          <textarea class="p-10 bc-1 m-10 r-5 bd f:bc-b trans-bc" placeholder="请输入" rows="4" style="resize: none;"></textarea>
+          <textarea class="p-10 bg-1 m-10 r-5 bd f:bc-b f:bg-b-1 h:bc-1 trans-bc" placeholder="请输入" rows="4" style="resize: none;"></textarea>
+          <pre class="bg-1 r-5 p-10 m-10 lh-16 c-8">
+  <span class="c-4">// var a = 0;</span>
+  var b = 0;
+  console.log(a + b);</pre>
+        </div>
+        <!-- <div class="gfr gtc-4 gr-3 gap-10 m-10" style="height:300px;">
+          <div class="bg-b-6 c-w ct">网格布局</div>
+          <div class="bg-o-6 c-w gc-1 grs-2"></div>
+          <div class="bg-g-6 c-w gc-2 gr-2"></div>
+          <div class="bg-b-6 c-w gc-1 gr-2"></div>
+          <div class="bg-o-6 c-w gc-2 gr-1"></div>
+          <div class="bg-r-6 c-w gc-2 gr-1"></div>
+        </div> -->
 
-      <div class="gfr gtc-4 gap-10 p-10 as">
-        <div class="r-3 bg-b-6 p-10 sm:gc-4 md:gc-2"></div>
-        <div class="r-3 bg-b-6 p-10 sm:gc-4 md:gc-2 md:gcs-3 sm:grs-2 sm:gcs-1"></div>
-        <div class="r-3 bg-b-6 p-10"></div>
-        <div class="r-3 bg-b-6 p-10"></div>
-        <div class="r-3 bg-b-6 p-10"></div>
-        <div class="r-3 bg-b-6 p-10"></div>
-        <div class="r-3 bg-b-6 p-10"></div>
-        <div class="r-3 bg-b-6 p-10"></div>
-      </div>
-      <div class="fr p-10">
-        <div class="p-20 f-1 md:f-3 bg-r-2 bd bc-r-4 h:bg-r"></div>
-        <div class="bg-f p-5"></div>
-        <div class="p-20 f-3 md:f-1 bg-o-2 bd bc-o-4"></div>
-      </div>
-      <div class="fr ac fw">
-        <select class="p-10 bd bc-2 m-10 r-4">
-          <option value="1">你好</option>
-          <option value="2">你好111</option>
-        </select>
-        <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 bd f:bc-2 h:bs-3 trans-bs">Button</button>
-        <button class="m-5 px-15 py-10 r-4 h:bg-1 a:bg-2 f:bc-4 bd bc-2">Button</button>
-        <button class="m-5 px-15 py-10 r-4 h:bg-b bg-b-8 c-w a:bg-b-8 trans">Button</button>
-        <button class="m-5 px-15 py-10 r-4 bd bc-r-2 h:bg-r-2 bg-r-1 c-r a:bg-r-4 trans" id="dialog-btn">Dialog</button>
-        <a class="m-5 toe h:c-b h:u trans-c" href="#">链接</a>
-      </div>
-      <div>
-        <input type="checkbox">
-      </div>
-      <div class="fr ac p-5">
-        <div class="p-5 px-10 r-20 bg-b-1 bd bc-b-2 c-b ml-5 fs-16">你好</div>
-        <div class="p-2 px-10 r-20 bg-o-1 bd bc-o-2 c-o ml-5">我是</div>
-        <div class="p-3 px-10 r-20 bg-g c-w ml-5 bs-2">标签</div>
-        <div class="p-2 px-10 r-20 bd bc-r-2 c-r ml-5">呢！</div>
-      </div>
-      <div class="p-10">
-        <div class="ifr btn-group">
-          <button class="a p-5 px-10 bd bc-1 h:bg-1 rtl-5 rbl-5">This</button>
-          <button class="a p-5 px-10 bd bc-1 h:bg-1 ml--1">is</button>
-          <button class="a p-5 px-10 bd bc-b-4 bg-b-2 ml--1 c-b z-1">Button</button>
-          <button class="a p-5 px-10 bd bc-1 h:bg-1 ml--1 rtr-5 rbr-5">Group</button>
+        <div class="r-3 bs-1 m-10 pr" style="max-width:360px;">
+          <div class="p-15 fr ac">
+            <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" class="r-20" width="40" height="40" alt="">
+            <div class="f-1 ml-15">
+              <div class="fs-18 b">Shiba Inu</div>
+              <div class="c-6">Dog Breed</div>
+            </div>
+          </div>
+          <img class="wf" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+          <div class="p-15 pb-5">The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.          </div>
+          <div class="p-5 b">
+            <button class="p-10 r-3 h:bg-1 a:bg-2 a lh-10">LINK</button>
+            <button class="p-10 r-3 h:bg-1 a:bg-2 a lh-10">SHARE</button>
+          </div>
+          <div class="pa fu lf-0 tp-0 bd bc-w-1 r-3 pen"></div>
         </div>
-      </div>
-      <div class="p-10">
-        <div class="p-15 bl bc-r-4 c-r bg-r-1 r-5" style="border-left-width: 5px;">以下各章节假设您已使用Vue CLI创建了一个新的Vuetify应用程序，并对Vue、HTML、CSS和JavaScript有基本的了解。 在[安装页面]（/getting-started/Installation/#Vue CLI install）上查找有关使用Vue CLI安装Vuetify的更多信息。</div>
-        <div class="p-15 bl bc-w-4 c-w bg-b-6 r-5 mt-20" style="border-left-width: 5px;">在本页中，"Material 图标"被用来指代谷歌官方图标，“Material Design 图标”指代扩展的第三方库。</div>
-      </div>
-      <div class="fc">
-        <div class="fr ac p-10">
-          <input type="text" class="f-1 py-10 bb bc-2 f:bc-b mr-10 trans:b-c" placeholder="请输入">
-          <input class="f-1 p-10 bd bc-1 r-4 f:bc-b trans-bc" placeholder="请输入" type="number">
+
+
+        <div class="m-10 mt-30">
+          <table class="wf">
+            <tr class="h:bg-b-1 trans-bg dur-200">
+              <th class="p-10 by bc-1">表格</th>
+              <th class="p-10 by bc-1">Hello</th>
+              <th class="p-10 by bc-1">Hello</th>
+            </tr>
+            <tr class="h:bg-b-1 trans-bg dur-200">
+              <td class="p-10 by bc-1">Hello</td>
+              <td class="p-10 by bc-1">Hello</td>
+              <td class="p-10 by bc-1">Hello</td>
+            </tr>
+          </table>
         </div>
-        <div class="fr m-10">
-          <div class="p-10 rl-5 bg-1 by bl bc-1 c-6">http://</div>
-          <input class="p-10 bc-1 f:bc-b bd trans-bc f-1 ml--1" placeholder="请输入" type="text">
-          <div class="p-10 rr-5 by br bc-1 c-6">.com</div>
+        <div class="fr mt-20" style="height: 100px;">
+          <div class="f-1 bs-1 mx-10 ct">阴影</div>
+          <div class="f-1 bs-2 mx-10"></div>
+          <div class="f-1 bs-3 mx-10"></div>
+          <div class="f-1 bs-4 mx-10"></div>
+          <div class="f-1 bs-5 mx-10"></div>
         </div>
-        <textarea class="p-10 bc-1 m-10 r-5 bd f:bc-b trans-bc" placeholder="请输入" rows="4" style="resize: none;"></textarea>
-        <textarea class="p-10 bg-1 m-10 r-5 bd f:bc-b f:bg-b-1 h:bc-1 trans-bc" placeholder="请输入" rows="4" style="resize: none;"></textarea>
-        <pre class="bg-1 r-5 p-10 m-10 lh-16 c-8">
-<span class="c-4">// var a = 0;</span>
-var b = 0;
-console.log(a + b);</pre>
-      </div>
-      <!-- <div class="gfr gtc-4 gr-3 gap-10 m-10" style="height:300px;">
-        <div class="bg-b-6 c-w ct">网格布局</div>
-        <div class="bg-o-6 c-w gc-1 grs-2"></div>
-        <div class="bg-g-6 c-w gc-2 gr-2"></div>
-        <div class="bg-b-6 c-w gc-1 gr-2"></div>
-        <div class="bg-o-6 c-w gc-2 gr-1"></div>
-        <div class="bg-r-6 c-w gc-2 gr-1"></div>
-      </div> -->
-      <div class="m-10 mt-30">
-        <table class="wf">
-          <tr class="h:bg-b-1 trans-bg dur-200">
-            <th class="p-10 by bc-1">表格</th>
-            <th class="p-10 by bc-1">Hello</th>
-            <th class="p-10 by bc-1">Hello</th>
-          </tr>
-          <tr class="h:bg-b-1 trans-bg dur-200">
-            <td class="p-10 by bc-1">Hello</td>
-            <td class="p-10 by bc-1">Hello</td>
-            <td class="p-10 by bc-1">Hello</td>
-          </tr>
-        </table>
-      </div>
-      <div class="fr mt-20" style="height: 100px;">
-        <div class="f-1 bs-1 mx-10 ct">阴影</div>
-        <div class="f-1 bs-2 mx-10"></div>
-        <div class="f-1 bs-3 mx-10"></div>
-        <div class="f-1 bs-4 mx-10"></div>
-        <div class="f-1 bs-5 mx-10"></div>
       </div>
     </div>
-    <div class="pf wf hf bg-blk-6 z-2 ct vh" id="dialog" style="left: 0;top: 0;">
-      <div class="p-15 bg r-10 bs-5 bd bc-w-1" style="max-width: 280px;">
-        <div class="fs-18 b p-10">Use Google's location service?</div>
-        <div class="p-10">Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</div>
-        <div class="fr ac mt-10">
-          <div class="f-1"></div>
-          <button class="h:bg-2 a:bg-4 f:bg-1 px-15 py-7 r-5 ml-10 trans-bg">DISAGREE</button>
-          <button class="h:bg-b-2 a:bg-b-4 f:bg-b-1 px-15 py-7 r-5 ml-10 c-b trans-bg b" id="agree-btn">AGREE</button>
-        </div>
+  </div>
+  <div class="pf fu bg-blk-6 z-2 ct vh" id="dialog" style="left: 0;top: 0;">
+    <div class="p-15 bg r-10 bs-5 bd bc-w-1" style="max-width: 280px;">
+      <div class="fs-18 b p-10">Use Google's location service?</div>
+      <div class="p-10">Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</div>
+      <div class="fr ac mt-10">
+        <div class="f-1"></div>
+        <button class="h:bg-2 a:bg-4 f:bg-1 px-15 py-7 r-5 ml-10 trans-bg">DISAGREE</button>
+        <button class="h:bg-b-2 a:bg-b-4 f:bg-b-1 px-15 py-7 r-5 ml-10 c-b trans-bg b" id="agree-btn">AGREE</button>
       </div>
     </div>
   </div>
@@ -144,7 +174,7 @@ console.log(a + b);</pre>
     var sw = function() {
       isDark = !isDark
       document.querySelector('#style').setAttribute('href', isDark ? './dist/dark.css' : './dist/light.css')
-      document.scrollingElement.classList.toggle("dk")
+      // document.scrollingElement.classList.toggle("dk")
     }
     document.querySelector('#switch').addEventListener('click', sw)
 
