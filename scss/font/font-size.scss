@@ -2,5 +2,5 @@
 
 @for $i from 0 through $font-size-max {
   $num: $i * $font-size-step;
-  .fs-#{$i}{font-size: #{$num}rem}
+  .fs-#{$num}{font-size: #{$num}rem}
 }
