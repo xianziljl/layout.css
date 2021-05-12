@@ -1,0 +1,36 @@
+@import '../variable';
+@for $i from 0 through $margin-padding-max {
+  $num: $i * $margin-padding-step;
+  .m-#{$i}{margin: #{$num}em}
+}
+@for $i from 0 through $margin-padding-max {
+  $num: $i * $margin-padding-step;
+  .mx-#{$i}{margin-left: #{$num}em;margin-right: #{$num}em;}
+  .my-#{$i}{margin-top: #{$num}em;margin-bottom: #{$num}em}
+}
+@for $i from 0 through $margin-padding-max {
+  $num: $i * $margin-padding-step;
+  .mt-#{$i}{margin-top: #{$num}em}
+  .mr-#{$i}{margin-right: #{$num}em}
+  .mb-#{$i}{margin-bottom: #{$num}em}
+  .ml-#{$i}{margin-left: #{$num}em}
+}
+
+
+
+@for $i from 0 through $margin-padding-max {
+  $num: $i * $margin-padding-step;
+  .p-#{$i}{padding: #{$num}em}
+}
+@for $i from 0 through $margin-padding-max {
+  $num: $i * $margin-padding-step;
+  .px-#{$i}{padding-left: #{$num}em;padding-right: #{$num}em;}
+  .py-#{$i}{padding-top: #{$num}em;padding-bottom: #{$num}em}
+}
+@for $i from 0 through $margin-padding-max {
+  $num: $i * $margin-padding-step;
+  .pt-#{$i}{padding-top: #{$num}em}
+  .pr-#{$i}{padding-right: #{$num}em}
+  .pb-#{$i}{padding-bottom: #{$num}em}
+  .pl-#{$i}{padding-left: #{$num}em}
+}

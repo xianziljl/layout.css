@@ -1,0 +1,42 @@
+@import '../variable';
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    @for $i from 0 through $margin-padding-max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:m-#{$i}{margin: #{$num}em}
+    }
+    @for $i from 0 through $margin-padding-max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:mx-#{$i}{margin-left: #{$num}em;margin-right: #{$num}em;}
+      .#{$key}\:my-#{$i}{margin-top: #{$num}em;margin-bottom: #{$num}em}
+    }
+    @for $i from 0 through $margin-padding-max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:mt-#{$i}{margin-top: #{$num}em}
+      .#{$key}\:mr-#{$i}{margin-right: #{$num}em}
+      .#{$key}\:mb-#{$i}{margin-bottom: #{$num}em}
+      .#{$key}\:ml-#{$i}{margin-left: #{$num}em}
+    }
+
+
+    
+
+    @for $i from 0 through $margin-padding-max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:p-#{$i}{padding: #{$num}em}
+    }
+    @for $i from 0 through $margin-padding-max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:px-#{$i}{padding-left: #{$num}em;padding-right: #{$num}em;}
+      .#{$key}\:py-#{$i}{padding-top: #{$num}em;padding-bottom: #{$num}em}
+    }
+    @for $i from 0 through $margin-padding-max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:pt-#{$i}{padding-top: #{$num}em}
+      .#{$key}\:pr-#{$i}{padding-right: #{$num}em}
+      .#{$key}\:pb-#{$i}{padding-bottom: #{$num}em}
+      .#{$key}\:pl-#{$i}{padding-left: #{$num}em}
+    }
+  }
+}

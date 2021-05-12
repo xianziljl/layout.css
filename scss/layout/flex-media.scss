@@ -16,7 +16,7 @@
     .#{$key}\:jc{justify-content: center;}
     .#{$key}\:je{justify-content: flex-end;}
     .#{$key}\:fw{flex-wrap: wrap;}
-    @for $i from 1 through $flex {
+    @for $i from 1 through $flex-max {
       .#{$key}\:f-#{$i}{flex: #{$i};}
     }
   }

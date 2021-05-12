@@ -1,5 +1,6 @@
 @import '../variable';
 
-@each $n in $line-height {
-  .lh-#{$n}{line-height: #{$n / 10}em;}
+@for $i from 0 through $line-height-max{
+  $num: $i * $line-height-step + 1;
+  .lh-#{$num}{line-height: #{$num};}
 }

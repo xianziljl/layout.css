@@ -1,26 +1,30 @@
+$width-height-max: 20;
+$width-height-step: 0.2;
+
 // 输出 .fs-12{ font-size: 12px }
 $font-size: 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40;
 
-// 12 输出 .lh-12{ font-size: 1.2em }
-$line-height: 10, 12, 14, 16, 18, 20, 22, 24;
+$font-size-min: 0;
+$font-size-max: 20;
+$font-size-step: 0.1;
 
-// opacity 5 输出 .o-5{ opacity: 0.5 }
+// line-height
+$line-height-max: 10;
+$line-height-step: 0.1;
+
 $opacity: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
-// z-index 5 输出 .z-5{ z-index: 0.5 }
 $z-index: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
-// border-radius 5 输出 .r-5{ border-radius: 5px }
-$border-radius: 1, 2, 3, 4, 5, 7, 10, 15, 20, 30, 40;
+// border-radius
+$rounded-max: 20;
+$rounded-step: 0.1;
 
-// padding
-$padding: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;
-
-// margin
-$margin: -1, 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0;;
-
+// margin padding
+$margin-padding-max: 20;
+$margin-padding-step: 0.2;
 // flex 输出 .f-1{ flex: 1 }
-$flex: 10;
+$flex-max: 10;
 
 // grid
 $grid: 12;

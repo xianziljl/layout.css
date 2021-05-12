@@ -1,13 +1,23 @@
 @import '../variable';
 
-@each $r in $border-radius {
-  .r-#{$r}{border-radius: #{$r}px}
-  .rt-#{$r}{border-top-left-radius: #{$r}px;border-top-right-radius: #{$r}px;}
-  .rb-#{$r}{border-bottom-left-radius: #{$r}px;border-bottom-right-radius: #{$r}px;}
-  .rl-#{$r}{border-top-left-radius: #{$r}px;border-bottom-left-radius: #{$r}px;}
-  .rr-#{$r}{border-top-right-radius: #{$r}px;border-bottom-right-radius: #{$r}px;}
-  .rtl-#{$r}{border-top-left-radius: #{$r}px;}
-  .rtr-#{$r}{border-top-right-radius: #{$r}px;}
-  .rbl-#{$r}{border-bottom-left-radius: #{$r}px;}
-  .rbr-#{$r}{border-bottom-right-radius: #{$r}px;}
+@for $i from 0 through $rounded-max {
+  $num: $i * $rounded-step;
+  .r-#{$i}{border-radius: #{$num}em}
+  .rt-#{$i}{border-top-left-radius: #{$num}em;border-top-right-radius: #{$num}em;}
+  .rb-#{$i}{border-bottom-left-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
+  .rl-#{$i}{border-top-left-radius: #{$num}em;border-bottom-left-radius: #{$num}em;}
+  .rr-#{$i}{border-top-right-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
+  .rtl-#{$i}{border-top-left-radius: #{$num}em;}
+  .rtr-#{$i}{border-top-right-radius: #{$num}em;}
+  .rbl-#{$i}{border-bottom-left-radius: #{$num}em;}
+  .rbr-#{$i}{border-bottom-right-radius: #{$num}em;}
 }
+.r-full{border-radius: 50%}
+.rt-full{border-top-left-radius: 50%;border-top-right-radius: 50%;}
+.rb-full{border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;}
+.rl-full{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
+.rr-full{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
+.rtl-full{border-top-left-radius: 50%;}
+.rtr-full{border-top-right-radius: 50%;}
+.rbl-full{border-bottom-left-radius: 50%;}
+.rbr-full{border-bottom-right-radius: 50%;}
