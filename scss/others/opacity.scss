@@ -1,6 +1,6 @@
 @import '../variable';
 
-@each $n in $opacity{
-  .o-#{$n}{opacity: $n / 10;}
+@for $i from 0 through $opacity-max{
+  .o-#{$i}{opacity: $i / 10;}
 }
 

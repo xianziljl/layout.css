@@ -1,11 +1,11 @@
 @import '../variable';
 
-@each $n in $opacity{
-  .h\:o-#{$n}:hover{opacity: $n / 10;}
+@for $i from 0 through $opacity-max{
+  .h\:o-#{$i}:hover{opacity: $i / 10;}
 }
-@each $n in $opacity{
-  .f\:o-#{$n}:focus{opacity: $n / 10;}
+@for $i from 0 through $opacity-max{
+  .f\:o-#{$i}:focus{opacity: $i / 10;}
 }
-@each $n in $opacity{
-  .a\:o-#{$n}:active{opacity: $n / 10;}
+@for $i from 0 through $opacity-max{
+  .a\:o-#{$i}:active{opacity: $i / 10;}
 }

@@ -12,9 +12,9 @@ $font-size-step: 0.1;
 $line-height-max: 10;
 $line-height-step: 0.1;
 
-$opacity: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$opacity-max: 10;
 
-$z-index: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$z-index-max: 10;
 
 // border-radius
 $rounded-max: 20;
@@ -39,7 +39,7 @@ $text-color-dark: #fff;    // 深色模式下文字颜色
 $text-color-value: 2, 4, 6, 8, 10;
 
 $bg-light: #fff;           // 亮色模式下的基础背景色（一般用在body上）
-$bg-dark: #13161b;            // 暗色模式下的基础背景色（一般用在body上）
+$bg-dark: #0d1117;            // 暗色模式下的基础背景色（一般用在body上）
 $bg-color: #13161b;           // 背景颜色
 $bg-color-dark: #fff;      // 深色模式下背景颜色
 $bg-color-value: 1, 2, 3, 4, 5;    // 背景的透明度为：实际数值 / 25
@@ -50,14 +50,16 @@ $border-color-value: 1, 2, 3, 4, 5, 0;
 
 // 此处的颜色并不会受黑色模式的影响
 $colors: (
-  w: #ffffff, // white
-  b: #1890ff, // blue
-  g: #00d369, // green
-  o: #ffa600, // orange
-  r: #ff4111, // red
-  blk: #000, // black  
+  white: #fff, // white
+  gray: #8d8d8d,
+  black: #000, // black  
+
+  blue: #1890ff, // blue
+  green: #00d369, // green
+  orange: #ffa600, // orange
+  red: #ff4111, // red
 );
-$colors-value: 1, 2, 4, 6, 8;
+$colors-value: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 
 // media query
 $media-query: (
