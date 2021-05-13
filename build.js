@@ -20,7 +20,10 @@ function fixClassNames(path) {
       if (!match) return str
       return str.replace(match[0], match[0].replace('.', '\\.'))
     })
-    const data = newArr.join('\n');
+    let data = newArr.join('\n');
+    data = data
+      .replace(/\}\s\}/g, '}\n}')
+      .replace(/\)\s\{\s\./g, ') {\n  .')
     
     fs.writeFile(path, data, 'utf-8', () => {
       console.log(`write file ${path}`)

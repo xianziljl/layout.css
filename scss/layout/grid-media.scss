@@ -16,5 +16,10 @@
       .#{$key}\:grs-#{$n}{grid-row-start: $n;}
       .#{$key}\:gcs-#{$n}{grid-column-start: $n;}
     }
+
+    @for $i from 0 through $grid-gap-max {
+      $num: $i * $grid-gap-step;
+      .#{$key}\:gap-#{$i}{grid-gap: #{$num}em}
+    }
   }
 }
