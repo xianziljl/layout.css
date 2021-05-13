@@ -1,4 +1,4 @@
 $sd-ns: 1, 2, 3, 4, 5;
 @each $sd in $sd-ns {
-  .bs-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.2), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
+  .shadow-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.2), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
 }

@@ -50,14 +50,14 @@ $border-color-value: 1, 2, 3, 4, 5, 0;
 
 // 此处的颜色并不会受黑色模式的影响
 $colors: (
-  white: #fff, // white
+  white: #fff,
   gray: #8d8d8d,
-  black: #000, // black  
+  black: #000,
 
-  blue: #1890ff, // blue
-  green: #00d369, // green
-  orange: #ffa600, // orange
-  red: #ff4111, // red
+  blue: #1a6df1,
+  green: #10ba75,
+  yellow: #f59e0b,
+  red: #ef4444,
 );
 $colors-value: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 
@@ -68,5 +68,6 @@ $media-query: (
   md: 1367,
   sm: 1001,
   xs: 769,
+  xxs: 501
 );
 

@@ -1,10 +1,10 @@
 $sd-ns: 1, 2, 3, 4, 5;
 @each $sd in $sd-ns {
-  .h\:bs-#{$sd}:hover{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
+  .h\:shadow-#{$sd}:hover{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
 }
 @each $sd in $sd-ns {
-  .f\:bs-#{$sd}:focus{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
+  .f\:shadow-#{$sd}:focus{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
 }
 @each $sd in $sd-ns {
-  .a\:bs-#{$sd}:active{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
+  .a\:shadow-#{$sd}:active{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.15), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
 }
