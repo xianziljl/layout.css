@@ -15,9 +15,15 @@
     .#{$key}\:js{justify-content: flex-start;}
     .#{$key}\:jc{justify-content: center;}
     .#{$key}\:je{justify-content: flex-end;}
-    .#{$key}\:fw{flex-wrap: wrap;}
-    @for $i from 1 through $flex-max {
-      .#{$key}\:f-#{$i}{flex: #{$i};}
+    .#{$key}\:wrap{flex-wrap: wrap;}
+
+    $max: ($flex-max - $flex-min) / $flex-step;
+    $min: $flex-min;
+    $step: $flex-step;
+    
+    @for $i from 0 through $max{
+      $num: $min + $i * $step;
+      .#{$key}\:f-#{$num}{flex: $num;}
     }
   }
 }

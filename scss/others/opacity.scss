@@ -1,6 +1,10 @@
 @import '../variable';
 
-@for $i from 0 through $opacity-max{
-  .o-#{$i}{opacity: $i / 10;}
-}
+$max: ($opacity-max - $opacity-min) / $opacity-step;
+$min: $opacity-min;
+$step: $opacity-step;
 
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .o-#{$num}{opacity: $num / 10;}
+}

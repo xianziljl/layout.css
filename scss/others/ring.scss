@@ -2,4 +2,5 @@
 
 @each $key, $val in $colors{
   .ring-#{$key}:focus{box-shadow: 0 0 0 2px transparentize($val, 0.7);}
+  // .ring-#{$key}:active{box-shadow: none;}
 }

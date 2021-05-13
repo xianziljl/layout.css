@@ -1,7 +1,6 @@
 @import '../variable';
 
 $trans: (
-  all: all,
   c: color,
   bg: background-color,
   o: opacity,
@@ -10,12 +9,17 @@ $trans: (
   tsfm: transform
 );
 
-[class*="trans"]{transition: all .3s;}
-
+.trans{transition: all .3s;}
 @each $key, $val in $trans{
   .trans-#{$key}{transition-property: $val;}
 }
 
-@each $n in $transition-during {
-  .dur-#{$n}{transition-duration: #{$n}ms;}
+
+$max: ($during-max - $during-min) / $during-step;
+$min: $during-min;
+$step: $during-step;
+
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .dur-#{$num}{transition-duration: #{$num}ms;}
 }

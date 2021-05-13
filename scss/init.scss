@@ -4,7 +4,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, ol{
 html{font-size: 16px;}
 body{font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, 'Segoe UI', Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
-*{outline: none;}
+*{outline: none;-webkit-tap-highlight-color:transparent;}
 *, ::before, ::after{box-sizing: border-box;}
 
 ul, ol{list-style-type: none;}

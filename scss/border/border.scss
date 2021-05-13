@@ -9,4 +9,27 @@
 .bb{border-bottom-width: 1px;}
 .bl{border-left-width: 1px;}
 
+
+$max: ($border-width-max - $border-width-min) / $border-width-step;
+$min: $border-width-min;
+$step: $border-width-step;
+
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .bd-#{$num}, .bx-#{$num}, .by-#{$num}, .bt-#{$num}, .br-#{$num}, .bb-#{$num}, .bl-#{$num}{border-width: 0;border-style: solid;}
+  .bd-#{$num}{border-width: #{$num}px;}
+}
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .bx-#{$num}{border-left-width: #{$num}px;border-right-width: #{$num}px;}
+  .by-#{$num}{border-top-width: #{$num}px;border-bottom-width: #{$num}px;}
+}
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .bt-#{$num}{border-top-width: #{$num}px;}
+  .br-#{$num}{border-right-width: #{$num}px;}
+  .bb-#{$num}{border-bottom-width: #{$num}px;}
+  .bl-#{$num}{border-left-width: #{$num}px;}
+}
+
 .bd-dash{border-style: dashed;}

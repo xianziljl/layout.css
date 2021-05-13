@@ -1,7 +1,12 @@
 @import '../variable';
 
-@for $i from 1 through $flex-max {
-  .f-#{$i}{flex: #{$i};}
+$max: ($flex-max - $flex-min) / $flex-step;
+$min: $flex-min;
+$step: $flex-step;
+
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .f-#{$num}{flex: $num;}
 }
 .fr{display: flex;flex-direction: row;}
 .fc{display: flex;flex-direction: column;}

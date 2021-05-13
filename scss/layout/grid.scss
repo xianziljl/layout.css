@@ -3,7 +3,7 @@
 .gfr{display: grid;grid-auto-flow: row;}
 .gfc{display: grid;grid-auto-flow: column;}
 
-@for $n from 1 through $grid {
+@for $n from 1 through $grid-max {
   .gtr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
   .gtc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 
@@ -14,6 +14,10 @@
   .gcs-#{$n}{grid-column-start: $n;}
 }
 
-@each $n in $grid-gap {
-  .gap-#{$n}{grid-gap: #{$n}px}
+// @each $n in $grid-gap {
+//   .gap-#{$n}{grid-gap: #{$n}px}
+// }
+@for $i from 0 through $grid-gap-max {
+  $num: $i * $grid-gap-step;
+  .gap-#{$i}{grid-gap: #{$num}em}
 }

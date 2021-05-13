@@ -16,11 +16,12 @@
     ::-webkit-scrollbar{width: 10px;height: 10px;}
     ::-webkit-scrollbar-thumb{background-color: rgba(120, 120, 120, 0.2);border: 1px solid rgba(120, 120, 120, 0.2);}
     ::-webkit-scrollbar-corner{background-color: transparent;}
+    *{scrollbar-color: rgba(120, 120, 120, 0.3) transparent;scrollbar-width: thin;}
   </style>
 </head>
-<body class="bg c-8 fs-0.9 fc oh">
+<body class="bg c-8 fs-0.9 fc oh trans-bg dur-200">
   <!-- <h1 tabindex="1" class="m-10 bc-1 c-5 bd h:bg-1 a:c-9 f:bc-4">测试文字</h1> -->
-  <div class="ps wf bb bc-1 bg z-2" style="left:0;top:0;">
+  <div class="ps wf bb bc-1 z-2" style="left:0;top:0;">
     <div class="ma wf px-10 fr hf ac" style="max-width:1200px;height: 60px;">
       <h1 class="f-1">ORIGIN.CSS</h1>
       <button id="switch" class="p-3 px-5 bd r-3 h:bg-2 ring-blue">切换暗色模式</button>
@@ -58,9 +59,9 @@
             <option value="1">你好</option>
             <option value="2">你好111</option>
           </select>
-          <button class="m-5 px-5 py-3 r-2 h:bg-1 a:bg-2 bd h:shadow-3">Button</button>
-          <button class="m-5 px-5 py-3 r-2 h:bg-1 a:bg-2 bd bc-2">Button</button>
-          <button class="m-5 px-5 py-3 r-2 h:bg-blue bg-blue-8 c-white a:bg-blue-8 ring-blue trans">Button</button>
+          <button class="m-5 px-5 py-3 r-3 h:bg-1 a:bg-2 bd h:shadow-3">Button</button>
+          <button class="m-5 px-5 py-3 r-3 h:bg-1 a:bg-2 bd bc-2">Button</button>
+          <button class="m-5 px-5 py-3 r-3 h:bg-blue bg-blue-8 c-white a:bg-blue-8 ring-blue trans">Button</button>
           <button class="m-5 px-5 py-3 r-3 bd bc-red-2 h:bg-red-2 bg-red-1 c-red a:bg-red-4 trans ring-red" id="dialog-btn">Dialog</button>
           <a class="m-5 toe h:c-blue h:u trans-c" href="#">链接</a>
         </div>
@@ -74,22 +75,22 @@
           <div class="px-4 py-1 r-10 bd bc-red-2 c-red ml-5">呢！</div>
         </div>
         <div class="p-10">
-          <div class="ifr btn-group">
-            <button class="p-2 px-5 bd bc-2 h:bg-1 rtl-3 rbl-3">This</button>
-            <button class="p-2 px-5 bd bc-2 h:bg-1">is</button>
-            <button class="p-2 px-5 bd bc-blue bg-blue-1 c-blue z-1">Button</button>
-            <button class="p-2 px-5 bd bc-2 h:bg-1 rtr-3 rbr-3">Group</button>
+          <div class="ifr">
+            <button class="p-2 px-5 bd ring-blue bc-2 h:bg-1 rtl-3 rbl-3">This</button>
+            <button class="p-2 px-5 bd ring-blue bc-2 h:bg-1">is</button>
+            <button class="p-2 px-5 bd ring-blue bc-blue bg-blue-1 c-blue z-1">Button</button>
+            <button class="p-2 px-5 bd ring-blue bc-2 h:bg-1 rtr-3 rbr-3">Group</button>
           </div>
         </div>
         <div class="p-10 fs-9">
-          <div class="p-4 m-1 bl bc-red-4 c-red bg-red-1 r-3" style="border-left-width: 5px;">以下各章节假设您已使用Vue CLI创建了一个新的Vuetify应用程序，并对Vue、HTML、CSS和JavaScript有基本的了解。 在[安装页面]（/getting-started/Installation/#Vue CLI install）上查找有关使用Vue CLI安装Vuetify的更多信息。</div>
-          <div class="p-5 bl bc-white-4 c-white bg-blue-6 r-5 mt-20" style="border-left-width: 5px;">在本页中，"Material 图标"被用来指代谷歌官方图标，“Material Design 图标”指代扩展的第三方库。</div>
-          <div class="p-5 bd bc-yellow-4 bg-yellow-1 r-5 fr mt-20 ac xs:fc xs:as">
+          <div class="p-4 m-1 bl bc-red-4 c-red bg-red-1 r-3 bl-6">以下各章节假设您已使用Vue CLI创建了一个新的Vuetify应用程序，并对Vue、HTML、CSS和JavaScript有基本的了解。 在[安装页面]（/getting-started/Installation/#Vue CLI install）上查找有关使用Vue CLI安装Vuetify的更多信息。</div>
+          <div class="p-5 bl bc-white-4 c-white bg-blue-6 r-3 mt-20 bl-6">在本页中，"Material 图标"被用来指代谷歌官方图标，“Material Design 图标”指代扩展的第三方库。</div>
+          <div class="p-5 bd bc-yellow-4 bg-yellow-1 r-3 fr mt-20 ac xs:fc xs:as">
             <div class="f-1 c-yellow">
               <div class="fs-8 b">We found potential security vulnerabilities in your dependencies.</div>
               <div class="mt-2">Only the owner of this repository can see this message.</div>
             </div>
-            <button class="p-3 px-5 bd r-5 bg-yellow-8 bc-yellow c-white h:bg-yellow xs:mt-5">See Dependabot alerts</button>
+            <button class="p-3 px-5 bd r-3 ring-yellow bg-yellow-8 bc-yellow c-white h:bg-yellow xs:mt-5">See Dependabot alerts</button>
           </div>
         </div>
         <div class="fc">
@@ -98,8 +99,8 @@
             <input class="f-1 p-4 bd bc-1 r-4 f:bc-blue ring-blue trans-bc" placeholder="请输入" type="number">
           </div>
           <div class="fr m-4">
-            <div class="p-4 rl-3 bg-1 by bl bc-1 c-6">http://</div>
-            <input class="p-4 bc-1 f:bc-blue bd trans-bc f-1 ring-blue" placeholder="请输入" type="text">
+            <div class="p-4 rl-3 bg-1 by bl bd-solid bc-1 c-6">http://</div>
+            <input class="p-4 bc-1 f:bc-blue bd trans f-1 ring-blue" placeholder="请输入" type="text">
             <div class="p-4 rr-3 by br bc-1 c-6">.com</div>
           </div>
           <textarea class="p-4 bc-1 m-4 r-3 bd bd f:bc-blue ring-blue trans-bc" placeholder="请输入" rows="4" style="resize: none;"></textarea>
@@ -160,8 +161,9 @@
       </div>
     </div>
   </div>
-  <div class="pf fu bg-black-6 z-2 ct vh" id="dialog" style="left: 0;top: 0;">
-    <div class="p-5 bg r-8 shadow-5 bd bc-white-1" style="max-width: 280px;">
+  <div class="pf fu z-2 ct vh" id="dialog" style="left: 0;top: 0;">
+    <div class="pa fu bg-black-7" id="dialog-mask"></div>
+    <div class="pr p-4 bg r-8 shadow-5 bd bc-white-1" style="max-width: 280px;">
       <div class="fs-1.2 b p-3">Use Google's location service?</div>
       <div class="p-3">Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</div>
       <div class="fr ac mt-2">

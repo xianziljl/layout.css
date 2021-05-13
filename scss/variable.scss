@@ -1,37 +1,47 @@
+$width-height-min: 0;
 $width-height-max: 20;
 $width-height-step: 0.2;
 
-// 输出 .fs-12{ font-size: 12px }
-$font-size: 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40;
-
 $font-size-min: 0;
-$font-size-max: 20;
+$font-size-max: 2;
 $font-size-step: 0.1;
 
-// line-height
-$line-height-max: 10;
+$line-height-min: 1;
+$line-height-max: 2;
 $line-height-step: 0.1;
 
+$opacity-min: 0;
 $opacity-max: 10;
+$opacity-step: 1;
 
+$z-index-min: 0;
 $z-index-max: 10;
+$z-index-step: 1;
 
-// border-radius
+$border-width-min: 0;
+$border-width-max: 20;
+$border-width-step: 1;
+
 $rounded-max: 20;
 $rounded-step: 0.1;
 
-// margin padding
 $margin-padding-max: 20;
 $margin-padding-step: 0.2;
-// flex 输出 .f-1{ flex: 1 }
+
+$flex-min: 0;
 $flex-max: 10;
+$flex-step: 1;
 
 // grid
-$grid: 12;
-$grid-gap: 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50;
+$grid-max: 12;
+$grid-step: 1;
+$grid-gap-max: 20;
+$grid-gap-step: 0.2;
 
 // transition
-$transition-during: 100, 200, 300, 400, 500;
+$during-min: 0;
+$during-max: 1000;
+$during-step: 100;
 
 // 颜色相关
 $text-color: #000;         // 文字颜色

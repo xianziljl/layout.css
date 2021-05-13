@@ -1,6 +1,8 @@
-@import '../variable';
+$max: ($font-size-max - $font-size-min) / $font-size-step;
+$min: $font-size-min;
+$step: $font-size-step;
 
-@for $i from 0 through $font-size-max {
-  $num: $i * $font-size-step;
-  .fs-#{$num}{font-size: #{$num}rem}
+@for $i from 0 through $max{
+  $num: $min + $i * $step;
+  .fs-#{$num}{font-size: #{$num}rem;}
 }

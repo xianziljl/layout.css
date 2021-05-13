@@ -6,7 +6,7 @@
     .#{$key}\:gfr{display: grid;grid-auto-flow: row;}
     .#{$key}\:gfc{display: grid;grid-auto-flow: column;}
 
-    @for $n from 1 through $grid {
+    @for $n from 1 through $grid-max {
       .#{$key}\:gtr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
       .#{$key}\:gtc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 

@@ -3,7 +3,7 @@
 .gfr{display: -ms-grid;grid-auto-flow: row;}
 .gfc{display: -ms-grid;grid-auto-flow: column;}
 
-@for $n from 1 through $grid {
+@for $n from 1 through $grid-max {
   $arr: ();
   @for $i from 1 through $n{
     $arr: append($arr, 1fr);
@@ -23,7 +23,7 @@
     .#{$key}\:gfr{display: -ms-grid;grid-auto-flow: row;}
     .#{$key}\:gfc{display: -ms-grid;grid-auto-flow: column;}
 
-    @for $n from 1 through $grid {
+    @for $n from 1 through $grid-max {
       $arr: ();
       @for $i from 1 through $n{
         $arr: append($arr, 1fr);
@@ -69,7 +69,7 @@
 //     .#{$key}\:fc{display: -ms-flexbox;-ms-flex-direction: column;}
 //     .#{$key}\:ifr{display: -ms-inline-flex;-ms-flex-direction: row;}
 //     .#{$key}\:ifc{display: -ms-inline-flex;-ms-flex-direction: column;}
-//     .#{$key}\:fw{-ms-flex-wrap: wrap;}
+//     .#{$key}\:wrap{-ms-flex-wrap: wrap;}
 //     @for $i from 1 through $flex {
 //       .#{$key}\:f-#{$i}{-ms-flex: #{$i};}
 //     }
