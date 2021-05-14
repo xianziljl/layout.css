@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx node-sass --output-style=compact scss/build -o css && node build.js",
+    "build": "npx node-sass --output-style=compact scss/build -o dist && node build.js",
     "purge": "npm run build && node purge.js"
   },
   "author": "xianziycg@gmail.com",
