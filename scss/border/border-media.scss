@@ -1,0 +1,37 @@
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    // flex
+    .#{$key}\:bd{border-width: 1px;}
+    .#{$key}\:bx{border-left-width: 1px;border-right-width: 1px;}
+    .#{$key}\:by{border-top-width: 1px;border-bottom-width: 1px;}
+    .#{$key}\:bt{border-top-width: 1px;}
+    .#{$key}\:br{border-right-width: 1px;}
+    .#{$key}\:bb{border-bottom-width: 1px;}
+    .#{$key}\:bl{border-left-width: 1px;}
+
+
+    $max: ($border-width-max - $border-width-min) / $border-width-step;
+    $min: $border-width-min;
+    $step: $border-width-step;
+
+    @for $i from 0 through $max{
+      $num: $min + $i * $step;
+      .#{$key}\:bd-#{$num}{border-width: #{$num}px;}
+    }
+    @for $i from 0 through $max{
+      $num: $min + $i * $step;
+      .#{$key}\:bx-#{$num}{border-left-width: #{$num}px;border-right-width: #{$num}px;}
+      .#{$key}\:by-#{$num}{border-top-width: #{$num}px;border-bottom-width: #{$num}px;}
+    }
+    @for $i from 0 through $max{
+      $num: $min + $i * $step;
+      .#{$key}\:bt-#{$num}{border-top-width: #{$num}px;}
+      .#{$key}\:br-#{$num}{border-right-width: #{$num}px;}
+      .#{$key}\:bb-#{$num}{border-bottom-width: #{$num}px;}
+      .#{$key}\:bl-#{$num}{border-left-width: #{$num}px;}
+    }
+
+    .#{$key}\:bd-dash{border-style: dashed;}
+  }
+}

@@ -1,0 +1,37 @@
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    // flex
+    @for $i from 0 through $rounded-max {
+      $num: $i * $rounded-step;
+      .#{$key}\:r-#{$i}{border-radius: #{$num}em}
+      .#{$key}\:rt-#{$i}{border-top-left-radius: #{$num}em;border-top-right-radius: #{$num}em;}
+      .#{$key}\:rb-#{$i}{border-bottom-left-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
+      .#{$key}\:rl-#{$i}{border-top-left-radius: #{$num}em;border-bottom-left-radius: #{$num}em;}
+      .#{$key}\:rr-#{$i}{border-top-right-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
+      .#{$key}\:rtl-#{$i}{border-top-left-radius: #{$num}em;}
+      .#{$key}\:rtr-#{$i}{border-top-right-radius: #{$num}em;}
+      .#{$key}\:rbl-#{$i}{border-bottom-left-radius: #{$num}em;}
+      .#{$key}\:rbr-#{$i}{border-bottom-right-radius: #{$num}em;}
+    }
+    .#{$key}\:r-full{border-radius: 50%}
+    .#{$key}\:rt-full{border-top-left-radius: 50%;border-top-right-radius: 50%;}
+    .#{$key}\:rb-full{border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;}
+    .#{$key}\:rl-full{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
+    .#{$key}\:rr-full{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
+    .#{$key}\:rtl-full{border-top-left-radius: 50%;}
+    .#{$key}\:rtr-full{border-top-right-radius: 50%;}
+    .#{$key}\:rbl-full{border-bottom-left-radius: 50%;}
+    .#{$key}\:rbr-full{border-bottom-right-radius: 50%;}
+    
+    .#{$key}\:r-max{border-radius: 9999px;}
+    .#{$key}\:rt-max{border-top-left-radius: 9999px;border-top-right-radius: 9999px;}
+    .#{$key}\:rb-max{border-bottom-left-radius: 9999px;border-bottom-right-radius: 9999px;}
+    .#{$key}\:rl-max{border-top-left-radius: 9999px;border-bottom-left-radius: 9999px;}
+    .#{$key}\:rr-max{border-top-right-radius: 9999px;border-bottom-right-radius: 9999px;}
+    .#{$key}\:rtl-max{border-top-left-radius: 9999px;}
+    .#{$key}\:rtr-max{border-top-right-radius: 9999px;}
+    .#{$key}\:rbl-max{border-bottom-left-radius: 9999px;}
+    .#{$key}\:rbr-max{border-bottom-right-radius: 9999px;}
+  }
+}

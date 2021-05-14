@@ -2,6 +2,16 @@
 
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
+    
+    .#{$key}\:m-a{margin: auto;}
+    .#{$key}\:mx-a{margin-left: auto;margin-right: auto;}
+    .#{$key}\:my-a{margin-top: auto;margin-bottom: auto;}
+    .#{$key}\:mt-a{margin-top: auto;}
+    .#{$key}\:mr-a{margin-right: auto;}
+    .#{$key}\:mb-a{margin-bottom: auto;}
+    .#{$key}\:ml-a{margin-left: auto;}
+
+
     @for $i from 0 through $margin-padding-max {
       $num: $i * $margin-padding-step;
       .#{$key}\:m-#{$i}{margin: #{$num}em}

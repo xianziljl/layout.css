@@ -1,6 +1,5 @@
 @import '../variable';
 
-.bd, .bx, .by, .bt, .br, .bb, .bl{border-width: 0;border-style: solid;}
 .bd{border-width: 1px;}
 .bx{border-left-width: 1px;border-right-width: 1px;}
 .by{border-top-width: 1px;border-bottom-width: 1px;}
@@ -16,7 +15,6 @@ $step: $border-width-step;
 
 @for $i from 0 through $max{
   $num: $min + $i * $step;
-  .bd-#{$num}, .bx-#{$num}, .by-#{$num}, .bt-#{$num}, .br-#{$num}, .bb-#{$num}, .bl-#{$num}{border-width: 0;border-style: solid;}
   .bd-#{$num}{border-width: #{$num}px;}
 }
 @for $i from 0 through $max{
