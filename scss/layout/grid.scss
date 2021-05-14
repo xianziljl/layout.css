@@ -1,23 +1,32 @@
 @import '../variable';
 
-.gfr{display: grid;grid-auto-flow: row;}
-.gfc{display: grid;grid-auto-flow: column;}
+.row{display: grid;grid-auto-flow: row;}
+.col{display: grid;grid-auto-flow: column;}
+.irow{display: inline-grid;grid-auto-flow: row;}
+.icol{display: inline-grid;grid-auto-flow: column;}
+
+.ass{align-self: start;}
+.asc{align-self: center;}
+.ase{align-self: end;}
+
+.jss{justify-self: start;}
+.jsc{justify-self: center;}
+.jse{justify-self: end;}
 
 @for $n from 1 through $grid-max {
-  .gtr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
-  .gtc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
+  .rows-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
+  .cols-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 
-  .gr-#{$n}{grid-row: span #{$n};}
-  .gc-#{$n}{grid-column: span #{$n};}
+  .row-#{$n}{grid-row: span #{$n};}
+  .col-#{$n}{grid-column: span #{$n};}
 
-  .grs-#{$n}{grid-row-start: $n;}
-  .gcs-#{$n}{grid-column-start: $n;}
+  .rs-#{$n}{grid-row-start: $n;}
+  .cs-#{$n}{grid-column-start: $n;}
 }
 
-// @each $n in $grid-gap {
-//   .gap-#{$n}{grid-gap: #{$n}px}
-// }
 @for $i from 0 through $grid-gap-max {
   $num: $i * $grid-gap-step;
-  .gap-#{$i}{grid-gap: #{$num}em}
+  .gap-#{$i}{grid-gap: #{$num}em;gap: #{$num}em}
+  .gapr-#{$i}{grid-row-gap: #{$num}em;row-gap: #{$num}em}
+  .gapc-#{$i}{grid-column-gap: #{$num}em;column-gap: #{$num}em}
 }

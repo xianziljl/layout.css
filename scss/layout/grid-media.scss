@@ -3,23 +3,35 @@
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
     // grid
-    .#{$key}\:gfr{display: grid;grid-auto-flow: row;}
-    .#{$key}\:gfc{display: grid;grid-auto-flow: column;}
+    .#{$key}\:row{display: grid;grid-auto-flow: row;}
+    .#{$key}\:col{display: grid;grid-auto-flow: column;}
+    .#{$key}\:irow{display: inline-grid;grid-auto-flow: row;}
+    .#{$key}\:icol{display: inline-grid;grid-auto-flow: column;}
+
+    .#{$key}\:ass{align-self: start;}
+    .#{$key}\:asc{align-self: center;}
+    .#{$key}\:ase{align-self: end;}
+
+    .#{$key}\:jss{justify-self: start;}
+    .#{$key}\:jsc{justify-self: center;}
+    .#{$key}\:jse{justify-self: end;}
 
     @for $n from 1 through $grid-max {
-      .#{$key}\:gtr-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
-      .#{$key}\:gtc-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
+      .#{$key}\:rows-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
+      .#{$key}\:cols-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 
-      .#{$key}\:gr-#{$n}{grid-row: span #{$n};}
-      .#{$key}\:gc-#{$n}{grid-column: span #{$n};}
+      .#{$key}\:row-#{$n}{grid-row: span #{$n};}
+      .#{$key}\:col-#{$n}{grid-column: span #{$n};}
 
-      .#{$key}\:grs-#{$n}{grid-row-start: $n;}
-      .#{$key}\:gcs-#{$n}{grid-column-start: $n;}
+      .#{$key}\:rs-#{$n}{grid-row-start: $n;}
+      .#{$key}\:cs-#{$n}{grid-column-start: $n;}
     }
 
     @for $i from 0 through $grid-gap-max {
       $num: $i * $grid-gap-step;
-      .#{$key}\:gap-#{$i}{grid-gap: #{$num}em}
+      .#{$key}\:gap-#{$i}{grid-gap: #{$num}em;gap: #{$num}em}
+      .#{$key}\:gapr-#{$i}{grid-row-gap: #{$num}em;row-gap: #{$num}em}
+      .#{$key}\:gapc-#{$i}{grid-column-gap: #{$num}em;column-gap: #{$num}em}
     }
   }
 }

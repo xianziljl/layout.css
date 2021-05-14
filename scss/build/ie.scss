@@ -1,41 +1,45 @@
 @import '../variable';
 
-.gfr{display: -ms-grid;grid-auto-flow: row;}
-.gfc{display: -ms-grid;grid-auto-flow: column;}
+.row{display: -ms-grid;grid-auto-flow: row;}
+.col{display: -ms-grid;grid-auto-flow: column;}
+.irow{display: -ms-inline-grid;grid-auto-flow: row;}
+.icol{display: -ms-inline-grid;grid-auto-flow: column;}
 
 @for $n from 1 through $grid-max {
   $arr: ();
   @for $i from 1 through $n{
     $arr: append($arr, 1fr);
   }
-  .gtr-#{$n}{-ms-grid-rows: $arr;}
-  .gtc-#{$n}{-ms-grid-columns: $arr;}
+  .rows-#{$n}{-ms-grid-rows: $arr;}
+  .cols-#{$n}{-ms-grid-columns: $arr;}
   
-  .gr-#{$n}{-ms-grid-row-span:#{$n};}
-  .gc-#{$n}{-ms-grid-column-span:#{$n};}
+  .row-#{$n}{-ms-grid-row-span:#{$n};}
+  .col-#{$n}{-ms-grid-column-span:#{$n};}
 
-  .grs-#{$n}{-ms-grid-row: $n;}
-  .gcs-#{$n}{-ms-grid-column: $n;}
+  .rs-#{$n}{-ms-grid-row: $n;}
+  .cs-#{$n}{-ms-grid-column: $n;}
 }
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
     // grid
-    .#{$key}\:gfr{display: -ms-grid;grid-auto-flow: row;}
-    .#{$key}\:gfc{display: -ms-grid;grid-auto-flow: column;}
+    .#{$key}\:row{display: -ms-grid;grid-auto-flow: row;}
+    .#{$key}\:col{display: -ms-grid;grid-auto-flow: column;}
+    .#{$key}\:irow{display: -ms-inline-grid;grid-auto-flow: row;}
+    .#{$key}\:icol{display: -ms-inline-grid;grid-auto-flow: column;}
 
     @for $n from 1 through $grid-max {
       $arr: ();
       @for $i from 1 through $n{
         $arr: append($arr, 1fr);
       }
-      .#{$key}\:gtr-#{$n}{-ms-grid-rows: $arr;}
-      .#{$key}\:gtc-#{$n}{-ms-grid-columns: $arr;}
+      .#{$key}\:rows-#{$n}{-ms-grid-rows: $arr;}
+      .#{$key}\:cols-#{$n}{-ms-grid-columns: $arr;}
       
-      .#{$key}\:gr-#{$n}{-ms-grid-row-span:#{$n};}
-      .#{$key}\:gc-#{$n}{-ms-grid-column-span:#{$n};}
+      .#{$key}\:row-#{$n}{-ms-grid-row-span:#{$n};}
+      .#{$key}\:col-#{$n}{-ms-grid-column-span:#{$n};}
 
-      .#{$key}\:grs-#{$n}{-ms-grid-row: $n;}
-      .#{$key}\:gcs-#{$n}{-ms-grid-column: $n;}
+      .#{$key}\:rs-#{$n}{-ms-grid-row: $n;}
+      .#{$key}\:cs-#{$n}{-ms-grid-column: $n;}
     }
   }
 }

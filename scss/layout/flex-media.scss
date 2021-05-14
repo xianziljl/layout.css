@@ -7,15 +7,15 @@
     .#{$key}\:fc{display: flex;flex-direction: column;}
     .#{$key}\:ifr{display: inline-flex;flex-direction: row;}
     .#{$key}\:ifc{display: inline-flex;flex-direction: column;}
+    .#{$key}\:wrap{flex-wrap: wrap;}
     
     .#{$key}\:as{align-items: flex-start;}
     .#{$key}\:ac{align-items: center;}
     .#{$key}\:ae{align-items: flex-end;}
-
+    
     .#{$key}\:js{justify-content: flex-start;}
     .#{$key}\:jc{justify-content: center;}
     .#{$key}\:je{justify-content: flex-end;}
-    .#{$key}\:wrap{flex-wrap: wrap;}
 
     $max: ($flex-max - $flex-min) / $flex-step;
     $min: $flex-min;
