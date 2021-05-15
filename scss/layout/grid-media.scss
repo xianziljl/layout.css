@@ -1,5 +1,6 @@
 @import '../variable';
 
+
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
     // grid
@@ -27,11 +28,16 @@
       .#{$key}\:cs-#{$n}{grid-column-start: $n;}
     }
 
-    @for $i from 0 through $grid-gap-max {
-      $num: $i * $grid-gap-step;
-      .#{$key}\:gap-#{$i}{grid-gap: #{$num}em;gap: #{$num}em}
-      .#{$key}\:gapr-#{$i}{grid-row-gap: #{$num}em;row-gap: #{$num}em}
-      .#{$key}\:gapc-#{$i}{grid-column-gap: #{$num}em;column-gap: #{$num}em}
+    
+    $step: $grid-gap-step;
+    $unit: $grid-gap-unit;
+    $max: $grid-gap-max / $step;
+
+    @for $i from 0 through $max {
+      $num: $i * $step;
+      .#{$key}\:gap-#{$i}{grid-gap: #{$num}#{$unit};gap: #{$num}#{$unit}}
+      .#{$key}\:gapr-#{$i}{grid-row-gap: #{$num}#{$unit};row-gap: #{$num}#{$unit}}
+      .#{$key}\:gapc-#{$i}{grid-column-gap: #{$num}#{$unit};column-gap: #{$num}#{$unit}}
     }
   }
 }

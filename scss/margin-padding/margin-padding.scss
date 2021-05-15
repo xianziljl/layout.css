@@ -8,38 +8,42 @@
 .mb-a{margin-bottom: auto;}
 .ml-a{margin-left: auto;}
 
-@for $i from 0 through $margin-padding-max {
-  $num: $i * $margin-padding-step;
-  .m-#{$i}{margin: #{$num}em}
+$step: $margin-padding-step;
+$unit: $margin-padding-unit;
+$max: $margin-padding-max / $step;
+
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .m-#{$i}{margin: #{$num}#{$unit}}
 }
-@for $i from 0 through $margin-padding-max {
-  $num: $i * $margin-padding-step;
-  .mx-#{$i}{margin-left: #{$num}em;margin-right: #{$num}em;}
-  .my-#{$i}{margin-top: #{$num}em;margin-bottom: #{$num}em}
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .mx-#{$i}{margin-left: #{$num}#{$unit};margin-right: #{$num}#{$unit};}
+  .my-#{$i}{margin-top: #{$num}#{$unit};margin-bottom: #{$num}#{$unit}}
 }
-@for $i from 0 through $margin-padding-max {
-  $num: $i * $margin-padding-step;
-  .mt-#{$i}{margin-top: #{$num}em}
-  .mr-#{$i}{margin-right: #{$num}em}
-  .mb-#{$i}{margin-bottom: #{$num}em}
-  .ml-#{$i}{margin-left: #{$num}em}
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .mt-#{$i}{margin-top: #{$num}#{$unit}}
+  .mr-#{$i}{margin-right: #{$num}#{$unit}}
+  .mb-#{$i}{margin-bottom: #{$num}#{$unit}}
+  .ml-#{$i}{margin-left: #{$num}#{$unit}}
 }
 
 
 
-@for $i from 0 through $margin-padding-max {
-  $num: $i * $margin-padding-step;
-  .p-#{$i}{padding: #{$num}em}
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .p-#{$i}{padding: #{$num}#{$unit}}
 }
-@for $i from 0 through $margin-padding-max {
-  $num: $i * $margin-padding-step;
-  .px-#{$i}{padding-left: #{$num}em;padding-right: #{$num}em;}
-  .py-#{$i}{padding-top: #{$num}em;padding-bottom: #{$num}em}
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .px-#{$i}{padding-left: #{$num}#{$unit};padding-right: #{$num}#{$unit};}
+  .py-#{$i}{padding-top: #{$num}#{$unit};padding-bottom: #{$num}#{$unit}}
 }
-@for $i from 0 through $margin-padding-max {
-  $num: $i * $margin-padding-step;
-  .pt-#{$i}{padding-top: #{$num}em}
-  .pr-#{$i}{padding-right: #{$num}em}
-  .pb-#{$i}{padding-bottom: #{$num}em}
-  .pl-#{$i}{padding-left: #{$num}em}
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .pt-#{$i}{padding-top: #{$num}#{$unit}}
+  .pr-#{$i}{padding-right: #{$num}#{$unit}}
+  .pb-#{$i}{padding-bottom: #{$num}#{$unit}}
+  .pl-#{$i}{padding-left: #{$num}#{$unit}}
 }

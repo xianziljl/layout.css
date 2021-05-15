@@ -1,18 +1,17 @@
 @import '../variable';
 
-$max: ($opacity-max - $opacity-min) / $opacity-step;
-$min: $opacity-min;
+$max: 1 / $opacity-step;
 $step: $opacity-step;
 
 @for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .h\:o-#{$num}:hover{opacity: $num / 10;}
+  $num: $i * $step;
+  .h\:o-#{$num}:hover{opacity: $num;}
 }
 @for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .f\:o-#{$num}:focus{opacity: $num / 10;}
+  $num: $i * $step;
+  .f\:o-#{$num}:focus{opacity: $num;}
 }
 @for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .a\:o-#{$num}:active{opacity: $num / 10;}
+  $num: $i * $step;
+  .a\:o-#{$num}:active{opacity: $num;}
 }

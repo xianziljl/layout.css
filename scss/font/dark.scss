@@ -1,5 +1,9 @@
 @import '../variable';
 
-@each $n in $text-color-value {
-  .c-#{$n}{color: transparentize($text-color-dark, 1 - $n / 10)}
+$max: 1 / $text-color-step;
+$step: $text-color-step;
+
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .c-#{$i}{color: transparentize($text-dark, 1 - $num)}
 }

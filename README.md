@@ -18,8 +18,8 @@ npm run build:compressed
 
 ## grid 布局
 ```html
-<div class="gfr gtr-2 gtc-2 gg-10">
-  <div class="gc-2 gr-1"></div>
+<div class="row cols-2 rows-2 gap-10">
+  <div class="col-2 row-1"></div>
   <div></div>
   <div></div>
 </div>
@@ -51,7 +51,7 @@ npm run build:compressed
 ```html
 <div class="z-5"></div> <!-- z-index: 5; -->
 <div class="o-5"></div> <!-- opacity: 0.5; -->
-<div class="r-5"></div> <!-- border-radius: 5px; -->
+<div class="radius-5"></div> <!-- border-radius: 5px; -->
 ```
 > 所有可选数值均可在 `scss/variable.scss` 中调整。  
 > 例如 `margin` 的可选值为 `$margin` 变量，有 `1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 50, 0`。
@@ -66,7 +66,7 @@ npm run build:compressed
 <div class="bb"></div> <!-- 下 -->
 <div class="bl"></div> <!-- 左 -->
 ```
-> 边框的宽度均为 `1px`，边框样式均为 `solid`，颜色在下文说明。
+> 边框的宽度可选如`bd-5`，边框样式均为 `solid`，颜色在下文说明。
 
 ## 颜色
 > 可控制的颜色为字体颜色、背景颜色、边框颜色。  

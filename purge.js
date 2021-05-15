@@ -23,7 +23,7 @@ function getUsedNames() {
 }
 
 function getClassName(str) {
-  const cls = str.match(/^\s*[\w-:\.\\]+\s/)
+  const cls = str.match(/^\s*[\w-:\.\\%]+\s/)
   if (!cls) return null
   return cls[0]
     .replace(/\s/g, '')

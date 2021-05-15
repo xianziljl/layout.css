@@ -4,9 +4,9 @@ $max: 1 / $color-step;
 $step: $color-step;
 
 @each $key, $val in $colors{
-  .c-#{$key}{color: $val;}
+  .bc-#{$key}{border-color: $val;}
   @for $i from 0 through $max{
     $num: $i * $step;
-    .c-#{$key}-#{$i}{color: transparentize($val, 1 - $num)}
+    .bc-#{$key}-#{$i}{border-color: transparentize($val, 1 - $num)}
   }
 }

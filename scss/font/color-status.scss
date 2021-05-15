@@ -1,25 +1,29 @@
 @import '../variable';
 
+$max: 1 / $color-step;
+$step: $color-step;
 
 @each $key, $val in $colors{
   .h\:c-#{$key}:hover{color: $val;}
-  @each $n in $colors-value {
-    .h\:c-#{$key}-#{$n}:hover{color: transparentize($val, 1 - $n / 10)}
+  @for $i from 0 through $max{
+    $num: $i * $step;
+    .h\:c-#{$key}-#{$i}:hover{color: transparentize($val, 1 - $num)}
   }
 }
-
 
 @each $key, $val in $colors{
   .f\:c-#{$key}:focus{color: $val;}
-  @each $n in $colors-value {
-    .f\:c-#{$key}-#{$n}:focus{color: transparentize($val, 1 - $n / 10)}
+  @for $i from 0 through $max{
+    $num: $i * $step;
+    .f\:c-#{$key}-#{$i}:focus{color: transparentize($val, 1 - $num)}
   }
 }
-
 
 @each $key, $val in $colors{
   .a\:c-#{$key}:active{color: $val;}
-  @each $n in $colors-value {
-    .a\:c-#{$key}-#{$n}:active{color: transparentize($val, 1 - $n / 10)}
+  @for $i from 0 through $max{
+    $num: $i * $step;
+    .a\:c-#{$key}-#{$i}:active{color: transparentize($val, 1 - $num)}
   }
 }
+

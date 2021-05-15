@@ -1,6 +1,11 @@
 @import '../variable';
 
-.bg{background-color: $bg-light;}
-@each $n in $bg-color-value {
-  .bg-#{$n}{background-color: transparentize($bg-color, 1 - $n / 25)}
+.bg{background-color: $bg-base-light;}
+
+$max: 1 / $bg-color-step;
+$step: $bg-color-step;
+
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .bg-#{$i}{background-color: transparentize($bg-light, 1 - $num)}
 }

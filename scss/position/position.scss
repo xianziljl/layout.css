@@ -1,0 +1,19 @@
+@import '../variable';
+
+$unit: $position-unit;
+
+@for $i from 0 through 99 {
+  $num: 100% * $i / 100;
+  .l-#{$i}\%{left: #{$num}}
+  .r-#{$i}\%{right: #{$num}}
+  .t-#{$i}\%{top: #{$num}}
+  .b-#{$i}\%{bottom: #{$num}}
+}
+
+@for $i from 0 through $position-max {
+  $num: $i * $position-step;
+  .l-#{$i}{left: #{$num}#{$unit}}
+  .r-#{$i}{right: #{$num}#{$unit}}
+  .t-#{$i}{top: #{$num}#{$unit}}
+  .b-#{$i}{bottom: #{$num}#{$unit}}
+}

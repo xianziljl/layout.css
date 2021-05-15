@@ -17,12 +17,11 @@
     .#{$key}\:jc{justify-content: center;}
     .#{$key}\:je{justify-content: flex-end;}
 
-    $max: ($flex-max - $flex-min) / $flex-step;
-    $min: $flex-min;
+    $max: $flex-max / $flex-step;
     $step: $flex-step;
     
     @for $i from 0 through $max{
-      $num: $min + $i * $step;
+      $num: $i * $step;
       .#{$key}\:f-#{$num}{flex: $num;}
     }
   }

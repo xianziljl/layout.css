@@ -8,26 +8,22 @@
 .bb{border-bottom-width: 1px;}
 .bl{border-left-width: 1px;}
 
-
-$max: ($border-width-max - $border-width-min) / $border-width-step;
-$min: $border-width-min;
-$step: $border-width-step;
-
-@for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .bd-#{$num}{border-width: #{$num}px;}
+$unit: $border-width-unit;
+@for $i from 0 through $border-width-max{
+  $num: $i * $border-width-step;
+  .bd-#{$num}{border-width: #{$num}#{$unit};}
 }
-@for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .bx-#{$num}{border-left-width: #{$num}px;border-right-width: #{$num}px;}
-  .by-#{$num}{border-top-width: #{$num}px;border-bottom-width: #{$num}px;}
+@for $i from 0 through $border-width-max{
+  $num: $i * $border-width-step;
+  .bx-#{$num}{border-left-width: #{$num}#{$unit};border-right-width: #{$num}#{$unit};}
+  .by-#{$num}{border-top-width: #{$num}#{$unit};border-bottom-width: #{$num}#{$unit};}
 }
-@for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .bt-#{$num}{border-top-width: #{$num}px;}
-  .br-#{$num}{border-right-width: #{$num}px;}
-  .bb-#{$num}{border-bottom-width: #{$num}px;}
-  .bl-#{$num}{border-left-width: #{$num}px;}
+@for $i from 0 through $border-width-max{
+  $num: $i * $border-width-step;
+  .bt-#{$num}{border-top-width: #{$num}#{$unit};}
+  .br-#{$num}{border-right-width: #{$num}#{$unit};}
+  .bb-#{$num}{border-bottom-width: #{$num}#{$unit};}
+  .bl-#{$num}{border-left-width: #{$num}#{$unit};}
 }
 
 .bd-dash{border-style: dashed;}

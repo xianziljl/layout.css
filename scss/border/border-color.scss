@@ -1,8 +1,0 @@
-@import '../variable';
-
-@each $key, $val in $colors{
-  .bc-#{$key}{border-color: $val;}
-  @each $n in $colors-value {
-    .bc-#{$key}-#{$n}{border-color: transparentize($val, 1 - $n / 10)}
-  }
-}

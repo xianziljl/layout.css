@@ -1,8 +1,9 @@
 $max: ($font-size-max - $font-size-min) / $font-size-step;
 $min: $font-size-min;
 $step: $font-size-step;
+$unit: $font-size-unit;
 
 @for $i from 0 through $max{
   $num: $min + $i * $step;
-  .fs-#{$num}{font-size: #{$num}rem;}
+  .fs-#{$num}{font-size: #{$num}#{$unit};}
 }

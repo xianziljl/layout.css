@@ -1,33 +1,47 @@
 @import '../variable';
 
-@for $i from 0 through $rounded-max {
-  $num: $i * $rounded-step;
-  .r-#{$i}{border-radius: #{$num}em}
-  .rt-#{$i}{border-top-left-radius: #{$num}em;border-top-right-radius: #{$num}em;}
-  .rb-#{$i}{border-bottom-left-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
-  .rl-#{$i}{border-top-left-radius: #{$num}em;border-bottom-left-radius: #{$num}em;}
-  .rr-#{$i}{border-top-right-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
-  .rtl-#{$i}{border-top-left-radius: #{$num}em;}
-  .rtr-#{$i}{border-top-right-radius: #{$num}em;}
-  .rbl-#{$i}{border-bottom-left-radius: #{$num}em;}
-  .rbr-#{$i}{border-bottom-right-radius: #{$num}em;}
-}
-.r-full{border-radius: 50%}
-.rt-full{border-top-left-radius: 50%;border-top-right-radius: 50%;}
-.rb-full{border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;}
-.rl-full{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
-.rr-full{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
-.rtl-full{border-top-left-radius: 50%;}
-.rtr-full{border-top-right-radius: 50%;}
-.rbl-full{border-bottom-left-radius: 50%;}
-.rbr-full{border-bottom-right-radius: 50%;}
+$unit: $radius-unit;
 
-.r-max{border-radius: 9999px;}
-.rt-max{border-top-left-radius: 9999px;border-top-right-radius: 9999px;}
-.rb-max{border-bottom-left-radius: 9999px;border-bottom-right-radius: 9999px;}
-.rl-max{border-top-left-radius: 9999px;border-bottom-left-radius: 9999px;}
-.rr-max{border-top-right-radius: 9999px;border-bottom-right-radius: 9999px;}
-.rtl-max{border-top-left-radius: 9999px;}
-.rtr-max{border-top-right-radius: 9999px;}
-.rbl-max{border-bottom-left-radius: 9999px;}
-.rbr-max{border-bottom-right-radius: 9999px;}
+@for $i from 0 through $radius-max {
+  $num: $i * $radius-step;
+  .radius-#{$i}{border-radius: #{$num}#{$unit}}
+  .radius-t-#{$i}{border-top-left-radius: #{$num}#{$unit};border-top-right-radius: #{$num}#{$unit};}
+  .radius-b-#{$i}{border-bottom-left-radius: #{$num}#{$unit};border-bottom-right-radius: #{$num}#{$unit};}
+  .radius-l-#{$i}{border-top-left-radius: #{$num}#{$unit};border-bottom-left-radius: #{$num}#{$unit};}
+  .radius-r-#{$i}{border-top-right-radius: #{$num}#{$unit};border-bottom-right-radius: #{$num}#{$unit};}
+  .radius-tl-#{$i}{border-top-left-radius: #{$num}#{$unit};}
+  .radius-tr-#{$i}{border-top-right-radius: #{$num}#{$unit};}
+  .radius-bl-#{$i}{border-bottom-left-radius: #{$num}#{$unit};}
+  .radius-br-#{$i}{border-bottom-right-radius: #{$num}#{$unit};}
+  .radius-lt-#{$i}{border-top-left-radius: #{$num}#{$unit};}
+  .radius-rt-#{$i}{border-top-right-radius: #{$num}#{$unit};}
+  .radius-lb-#{$i}{border-bottom-left-radius: #{$num}#{$unit};}
+  .radius-rb-#{$i}{border-bottom-right-radius: #{$num}#{$unit};}
+}
+.radius-full{border-radius: 50%}
+.radius-t-full{border-top-left-radius: 50%;border-top-right-radius: 50%;}
+.radius-b-full{border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;}
+.radius-l-full{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
+.radius-r-full{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
+.radius-tl-full{border-top-left-radius: 50%;}
+.radius-tr-full{border-top-right-radius: 50%;}
+.radius-bl-full{border-bottom-left-radius: 50%;}
+.radius-br-full{border-bottom-right-radius: 50%;}
+.radius-lt-full{border-top-left-radius: 50%;}
+.radius-rt-full{border-top-right-radius: 50%;}
+.radius-lb-full{border-bottom-left-radius: 50%;}
+.radius-rb-full{border-bottom-right-radius: 50%;}
+
+.radius-max{border-radius: 9999px;}
+.radius-t-max{border-top-left-radius: 9999px;border-top-right-radius: 9999px;}
+.radius-b-max{border-bottom-left-radius: 9999px;border-bottom-right-radius: 9999px;}
+.radius-l-max{border-top-left-radius: 9999px;border-bottom-left-radius: 9999px;}
+.radius-r-max{border-top-right-radius: 9999px;border-bottom-right-radius: 9999px;}
+.radius-tl-max{border-top-left-radius: 9999px;}
+.radius-tr-max{border-top-right-radius: 9999px;}
+.radius-bl-max{border-bottom-left-radius: 9999px;}
+.radius-br-max{border-bottom-right-radius: 9999px;}
+.radius-lt-max{border-top-left-radius: 9999px;}
+.radius-rt-max{border-top-right-radius: 9999px;}
+.radius-lb-max{border-bottom-left-radius: 9999px;}
+.radius-rb-max{border-bottom-right-radius: 9999px;}

@@ -1,14 +1,16 @@
 @import '../variable';
+$max: 1 / $text-color-step;
+$step: $text-color-step;
 
-
-@each $n in $text-color-value {
-  .h\:c-#{$n}:hover{color: transparentize($text-color, 1 - $n / 10)}
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .h\:c-#{$i}:hover{color: transparentize($text-light, 1 - $num)}
 }
-
-@each $n in $text-color-value {
-  .f\:c-#{$n}:focus{color: transparentize($text-color, 1 - $n / 10)}
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .f\:c-#{$i}:focus{color: transparentize($text-light, 1 - $num)}
 }
-
-@each $n in $text-color-value {
-  .a\:c-#{$n}:active{color: transparentize($text-color, 1 - $n / 10)}
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .a\:c-#{$i}:active{color: transparentize($text-light, 1 - $num)}
 }

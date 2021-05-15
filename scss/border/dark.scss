@@ -1,5 +1,9 @@
 @import '../variable';
 
-@each $n in $border-color-value {
-  .bc-#{$n}{border-color: transparentize($border-color-dark, 1 - $n / 10);}
+$max: 1 / $border-color-step;
+$step: $border-color-step;
+
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .bc-#{$i}{border-color: transparentize($border-dark, 1 - $num)}
 }

@@ -1,37 +1,51 @@
 
+$unit: $radius-unit;
+
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
-    // flex
-    @for $i from 0 through $rounded-max {
-      $num: $i * $rounded-step;
-      .#{$key}\:r-#{$i}{border-radius: #{$num}em}
-      .#{$key}\:rt-#{$i}{border-top-left-radius: #{$num}em;border-top-right-radius: #{$num}em;}
-      .#{$key}\:rb-#{$i}{border-bottom-left-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
-      .#{$key}\:rl-#{$i}{border-top-left-radius: #{$num}em;border-bottom-left-radius: #{$num}em;}
-      .#{$key}\:rr-#{$i}{border-top-right-radius: #{$num}em;border-bottom-right-radius: #{$num}em;}
-      .#{$key}\:rtl-#{$i}{border-top-left-radius: #{$num}em;}
-      .#{$key}\:rtr-#{$i}{border-top-right-radius: #{$num}em;}
-      .#{$key}\:rbl-#{$i}{border-bottom-left-radius: #{$num}em;}
-      .#{$key}\:rbr-#{$i}{border-bottom-right-radius: #{$num}em;}
+
+    @for $i from 0 through $radius-max {
+      $num: $i * $radius-step;
+      .#{$key}\:radius-#{$i}{border-radius: #{$num}#{$unit}}
+      .#{$key}\:radius-t-#{$i}{border-top-left-radius: #{$num}#{$unit};border-top-right-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-b-#{$i}{border-bottom-left-radius: #{$num}#{$unit};border-bottom-right-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-l-#{$i}{border-top-left-radius: #{$num}#{$unit};border-bottom-left-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-r-#{$i}{border-top-right-radius: #{$num}#{$unit};border-bottom-right-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-tl-#{$i}{border-top-left-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-tr-#{$i}{border-top-right-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-bl-#{$i}{border-bottom-left-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-br-#{$i}{border-bottom-right-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-lt-#{$i}{border-top-left-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-rt-#{$i}{border-top-right-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-lb-#{$i}{border-bottom-left-radius: #{$num}#{$unit};}
+      .#{$key}\:radius-rb-#{$i}{border-bottom-right-radius: #{$num}#{$unit};}
     }
-    .#{$key}\:r-full{border-radius: 50%}
-    .#{$key}\:rt-full{border-top-left-radius: 50%;border-top-right-radius: 50%;}
-    .#{$key}\:rb-full{border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;}
-    .#{$key}\:rl-full{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
-    .#{$key}\:rr-full{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
-    .#{$key}\:rtl-full{border-top-left-radius: 50%;}
-    .#{$key}\:rtr-full{border-top-right-radius: 50%;}
-    .#{$key}\:rbl-full{border-bottom-left-radius: 50%;}
-    .#{$key}\:rbr-full{border-bottom-right-radius: 50%;}
+    .#{$key}\:radius-full{border-radius: 50%}
+    .#{$key}\:radius-t-full{border-top-left-radius: 50%;border-top-right-radius: 50%;}
+    .#{$key}\:radius-b-full{border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;}
+    .#{$key}\:radius-l-full{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
+    .#{$key}\:radius-r-full{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
+    .#{$key}\:radius-tl-full{border-top-left-radius: 50%;}
+    .#{$key}\:radius-tr-full{border-top-right-radius: 50%;}
+    .#{$key}\:radius-bl-full{border-bottom-left-radius: 50%;}
+    .#{$key}\:radius-br-full{border-bottom-right-radius: 50%;}
+    .#{$key}\:radius-lt-full{border-top-left-radius: 50%;}
+    .#{$key}\:radius-rt-full{border-top-right-radius: 50%;}
+    .#{$key}\:radius-lb-full{border-bottom-left-radius: 50%;}
+    .#{$key}\:radius-rb-full{border-bottom-right-radius: 50%;}
     
-    .#{$key}\:r-max{border-radius: 9999px;}
-    .#{$key}\:rt-max{border-top-left-radius: 9999px;border-top-right-radius: 9999px;}
-    .#{$key}\:rb-max{border-bottom-left-radius: 9999px;border-bottom-right-radius: 9999px;}
-    .#{$key}\:rl-max{border-top-left-radius: 9999px;border-bottom-left-radius: 9999px;}
-    .#{$key}\:rr-max{border-top-right-radius: 9999px;border-bottom-right-radius: 9999px;}
-    .#{$key}\:rtl-max{border-top-left-radius: 9999px;}
-    .#{$key}\:rtr-max{border-top-right-radius: 9999px;}
-    .#{$key}\:rbl-max{border-bottom-left-radius: 9999px;}
-    .#{$key}\:rbr-max{border-bottom-right-radius: 9999px;}
+    .#{$key}\:radius-max{border-radius: 9999px;}
+    .#{$key}\:radius-t-max{border-top-left-radius: 9999px;border-top-right-radius: 9999px;}
+    .#{$key}\:radius-b-max{border-bottom-left-radius: 9999px;border-bottom-right-radius: 9999px;}
+    .#{$key}\:radius-l-max{border-top-left-radius: 9999px;border-bottom-left-radius: 9999px;}
+    .#{$key}\:radius-r-max{border-top-right-radius: 9999px;border-bottom-right-radius: 9999px;}
+    .#{$key}\:radius-tl-max{border-top-left-radius: 9999px;}
+    .#{$key}\:radius-tr-max{border-top-right-radius: 9999px;}
+    .#{$key}\:radius-bl-max{border-bottom-left-radius: 9999px;}
+    .#{$key}\:radius-br-max{border-bottom-right-radius: 9999px;}
+    .#{$key}\:radius-lt-max{border-top-left-radius: 9999px;}
+    .#{$key}\:radius-rt-max{border-top-right-radius: 9999px;}
+    .#{$key}\:radius-lb-max{border-bottom-left-radius: 9999px;}
+    .#{$key}\:radius-rb-max{border-bottom-right-radius: 9999px;}
   }
 }

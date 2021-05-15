@@ -1,13 +1,16 @@
 @import '../variable';
+$max: 1 / $bg-color-step;
+$step: $bg-color-step;
 
-@each $n in $bg-color-value {
-  .h\:bg-#{$n}:hover{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .h\:bg-#{$i}:hover{background-color: transparentize($bg-dark, 1 - $num)}
 }
-
-@each $n in $bg-color-value {
-  .f\:bg-#{$n}:focus{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .f\:bg-#{$i}:focus{background-color: transparentize($bg-dark, 1 - $num)}
 }
-
-@each $n in $bg-color-value {
-  .a\:bg-#{$n}:active{background-color: transparentize($bg-color-dark, 1 - $n / 25)}
+@for $i from 0 through $max{
+  $num: $i * $step;
+  .a\:bg-#{$i}:active{background-color: transparentize($bg-dark, 1 - $num)}
 }

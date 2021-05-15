@@ -3,8 +3,9 @@
 $max: ($line-height-max - $line-height-min) / $line-height-step;
 $min: $line-height-min;
 $step: $line-height-step;
+$unit: $line-height-unit;
 
 @for $i from 0 through $max{
   $num: $min + $i * $step;
-  .lh-#{$num}{line-height: #{$num};}
+  .lh-#{$num}{line-height: #{$num}#{$unit};}
 }

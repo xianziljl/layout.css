@@ -1,10 +1,9 @@
 @import '../variable';
 
-$max: ($z-index-max - $z-index-min) / $z-index-step;
-$min: $z-index-min;
+$max: $z-index-max / $z-index-step;
 $step: $z-index-step;
 
 @for $i from 0 through $max{
-  $num: $min + $i * $step;
-  .z-#{$num}{z-index: $num;}
+  $num: $i * $step;
+  .z-#{$i}{z-index: $num;}
 }

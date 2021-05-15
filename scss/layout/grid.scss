@@ -24,9 +24,13 @@
   .cs-#{$n}{grid-column-start: $n;}
 }
 
-@for $i from 0 through $grid-gap-max {
-  $num: $i * $grid-gap-step;
-  .gap-#{$i}{grid-gap: #{$num}em;gap: #{$num}em}
-  .gapr-#{$i}{grid-row-gap: #{$num}em;row-gap: #{$num}em}
-  .gapc-#{$i}{grid-column-gap: #{$num}em;column-gap: #{$num}em}
+$step: $grid-gap-step;
+$unit: $grid-gap-unit;
+$max: $grid-gap-max / $step;
+
+@for $i from 0 through $max {
+  $num: $i * $step;
+  .gap-#{$i}{grid-gap: #{$num}#{$unit};gap: #{$num}#{$unit}}
+  .gapr-#{$i}{grid-row-gap: #{$num}#{$unit};row-gap: #{$num}#{$unit}}
+  .gapc-#{$i}{grid-column-gap: #{$num}#{$unit};column-gap: #{$num}#{$unit}}
 }
