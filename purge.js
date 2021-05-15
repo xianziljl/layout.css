@@ -39,6 +39,7 @@ function purgeFile(file, usedNames) {
   const data = fs.readFileSync(path, CODE_TYPE)
   const arr = data.split('\n')
   arr.forEach((str, index) => {
+    if (!str.match(/^\s*\./)) return
     const name = getClassName(str)
     if (name && !usedNames.has(name)) arr[index] = ''
   })

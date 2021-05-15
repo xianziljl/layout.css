@@ -25,9 +25,7 @@
 .vh{visibility: hidden;}
 .vv{visibility: visible;}
 
-.wf{width: 100%;}
-.hf{height: 100%;}
-.fu{width: 100%;height: 100%;left: 0;top: 0;} // full
+.full{width: 100%;height: 100%;left: 0;top: 0;}
 
 .oh{overflow: hidden;}
 .ov{overflow: visible;}
@@ -42,8 +40,3 @@
 
 .pre{white-space: pre-wrap}
 .tlf{table-layout: fixed;}
-
-.lf-0{left: 0;}
-.rt-0{right: 0;}
-.tp-0{top: 0;}
-.btm-0{bottom: 0;}

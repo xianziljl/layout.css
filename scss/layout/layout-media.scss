@@ -27,29 +27,20 @@
     .#{$key}\:vh{visibility: hidden;}
     .#{$key}\:vv{visibility: visible;}
 
-    .#{$key}\:wf{width: 100%;}
-    .#{$key}\:hf{height: 100%;}
-    .#{$key}\:fu{width: 100%;height: 100%;left: 0;top: 0;} // full
-
-    .#{$key}\:ma{margin: 0 auto;}
+    .#{$key}\:full{width: 100%;height: 100%;left: 0;top: 0;}
     
-    .#{$key}\:lf-0{left: 0;}
-    .#{$key}\:rt-0{right: 0;}
-    .#{$key}\:tp-0{top: 0;}
-    .#{$key}\:btm-0{bottom: 0;}
+    .#{$key}\:oh{overflow: hidden;}
+    .#{$key}\:ov{overflow: visible;}
+    .#{$key}\:os{overflow: auto;}
+    .#{$key}\:osx{overflow-x: auto;overflow-y: hidden;}
+    .#{$key}\:osy{overflow-x: hidden;overflow-y: auto;}
 
-    // .#{$key}\:oh{overflow: hidden;}
-    // .#{$key}\:ov{overflow: visible;}
-    // .#{$key}\:os{overflow: auto;}
-    // .#{$key}\:osx{overflow-x: auto;overflow-y: hidden;}
-    // .#{$key}\:osy{overflow-x: hidden;overflow-y: auto;}
+    .#{$key}\:toe{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    .#{$key}\:pen{pointer-events: none;}
+    .#{$key}\:pea{pointer-events: auto;}
+    .#{$key}\:usn{user-select: none;}
 
-    // .#{$key}\:toe{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
-    // .#{$key}\:pen{pointer-events: none;}
-    // .#{$key}\:pea{pointer-events: auto;}
-    // .#{$key}\:usn{user-select: none;}
-
-    // .#{$key}\:pre{white-space: pre-wrap}
-    // .#{$key}\:tlf{table-layout: fixed;}
+    .#{$key}\:pre{white-space: pre-wrap}
+    .#{$key}\:tlf{table-layout: fixed;}
   }
 }
