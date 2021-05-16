@@ -5,9 +5,21 @@ $step: $ring-step;
 $max: $ring-max / $step;
 
 @each $key, $val in $colors{
-  .ring-#{$key}:focus{box-shadow: 0 0 0 2px transparentize($val, 0.7);}
+  $c: transparentize($val, 0.7);
+  .ring-#{$key}{box-shadow: 0 0 0 2px $c;}
   @for $i from 0 through $max{
     $num: $i * $step;
-    .ring-#{$key}-#{$i}:focus{box-shadow: 0 0 0 #{$num}px transparentize($val, 0.7);}
+    .ring-#{$key}-#{$i}{box-shadow: 0 0 0 #{$num}px $c;}
+  }
+}
+
+@each $s, $str in $status {
+  @each $key, $val in $colors{
+    $c: transparentize($val, 0.7);
+    .#{$s}\:ring-#{$key}:#{$str}{box-shadow: 0 0 0 2px $c;}
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$s}\:ring-#{$key}-#{$i}:#{$str}{box-shadow: 0 0 0 #{$num}px $c;}
+    }
   }
 }
