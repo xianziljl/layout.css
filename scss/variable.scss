@@ -22,11 +22,6 @@ $line-height-max: 4;
 $line-height-step: 0.1;
 $line-height-unit: em;
 
-$opacity-step: 0.01;
-
-$z-index-max: 100;
-$z-index-step: 1;
-
 $radius-max: 20;
 $radius-step: 0.1;
 $radius-unit: em;
@@ -34,35 +29,42 @@ $radius-unit: em;
 $flex-max: 20;
 $flex-step: 1;
 
-// grid
 $grid-max: 20;
 $grid-step: 1;
 $grid-gap-max: 5;
 $grid-gap-step: 0.1;
 $grid-gap-unit: em;
 
-// transition
 $during-max: 1000;
 $during-step: 100;
 $during-unit: ms;
 
-// 颜色相关
-$text-light: #000000;         // 文字颜色
-$text-dark: #ffffff;    // 深色模式下文字颜色
-$text-color-step: 0.01;
+$opacity-step: 0.01;
+
+$z-index-max: 100;
+$z-index-step: 1;
+
+$ring-max: 10;
+$ring-step: 1;
+$ring-unit: px;
 
 // 基础背景色
 $bg-base-light: #ffffff;
 $bg-base-dark: #0d1117;
 
-// 叠加背景色
-$bg-light: #13161b;           // 背景颜色
-$bg-dark: #ffffff;      // 深色模式下背景颜色
+// 字体叠加色
+$text-light: #000000;
+$text-dark: #ffffff;
+$text-color-step: 0.01;
+
+// 背景叠加色
+$bg-light: #13161b;
+$bg-dark: #ffffff;
 $bg-color-step: 0.01;
 
-
-$border-light: #13161b;       // 边框颜色
-$border-dark: #ffffff;  // 深色模式下边框颜色
+// 边框叠加色
+$border-light: #13161b;
+$border-dark: #ffffff;
 $border-color-step: 0.01;
 
 // 此处的颜色并不会受黑色模式的影响
@@ -86,7 +88,6 @@ $status: (
   f: focus,
   a: active
 );
-
 
 $media-query: (
   xl: 1920,
