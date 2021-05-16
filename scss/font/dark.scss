@@ -7,3 +7,10 @@ $step: $text-color-step;
   $num: $i * $step;
   .c-#{$i}{color: transparentize($text-dark, 1 - $num)}
 }
+
+@each $s, $str in $status {
+  @for $i from 0 through $max{
+    $num: $i * $step;
+    .#{$s}\:c-#{$i}:#{$str}{color: transparentize($text-dark, 1 - $num)}
+  }
+}

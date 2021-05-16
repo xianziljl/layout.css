@@ -5,3 +5,9 @@ $max: 1 / $opacity-step;
 @for $i from 0 through $max{
   .o-#{$i}{opacity: $i * $opacity-step;}
 }
+
+@each $s, $str in $status {
+  @for $i from 0 through $max{
+    .#{$s}\:o-#{$i}:#{$str}{opacity: $i * $opacity-step;}
+  }
+}

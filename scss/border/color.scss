@@ -5,8 +5,45 @@ $step: $color-step;
 
 @each $key, $val in $colors{
   .bc-#{$key}{border-color: $val;}
+  .bxc-#{$key}{border-left-color: $val;border-right-color: $val;}
+  .byc-#{$key}{border-top-color: $val;border-bottom-color: $val;}
+  .blc-#{$key}{border-left-color: $val;}
+  .brc-#{$key}{border-right-color: $val;}
+  .btc-#{$key}{border-top-color: $val;}
+  .bbc-#{$key}{border-bottom-color: $val;}
   @for $i from 0 through $max{
     $num: $i * $step;
-    .bc-#{$key}-#{$i}{border-color: transparentize($val, 1 - $num)}
+    $c: transparentize($val, 1 - $num);
+    .bc-#{$key}-#{$i}{border-color: $c}
+    .bxc-#{$key}-#{$i}{border-left-color: $c;border-right-color: $c;}
+    .byc-#{$key}-#{$i}{border-top-color: $c;border-bottom-color: $c;}
+    .blc-#{$key}-#{$i}{border-left-color: $c;}
+    .brc-#{$key}-#{$i}{border-right-color: $c;}
+    .btc-#{$key}-#{$i}{border-top-color: $c;}
+    .bbc-#{$key}-#{$i}{border-bottom-color: $c;}
+  }
+}
+
+
+@each $s, $str in $status {
+  @each $key, $val in $colors{
+    .#{$s}\:bc-#{$key}:#{$str}{border-color: $val;}
+    .#{$s}\:bxc-#{$key}:#{$str}{border-left-color: $val;border-right-color: $val;}
+    .#{$s}\:byc-#{$key}:#{$str}{border-top-color: $val;border-bottom-color: $val;}
+    .#{$s}\:blc-#{$key}:#{$str}{border-left-color: $val;}
+    .#{$s}\:brc-#{$key}:#{$str}{border-right-color: $val;}
+    .#{$s}\:btc-#{$key}:#{$str}{border-top-color: $val;}
+    .#{$s}\:bbc-#{$key}:#{$str}{border-bottom-color: $val;}
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      $c: transparentize($val, 1 - $num);
+      .#{$s}\:bc-#{$key}-#{$i}:#{$str}{border-color: $c}
+      .#{$s}\:bxc-#{$key}-#{$i}:#{$str}{border-left-color: $c;border-right-color: $c;}
+      .#{$s}\:byc-#{$key}-#{$i}:#{$str}{border-top-color: $c;border-bottom-color: $c;}
+      .#{$s}\:blc-#{$key}-#{$i}:#{$str}{border-left-color: $c;}
+      .#{$s}\:brc-#{$key}-#{$i}:#{$str}{border-right-color: $c;}
+      .#{$s}\:btc-#{$key}-#{$i}:#{$str}{border-top-color: $c;}
+      .#{$s}\:bbc-#{$key}-#{$i}:#{$str}{border-bottom-color: $c;}
+    }
   }
 }

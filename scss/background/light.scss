@@ -9,3 +9,10 @@ $step: $bg-color-step;
   $num: $i * $step;
   .bg-#{$i}{background-color: transparentize($bg-light, 1 - $num)}
 }
+
+@each $s, $str in $status {
+  @for $i from 0 through $max{
+    $num: $i * $step;
+    .#{$s}\:bg-#{$i}:#{$str}{background-color: transparentize($bg-light, 1 - $num)}
+  }
+}

@@ -7,6 +7,17 @@ $step: $color-step;
   .bg-#{$key}{background-color: $val;}
   @for $i from 0 through $max{
     $num: $i * $step;
-    .bg-#{$key}-#{$i}{background-color: transparentize($val, 1 - $num)}
+    .bg-#{$key}-#{$i}{background-color: transparentize($val, 1 - $num);}
+  }
+}
+
+
+@each $s, $str in $status {
+  @each $key, $val in $colors{
+    .#{$s}\:bg-#{$key}:#{$str}{background-color: $val;}
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$s}\:bg-#{$key}-#{$i}:#{$str}{background-color: transparentize($val, 1 - $num);}
+    }
   }
 }

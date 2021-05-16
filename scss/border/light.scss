@@ -5,5 +5,26 @@ $step: $border-color-step;
 
 @for $i from 0 through $max{
   $num: $i * $step;
-  .bc-#{$i}{border-color: transparentize($border-light, 1 - $num)}
+  $c: transparentize($border-light, 1 - $num);
+  .bc-#{$i}{border-color: $c;}
+  .bxc-#{$i}{border-left-color: $c;border-right-color: $c;}
+  .byc-#{$i}{border-top-color: $c;border-bottom-color: $c;}
+  .blc-#{$i}{border-left-color: $c;}
+  .brc-#{$i}{border-right-color: $c;}
+  .btc-#{$i}{border-top-color: $c;}
+  .bbc-#{$i}{border-bottom-color: $c;}
+}
+
+@each $s, $str in $status {
+  @for $i from 0 through $max{
+    $num: $i * $step;
+    $c: transparentize($border-light, 1 - $num);
+    .#{$s}\:bc-#{$i}:#{$str}{border-color: $c}
+    .#{$s}\:bxc-#{$i}:#{$str}{border-left-color: $c;border-right-color: $c;}
+    .#{$s}\:byc-#{$i}:#{$str}{border-top-color: $c;border-bottom-color: $c;}
+    .#{$s}\:blc-#{$i}:#{$str}{border-left-color: $c}
+    .#{$s}\:brc-#{$i}:#{$str}{border-right-color: $c}
+    .#{$s}\:btc-#{$i}:#{$str}{border-top-color: $c}
+    .#{$s}\:bbc-#{$i}:#{$str}{border-bottom-color: $c}
+  }
 }

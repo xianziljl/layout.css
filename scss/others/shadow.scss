@@ -1,4 +1,10 @@
-$sd-ns: 1, 2, 3, 4, 5;
-@each $sd in $sd-ns {
-  .shadow-#{$sd}{box-shadow: 0 #{$sd}px #{$sd * 3}px opacify(#00000000, 0.2), 0 0 #{$sd * 3 / 2}px opacify(#00000000, 0.1);}
+$max: 10;
+@for $i from 0 through $max {
+  .shadow-#{$i}{box-shadow: 0 #{$i}px #{$i * 3}px opacify(#00000000, 0.2), 0 0 #{$i * 3 / 2}px opacify(#00000000, 0.1);}
+}
+
+@each $s, $str in $status {
+  @for $i from 0 through $max {
+    .#{$s}\:shadow-#{$i}:#{$str}{box-shadow: 0 #{$i}px #{$i * 3}px opacify(#00000000, 0.2), 0 0 #{$i * 3 / 2}px opacify(#00000000, 0.1);}
+  }
 }

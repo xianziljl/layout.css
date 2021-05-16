@@ -86,10 +86,16 @@ $colors: (
   cyan: #19bedb,
   green: #10ba75,
   yellow: #e9ae0a,
-  orange: #e98513,
-  red: #ef4444,
+  orange: #e96913,
+  red: #e93232,
   pink: #e72690,
   purple: #ab44ef,
+);
+
+$status: (
+  h: hover,
+  f: focus,
+  a: active
 );
 
 

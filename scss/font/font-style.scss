@@ -3,3 +3,11 @@
 .u{text-decoration: underline;}
 .i{font-style: italic;}
 .s{text-decoration: line-through;}
+
+@each $s, $str in $status {
+  .#{$s}\:a:#{$str}{cursor: pointer;}
+  .#{$s}\:b:#{$str}{font-weight: bold;}
+  .#{$s}\:u:#{$str}{text-decoration: underline;}
+  .#{$s}\:i:#{$str}{font-style: italic;}
+  .#{$s}\:s:#{$str}{text-decoration: line-through;}
+}

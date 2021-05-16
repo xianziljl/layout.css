@@ -10,3 +10,13 @@ $step: $color-step;
     .c-#{$key}-#{$i}{color: transparentize($val, 1 - $num)}
   }
 }
+
+@each $s, $str in $status {
+  @each $key, $val in $colors{
+    .#{$s}\:c-#{$key}:#{$str}{color: $val;}
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$s}\:c-#{$key}-#{$i}:#{$str}{color: transparentize($val, 1 - $num)}
+    }
+  }
+}
