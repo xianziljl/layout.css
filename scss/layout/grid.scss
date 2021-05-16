@@ -34,3 +34,8 @@ $max: $grid-gap-max / $step;
   .gapr-#{$i}{grid-row-gap: #{$num}#{$unit};row-gap: #{$num}#{$unit}}
   .gapc-#{$i}{grid-column-gap: #{$num}#{$unit};column-gap: #{$num}#{$unit}}
 }
+
+// $arr: ();
+// @for $i from 1 through $n{
+//   $arr: append($arr, 1fr);
+// }

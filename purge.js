@@ -49,7 +49,9 @@ function purgeFile(file, usedNames) {
     .join('\n')
     .replace(/@media.*\n\}/g, '')
     .replace(/\n+/g, '\n')
-  fs.writeFileSync(join(__dirname, 'css', file), str, CODE_TYPE)
+  const p = join(__dirname, 'css', file)
+  fs.writeFileSync(p, str, CODE_TYPE)
+  console.log('write file ' + p)
 }
 
 
