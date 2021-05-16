@@ -1,22 +1,21 @@
 @import '../variable';
 
+$step: $width-height-step;
+$unit: $width-height-unit;
+$max: $width-height-max / $step;
+
 .w-full{width: 100%;}
 .h-full{height: 100%;}
 .w-half{width: 50%;}
 .h-half{width: 50%;}
-
 .maxw-full{max-width: 100%;}
 .maxh-full{max-height: 100%;}
 .maxw-half{max-width: 50%;}
 .maxh-half{max-width: 50%;}
-
 .minw-full{min-width: 100%;}
 .minh-full{min-height: 100%;}
 .minw-half{min-width: 50%;}
 .minh-half{min-width: 50%;}
-
-$unit: $width-height-unit;
-
 @for $i from 0 through 99 {
   $num: 100% * $i / 100;
   .w-#{$i}\%{width: #{$num}}
@@ -26,13 +25,48 @@ $unit: $width-height-unit;
   .minw-#{$i}\%{min-width: #{$num}}
   .minh-#{$i}\%{min-height: #{$num}}
 }
-
-@for $i from 0 through $width-height-max {
-  $num: $i * $width-height-step;
+@for $i from 0 through $max {
+  $num: $i * $step;
   .w-#{$i}{width: #{$num}#{$unit}}
   .h-#{$i}{height: #{$num}#{$unit}}
   .maxw-#{$i}{max-width: #{$num}#{$unit}}
   .maxh-#{$i}{max-height: #{$num}#{$unit}}
   .minw-#{$i}{min-width: #{$num}#{$unit}}
   .minh-#{$i}{min-height: #{$num}#{$unit}}
+}
+
+// media query
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    .#{$key}\:w-full{width: 100%;}
+    .#{$key}\:h-full{height: 100%;}
+    .#{$key}\:w-half{width: 50%;}
+    .#{$key}\:h-half{width: 50%;}
+    .#{$key}\:maxw-full{max-width: 100%;}
+    .#{$key}\:maxh-full{max-height: 100%;}
+    .#{$key}\:maxw-half{max-width: 50%;}
+    .#{$key}\:maxh-half{max-width: 50%;}
+    .#{$key}\:minw-full{min-width: 100%;}
+    .#{$key}\:minh-full{min-height: 100%;}
+    .#{$key}\:minw-half{min-width: 50%;}
+    .#{$key}\:minh-half{min-width: 50%;}
+    @for $i from 0 through 99 {
+      $num: 100% * $i / 100;
+      .#{$key}\:w-#{$i}\%{width: #{$num}}
+      .#{$key}\:h-#{$i}\%{height: #{$num}}
+      .#{$key}\:maxw-#{$i}\%{max-width: #{$num}}
+      .#{$key}\:maxh-#{$i}\%{max-height: #{$num}}
+      .#{$key}\:minw-#{$i}\%{min-width: #{$num}}
+      .#{$key}\:minh-#{$i}\%{min-height: #{$num}}
+    }
+    @for $i from 0 through $max {
+      $num: $i * $step;
+      .#{$key}\:w-#{$i}{width: #{$num}#{$unit}}
+      .#{$key}\:h-#{$i}{height: #{$num}#{$unit}}
+      .#{$key}\:maxw-#{$i}{max-width: #{$num}#{$unit}}
+      .#{$key}\:maxh-#{$i}{max-height: #{$num}#{$unit}}
+      .#{$key}\:minw-#{$i}{min-width: #{$num}#{$unit}}
+      .#{$key}\:minh-#{$i}{min-height: #{$num}#{$unit}}
+    }
+  }
 }

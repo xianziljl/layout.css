@@ -21,3 +21,27 @@ $step: $flex-step;
 .jc{justify-content: center;}
 .je{justify-content: flex-end;}
 
+// media query
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    .#{$key}\:fr{display: flex;flex-direction: row;}
+    .#{$key}\:fc{display: flex;flex-direction: column;}
+    .#{$key}\:ifr{display: inline-flex;flex-direction: row;}
+    .#{$key}\:ifc{display: inline-flex;flex-direction: column;}
+    .#{$key}\:wrap{flex-wrap: wrap;}
+    
+    .#{$key}\:as{align-items: flex-start;}
+    .#{$key}\:ac{align-items: center;}
+    .#{$key}\:ae{align-items: flex-end;}
+    
+    .#{$key}\:js{justify-content: flex-start;}
+    .#{$key}\:jc{justify-content: center;}
+    .#{$key}\:je{justify-content: flex-end;}
+    
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$key}\:f-#{$num}{flex: $num;}
+    }
+  }
+}
+

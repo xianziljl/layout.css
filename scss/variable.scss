@@ -1,46 +1,35 @@
-$width-height-max: 20;
-$width-height-step: 0.2;
+$width-height-max: 5;
+$width-height-step: 0.1;
 $width-height-unit: em;
 
+$position-max: 5;
+$position-step: 0.1;
+$position-unit: em;
 
-$position-max: 100;
-$position-step: 1;
-$position-unit: px;
-
-
-$font-size-min: 0;
-$font-size-max: 4;
-$font-size-step: 0.1;
-$font-size-unit: rem;
-
-
-$line-height-min: 1;
-$line-height-max: 4;
-$line-height-step: 0.1;
-$line-height-unit: em;
-
-
-$opacity-step: 0.01;
-
-
-$z-index-max: 100;
-$z-index-step: 1;
-
+$margin-padding-max: 5;
+$margin-padding-step: 0.1;
+$margin-padding-unit: em;
 
 $border-width-max: 20;
 $border-width-step: 1;
 $border-width-unit: px;
 
+$font-size-max: 4;
+$font-size-step: 0.1;
+$font-size-unit: rem;
+
+$line-height-max: 4;
+$line-height-step: 0.1;
+$line-height-unit: em;
+
+$opacity-step: 0.01;
+
+$z-index-max: 100;
+$z-index-step: 1;
 
 $radius-max: 20;
 $radius-step: 0.1;
 $radius-unit: em;
-
-// margin padding em
-$margin-padding-max: 5;
-$margin-padding-step: 0.1;
-$margin-padding-unit: em;
-
 
 $flex-max: 20;
 $flex-step: 1;

@@ -1,5 +1,9 @@
 @import '../variable';
 
+$unit: $border-width-unit;
+$step: $border-width-step;
+$max: $border-width-max / $step;
+
 .bd{border-width: 1px;}
 .bx{border-left-width: 1px;border-right-width: 1px;}
 .by{border-top-width: 1px;border-bottom-width: 1px;}
@@ -8,18 +12,17 @@
 .bb{border-bottom-width: 1px;}
 .bl{border-left-width: 1px;}
 
-$unit: $border-width-unit;
-@for $i from 0 through $border-width-max{
-  $num: $i * $border-width-step;
+@for $i from 0 through $max{
+  $num: $i * $step;
   .bd-#{$num}{border-width: #{$num}#{$unit};}
 }
-@for $i from 0 through $border-width-max{
-  $num: $i * $border-width-step;
+@for $i from 0 through $max{
+  $num: $i * $step;
   .bx-#{$num}{border-left-width: #{$num}#{$unit};border-right-width: #{$num}#{$unit};}
   .by-#{$num}{border-top-width: #{$num}#{$unit};border-bottom-width: #{$num}#{$unit};}
 }
-@for $i from 0 through $border-width-max{
-  $num: $i * $border-width-step;
+@for $i from 0 through $max{
+  $num: $i * $step;
   .bt-#{$num}{border-top-width: #{$num}#{$unit};}
   .br-#{$num}{border-right-width: #{$num}#{$unit};}
   .bb-#{$num}{border-bottom-width: #{$num}#{$unit};}
@@ -27,3 +30,37 @@ $unit: $border-width-unit;
 }
 
 .bd-dash{border-style: dashed;}
+
+
+// media query
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    // flex
+    .#{$key}\:bd{border-width: 1px;}
+    .#{$key}\:bx{border-left-width: 1px;border-right-width: 1px;}
+    .#{$key}\:by{border-top-width: 1px;border-bottom-width: 1px;}
+    .#{$key}\:bt{border-top-width: 1px;}
+    .#{$key}\:br{border-right-width: 1px;}
+    .#{$key}\:bb{border-bottom-width: 1px;}
+    .#{$key}\:bl{border-left-width: 1px;}
+
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$key}\:bd-#{$num}{border-width: #{$num}#{$unit};}
+    }
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$key}\:bx-#{$num}{border-left-width: #{$num}#{$unit};border-right-width: #{$num}#{$unit};}
+      .#{$key}\:by-#{$num}{border-top-width: #{$num}#{$unit};border-bottom-width: #{$num}#{$unit};}
+    }
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$key}\:bt-#{$num}{border-top-width: #{$num}#{$unit};}
+      .#{$key}\:br-#{$num}{border-right-width: #{$num}#{$unit};}
+      .#{$key}\:bb-#{$num}{border-bottom-width: #{$num}#{$unit};}
+      .#{$key}\:bl-#{$num}{border-left-width: #{$num}#{$unit};}
+    }
+
+    .#{$key}\:bd-dash{border-style: dashed;}
+  }
+}

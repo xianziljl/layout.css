@@ -7,3 +7,12 @@ $step: $z-index-step;
   $num: $i * $step;
   .z-#{$i}{z-index: $num;}
 }
+
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$key}\:z-#{$i}{z-index: $num;}
+    }
+  }
+}

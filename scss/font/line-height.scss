@@ -1,11 +1,20 @@
 @import '../variable';
 
-$max: ($line-height-max - $line-height-min) / $line-height-step;
-$min: $line-height-min;
+$max: $line-height-max / $line-height-step;
 $step: $line-height-step;
 $unit: $line-height-unit;
 
 @for $i from 0 through $max{
-  $num: $min + $i * $step;
+  $num: $i * $step;
   .lh-#{$num}{line-height: #{$num}#{$unit};}
+}
+
+// media query
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    @for $i from 0 through $max{
+      $num: $i * $step;
+      .#{$key}\:lh-#{$num}{line-height: #{$num}#{$unit};}
+    }
+  }
 }

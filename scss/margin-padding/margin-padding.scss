@@ -1,5 +1,9 @@
 @import '../variable';
 
+$step: $margin-padding-step;
+$unit: $margin-padding-unit;
+$max: $margin-padding-max / $step;
+
 .m-a{margin: auto;}
 .mx-a{margin-left: auto;margin-right: auto;}
 .my-a{margin-top: auto;margin-bottom: auto;}
@@ -7,10 +11,6 @@
 .mr-a{margin-right: auto;}
 .mb-a{margin-bottom: auto;}
 .ml-a{margin-left: auto;}
-
-$step: $margin-padding-step;
-$unit: $margin-padding-unit;
-$max: $margin-padding-max / $step;
 
 @for $i from 0 through $max {
   $num: $i * $step;
@@ -28,9 +28,6 @@ $max: $margin-padding-max / $step;
   .mb-#{$i}{margin-bottom: #{$num}#{$unit}}
   .ml-#{$i}{margin-left: #{$num}#{$unit}}
 }
-
-
-
 @for $i from 0 through $max {
   $num: $i * $step;
   .p-#{$i}{padding: #{$num}#{$unit}}
@@ -46,4 +43,51 @@ $max: $margin-padding-max / $step;
   .pr-#{$i}{padding-right: #{$num}#{$unit}}
   .pb-#{$i}{padding-bottom: #{$num}#{$unit}}
   .pl-#{$i}{padding-left: #{$num}#{$unit}}
+}
+
+
+// media query
+@each $key, $val in $media-query{
+  @media screen and (max-width: #{$val}px) {
+    .#{$key}\:m-a{margin: auto;}
+    .#{$key}\:mx-a{margin-left: auto;margin-right: auto;}
+    .#{$key}\:my-a{margin-top: auto;margin-bottom: auto;}
+    .#{$key}\:mt-a{margin-top: auto;}
+    .#{$key}\:mr-a{margin-right: auto;}
+    .#{$key}\:mb-a{margin-bottom: auto;}
+    .#{$key}\:ml-a{margin-left: auto;}
+    
+    @for $i from 0 through $max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:m-#{$i}{margin: #{$num}#{$unit}}
+    }
+    @for $i from 0 through $max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:mx-#{$i}{margin-left: #{$num}#{$unit};margin-right: #{$num}#{$unit};}
+      .#{$key}\:my-#{$i}{margin-top: #{$num}#{$unit};margin-bottom: #{$num}#{$unit}}
+    }
+    @for $i from 0 through $max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:mt-#{$i}{margin-top: #{$num}#{$unit}}
+      .#{$key}\:mr-#{$i}{margin-right: #{$num}#{$unit}}
+      .#{$key}\:mb-#{$i}{margin-bottom: #{$num}#{$unit}}
+      .#{$key}\:ml-#{$i}{margin-left: #{$num}#{$unit}}
+    }
+    @for $i from 0 through $max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:p-#{$i}{padding: #{$num}#{$unit}}
+    }
+    @for $i from 0 through $max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:px-#{$i}{padding-left: #{$num}#{$unit};padding-right: #{$num}#{$unit};}
+      .#{$key}\:py-#{$i}{padding-top: #{$num}#{$unit};padding-bottom: #{$num}#{$unit}}
+    }
+    @for $i from 0 through $max {
+      $num: $i * $margin-padding-step;
+      .#{$key}\:pt-#{$i}{padding-top: #{$num}#{$unit}}
+      .#{$key}\:pr-#{$i}{padding-right: #{$num}#{$unit}}
+      .#{$key}\:pb-#{$i}{padding-bottom: #{$num}#{$unit}}
+      .#{$key}\:pl-#{$i}{padding-left: #{$num}#{$unit}}
+    }
+  }
 }
