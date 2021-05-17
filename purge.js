@@ -6,7 +6,13 @@ const CODE_TYPE = 'utf-8'
 const files = fs.readdirSync('dist')
 const usedNames = getUsedNames()
 files.forEach(f => {
-  purgeFile(f, usedNames)
+  const path = join(__dirname, 'dist', f)
+  const data = fs.readFileSync(path, CODE_TYPE)
+  let str = purge(data, usedNames)
+  str = mergeMedia(str)
+  const p = join(__dirname, 'css', f)
+  fs.writeFileSync(p, str, CODE_TYPE)
+  console.log('write file ' + p)
 })
 
 
@@ -34,24 +40,52 @@ function getClassName(str) {
     .replace(':active', '')
 }
 
-function purgeFile(file, usedNames) {
-  const path = join(__dirname, 'dist', file)
-  const data = fs.readFileSync(path, CODE_TYPE)
+// 抽离使用过的类
+function purge(data, usedNames) {
   const arr = data.split('\n')
   arr.forEach((str, index) => {
     if (!str.match(/^\s*\./)) return
     const name = getClassName(str)
     if (name && !usedNames.has(name)) arr[index] = ''
   })
-
   const str = arr
     .filter(s => s)
     .join('\n')
     .replace(/@media.*\n\}/g, '')
     .replace(/\n+/g, '\n')
-  const p = join(__dirname, 'css', file)
-  fs.writeFileSync(p, str, CODE_TYPE)
-  console.log('write file ' + p)
+  return str
 }
 
+// 合并 media query
+function mergeMedia(data) {
+  const arr = data.split('\n')
+  const medias = Array.from(new Set(arr.filter(s => s.match(/^@media/))))
+    .map(s => ({
+      m: s,
+      lines: []
+    }))
+
+  let lines = []
+  let media = null
+  arr.forEach(s => {
+    if (s.match(/^@media/)) media = s
+    else if (media && s !== '}') {
+      const mediaLine = medias.find(m => m.m === media).lines
+      mediaLine.push(s)
+    } else if (s === '}') {
+      media = null
+    } else {
+      lines.push(s)
+    }
+  })
+
+  medias.forEach(m => {
+    lines.push(m.m)
+    lines = lines.concat(m.lines)
+    lines.push('}')
+  })
+  
+  const str = lines.join('\n')
+  return str
+}
 
