@@ -274,11 +274,13 @@
   </div>
 
   <script>
-    var isDark = false
+    var mode = 'light'
     var sw = function() {
-      isDark = !isDark
-      document.querySelector('#style').setAttribute('href', isDark ? './css/dark.css' : './css/light.css')
-      // document.scrollingElement.classList.toggle("dk")
+      const styleEl = document.querySelector('#style')
+      mode = mode === 'light' ? 'dark' : 'light'
+      const href = styleEl.getAttribute('href')
+      const newHref = href.replace(/\/\w+\.css/, '/' + mode + '.css')
+      styleEl.setAttribute('href', newHref)
     }
     document.querySelector('#switch').addEventListener('click', sw)
   </script>
