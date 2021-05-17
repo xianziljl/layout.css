@@ -2,10 +2,15 @@
 .fit-contain{object-fit: contain;}
 .fit-fill{object-fit: fill;}
 
+.ctn-box{box-sizing: content-box;}
+.bd-box{box-sizing: border-box;}
+
 @each $key, $val in $media-query{
   @media screen and (max-width: #{$val}px) {
     .#{$key}\:fit-cover{object-fit: cover;}
     .#{$key}\:fit-contain{object-fit: contain;}
     .#{$key}\:fit-fill{object-fit: fill;}
+    .#{$key}\:ctn-box{box-sizing: content-box;}
+    .#{$key}\:bd-box{box-sizing: border-box;}
   }
 }
