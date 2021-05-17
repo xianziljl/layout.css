@@ -1,7 +1,8 @@
 @import '../variable';
 
-$max: 1 / $color-step;
-$step: $color-step;
+$step: map-get($color, step);
+$max: 1 / $step;
+$colors: map-get($color, list);
 
 @each $key, $val in $colors{
   .bc-#{$key}{border-color: $val;}

@@ -1,8 +1,9 @@
 @import '../variable';
 
-$step: $radius-step;
-$unit: $radius-unit;
-$max: $radius-max / $step;
+$map: $radius;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 @for $i from 0 through $max {
   $num: $i * $step;

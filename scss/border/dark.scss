@@ -1,11 +1,13 @@
 @import '../variable';
 
-$max: 1 / $border-color-step;
-$step: $border-color-step;
+$map: $border-color;
+$step: map-get($map, step);
+$max: 1 / $step;
+$bc: map-get($map, dark);
 
 @for $i from 0 through $max{
   $num: $i * $step;
-  $c: transparentize($border-dark, 1 - $num);
+  $c: transparentize($bc, 1 - $num);
   .bc-#{$i}{border-color: $c;}
   .bxc-#{$i}{border-left-color: $c;border-right-color: $c;}
   .byc-#{$i}{border-top-color: $c;border-bottom-color: $c;}
@@ -18,7 +20,7 @@ $step: $border-color-step;
 @each $s, $str in $status {
   @for $i from 0 through $max{
     $num: $i * $step;
-    $c: transparentize($border-dark, 1 - $num);
+    $c: transparentize($bc, 1 - $num);
     .#{$s}\:bc-#{$i}:#{$str}{border-color: $c}
     .#{$s}\:bxc-#{$i}:#{$str}{border-left-color: $c;border-right-color: $c;}
     .#{$s}\:byc-#{$i}:#{$str}{border-top-color: $c;border-bottom-color: $c;}

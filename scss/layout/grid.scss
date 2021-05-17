@@ -1,8 +1,11 @@
 @import '../variable';
 
-$step: $grid-gap-step;
-$unit: $grid-gap-unit;
-$max: $grid-gap-max / $step;
+$step: map-get($grid, step);
+$max: map-get($grid, max) / $step;
+
+$step1: map-get($grid-gap, step);
+$max1: map-get($grid-gap, max) / $step1;
+$unit1: map-get($grid-gap, unit);
 
 .row{display: grid;grid-auto-flow: row;}
 .col{display: grid;grid-auto-flow: column;}
@@ -17,7 +20,7 @@ $max: $grid-gap-max / $step;
 .jsc{justify-self: center;}
 .jse{justify-self: end;}
 
-@for $n from 1 through $grid-max {
+@for $n from 1 through $max {
   .rows-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
   .cols-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 
@@ -28,11 +31,11 @@ $max: $grid-gap-max / $step;
   .cs-#{$n}{grid-column-start: $n;}
 }
 
-@for $i from 0 through $max {
-  $num: $i * $step;
-  .gap-#{$i}{grid-gap: #{$num}#{$unit};gap: #{$num}#{$unit}}
-  .gapr-#{$i}{grid-row-gap: #{$num}#{$unit};row-gap: #{$num}#{$unit}}
-  .gapc-#{$i}{grid-column-gap: #{$num}#{$unit};column-gap: #{$num}#{$unit}}
+@for $i from 0 through $max1 {
+  $num: $i * $step1;
+  .gap-#{$i}{grid-gap: #{$num}#{$unit1};gap: #{$num}#{$unit1}}
+  .gapr-#{$i}{grid-row-gap: #{$num}#{$unit1};row-gap: #{$num}#{$unit1}}
+  .gapc-#{$i}{grid-column-gap: #{$num}#{$unit1};column-gap: #{$num}#{$unit1}}
 }
 
 // media query
@@ -52,7 +55,7 @@ $max: $grid-gap-max / $step;
     .#{$key}\:jsc{justify-self: center;}
     .#{$key}\:jse{justify-self: end;}
 
-    @for $n from 1 through $grid-max {
+    @for $n from 1 through $max {
       .#{$key}\:rows-#{$n}{grid-template-rows: repeat(#{$n}, 1fr);}
       .#{$key}\:cols-#{$n}{grid-template-columns: repeat(#{$n}, 1fr);}
 
@@ -63,11 +66,11 @@ $max: $grid-gap-max / $step;
       .#{$key}\:cs-#{$n}{grid-column-start: $n;}
     }
 
-    @for $i from 0 through $max {
-      $num: $i * $step;
-      .#{$key}\:gap-#{$i}{grid-gap: #{$num}#{$unit};gap: #{$num}#{$unit}}
-      .#{$key}\:gapr-#{$i}{grid-row-gap: #{$num}#{$unit};row-gap: #{$num}#{$unit}}
-      .#{$key}\:gapc-#{$i}{grid-column-gap: #{$num}#{$unit};column-gap: #{$num}#{$unit}}
+    @for $i from 0 through $max1 {
+      $num: $i * $step1;
+      .#{$key}\:gap-#{$i}{grid-gap: #{$num}#{$unit1};gap: #{$num}#{$unit1}}
+      .#{$key}\:gapr-#{$i}{grid-row-gap: #{$num}#{$unit1};row-gap: #{$num}#{$unit1}}
+      .#{$key}\:gapc-#{$i}{grid-column-gap: #{$num}#{$unit1};column-gap: #{$num}#{$unit1}}
     }
   }
 }

@@ -1,8 +1,9 @@
 @import '../variable';
 
-$step: $margin-padding-step;
-$unit: $margin-padding-unit;
-$max: $margin-padding-max / $step;
+$map: $margin-padding;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 .m-a{margin: auto;}
 .mx-a{margin-left: auto;margin-right: auto;}
@@ -58,32 +59,32 @@ $max: $margin-padding-max / $step;
     .#{$key}\:ml-a{margin-left: auto;}
     
     @for $i from 0 through $max {
-      $num: $i * $margin-padding-step;
+      $num: $i * $step;
       .#{$key}\:m-#{$i}{margin: #{$num}#{$unit}}
     }
     @for $i from 0 through $max {
-      $num: $i * $margin-padding-step;
+      $num: $i * $step;
       .#{$key}\:mx-#{$i}{margin-left: #{$num}#{$unit};margin-right: #{$num}#{$unit};}
       .#{$key}\:my-#{$i}{margin-top: #{$num}#{$unit};margin-bottom: #{$num}#{$unit}}
     }
     @for $i from 0 through $max {
-      $num: $i * $margin-padding-step;
+      $num: $i * $step;
       .#{$key}\:mt-#{$i}{margin-top: #{$num}#{$unit}}
       .#{$key}\:mr-#{$i}{margin-right: #{$num}#{$unit}}
       .#{$key}\:mb-#{$i}{margin-bottom: #{$num}#{$unit}}
       .#{$key}\:ml-#{$i}{margin-left: #{$num}#{$unit}}
     }
     @for $i from 0 through $max {
-      $num: $i * $margin-padding-step;
+      $num: $i * $step;
       .#{$key}\:p-#{$i}{padding: #{$num}#{$unit}}
     }
     @for $i from 0 through $max {
-      $num: $i * $margin-padding-step;
+      $num: $i * $step;
       .#{$key}\:px-#{$i}{padding-left: #{$num}#{$unit};padding-right: #{$num}#{$unit};}
       .#{$key}\:py-#{$i}{padding-top: #{$num}#{$unit};padding-bottom: #{$num}#{$unit}}
     }
     @for $i from 0 through $max {
-      $num: $i * $margin-padding-step;
+      $num: $i * $step;
       .#{$key}\:pt-#{$i}{padding-top: #{$num}#{$unit}}
       .#{$key}\:pr-#{$i}{padding-right: #{$num}#{$unit}}
       .#{$key}\:pb-#{$i}{padding-bottom: #{$num}#{$unit}}

@@ -1,7 +1,8 @@
 @import '../variable';
 
-$max: $z-index-max / $z-index-step;
-$step: $z-index-step;
+$map: $z-index;
+$step: map-get($map, step);
+$max: map-get($map, max) / $step;
 
 @for $i from 0 through $max{
   $num: $i * $step;

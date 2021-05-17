@@ -1,0 +1,99 @@
+$width-height-max: 5;
+$width-height-step: 0.1;
+$width-height-unit: em;
+
+$position-max: 5;
+$position-step: 0.1;
+$position-unit: em;
+
+$margin-padding-max: 5;
+$margin-padding-step: 0.1;
+$margin-padding-unit: em;
+
+$border-width-max: 20;
+$border-width-step: 1;
+$border-width-unit: px;
+
+$font-size-max: 4;
+$font-size-step: 0.1;
+$font-size-unit: rem;
+
+$line-height-max: 4;
+$line-height-step: 0.1;
+$line-height-unit: em;
+
+$radius-max: 20;
+$radius-step: 0.1;
+$radius-unit: em;
+
+$flex-max: 20;
+$flex-step: 1;
+
+$grid-max: 20;
+$grid-step: 1;
+$grid-gap-max: 5;
+$grid-gap-step: 0.1;
+$grid-gap-unit: em;
+
+$during-max: 1000;
+$during-step: 100;
+$during-unit: ms;
+
+$opacity-step: 0.01;
+
+$z-index-max: 100;
+$z-index-step: 1;
+
+$ring-max: 10;
+$ring-step: 1;
+$ring-unit: px;
+
+// 基础背景色
+$bg-base-light: #ffffff;
+$bg-base-dark: #0d1117;
+
+// 字体叠加色
+$text-light: #000000;
+$text-dark: #ffffff;
+$text-color-step: 0.01;
+
+// 背景叠加色
+$bg-light: #13161b;
+$bg-dark: #ffffff;
+$bg-color-step: 0.01;
+
+// 边框叠加色
+$border-light: #13161b;
+$border-dark: #ffffff;
+$border-color-step: 0.01;
+
+// 此处的颜色并不会受黑色模式的影响
+$color-step: 0.01;
+$colors: (
+  white: #ffffff,
+  gray: #8d8d8d,
+  black: #000000,
+  blue: #1a6df1,
+  cyan: #19bedb,
+  green: #10ba75,
+  yellow: #e9ae0a,
+  orange: #e96913,
+  red: #e93232,
+  pink: #e72690,
+  purple: #ab44ef,
+);
+
+$status: (
+  h: hover,
+  f: focus,
+  a: active
+);
+
+$media-query: (
+  xl: 1920,
+  lg: 1366,
+  md: 992,
+  sm: 768,
+  xs: 576
+);
+

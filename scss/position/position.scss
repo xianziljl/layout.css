@@ -1,8 +1,9 @@
 @import '../variable';
 
-$step: $position-step;
-$unit: $position-unit;
-$max: $position-max / $step;
+$map: $position;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 @for $i from 0 through 99 {
   $num: 100% * $i / 100;

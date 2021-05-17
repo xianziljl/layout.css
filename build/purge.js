@@ -22,7 +22,7 @@ function getUsedNames() {
   const htmlFiles = fs.readdirSync(path).filter(f => f.match(/\.html$/))
   htmlFiles.forEach(f => {
     const data = fs.readFileSync(join(path, f), CODE_TYPE)
-    const match = data.match(/[^<>"'`\s]*[^<>"'`\s:]/g).map(x => x)
+    const match = (data.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []).map(x => x)
     match.forEach(name => names.add(name))
   })
   return names
@@ -60,10 +60,16 @@ function purge(data, usedNames) {
 function mergeMedia(data) {
   const arr = data.split('\n')
   const medias = Array.from(new Set(arr.filter(s => s.match(/^@media/))))
-    .map(s => ({
-      m: s,
-      lines: []
-    }))
+    .map(s => {
+      let num = s.match(/\d+px/)
+      num = num ? parseInt(num[0].replace('px', '')) : 0
+      return {
+        m: s,
+        num,
+        lines: []
+      }
+    })
+    .sort((a, b) => b.num - a.num)
 
   let lines = []
   let media = null

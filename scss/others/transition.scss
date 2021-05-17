@@ -1,24 +1,17 @@
 @import '../variable';
 
-$trans: (
-  c: color,
-  bg: background-color,
-  o: opacity,
-  bc: border-color,
-  shadow: box-shadow,
-  tsfm: transform
-);
-
-.trans{transition: all .3s;}
-@each $key, $val in $trans{
+.trans{transition: all 200ms;}
+@each $key, $val in $transition{
   .trans-#{$key}{transition-property: $val;transition-duration: 200ms;}
 }
 
 
-$max: $during-max / $during-step;
-$step: $during-step;
+$map: $during;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 @for $i from 0 through $max{
   $num: $i * $step;
-  .dur-#{$num}{transition-duration: #{$num}#{$during-unit};}
+  .dur-#{$num}{transition-duration: #{$num}#{$unit};}
 }

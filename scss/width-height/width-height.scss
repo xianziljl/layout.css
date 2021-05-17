@@ -1,8 +1,9 @@
 @import '../variable';
 
-$step: $width-height-step;
-$unit: $width-height-unit;
-$max: $width-height-max / $step;
+$map: $width-height;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 .w-full{width: 100%;}
 .h-full{height: 100%;}

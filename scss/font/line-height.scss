@@ -1,8 +1,9 @@
 @import '../variable';
 
-$max: $line-height-max / $line-height-step;
-$step: $line-height-step;
-$unit: $line-height-unit;
+$map: $line-height;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 @for $i from 0 through $max{
   $num: $i * $step;

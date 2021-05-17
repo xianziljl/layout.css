@@ -1,13 +1,15 @@
 @import '../variable';
 
-$max: 1 / $opacity-step;
+$map: $opacity;
+$step: map-get($map, step);
+$max: 1 / $step;
 
 @for $i from 0 through $max{
-  .o-#{$i}{opacity: $i * $opacity-step;}
+  .o-#{$i}{opacity: $i * $step;}
 }
 
 @each $s, $str in $status {
   @for $i from 0 through $max{
-    .#{$s}\:o-#{$i}:#{$str}{opacity: $i * $opacity-step;}
+    .#{$s}\:o-#{$i}:#{$str}{opacity: $i * $step;}
   }
 }

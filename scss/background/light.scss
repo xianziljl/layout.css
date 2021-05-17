@@ -1,18 +1,20 @@
 @import '../variable';
 
-.bg{background-color: $bg-base-light;}
+$map: $bg-color;
+$step: map-get($map, step);
+$max: 1 / $step;
+$bg: map-get($map, light);
 
-$max: 1 / $bg-color-step;
-$step: $bg-color-step;
+.bg{background-color: map-get($bg-base-color, light);}
 
 @for $i from 0 through $max{
   $num: $i * $step;
-  .bg-#{$i}{background-color: transparentize($bg-light, 1 - $num)}
+  .bg-#{$i}{background-color: transparentize($bg, 1 - $num)}
 }
 
 @each $s, $str in $status {
   @for $i from 0 through $max{
     $num: $i * $step;
-    .#{$s}\:bg-#{$i}:#{$str}{background-color: transparentize($bg-light, 1 - $num)}
+    .#{$s}\:bg-#{$i}:#{$str}{background-color: transparentize($bg, 1 - $num)}
   }
 }

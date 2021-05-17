@@ -1,16 +1,18 @@
 @import '../variable';
 
-$max: 1 / $text-color-step;
-$step: $text-color-step;
+$map: $text-color;
+$step: map-get($map, step);
+$max: 1 / $step;
+$c: map-get($map, dark);
 
 @for $i from 0 through $max{
   $num: $i * $step;
-  .c-#{$i}{color: transparentize($text-dark, 1 - $num)}
+  .c-#{$i}{color: transparentize($c, 1 - $num)}
 }
 
 @each $s, $str in $status {
   @for $i from 0 through $max{
     $num: $i * $step;
-    .#{$s}\:c-#{$i}:#{$str}{color: transparentize($text-dark, 1 - $num)}
+    .#{$s}\:c-#{$i}:#{$str}{color: transparentize($c, 1 - $num)}
   }
 }

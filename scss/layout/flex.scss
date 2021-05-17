@@ -1,7 +1,8 @@
 @import '../variable';
 
-$max: $flex-max / $flex-step;
-$step: $flex-step;
+$map: $flex;
+$step: map-get($map, step);
+$max: map-get($map, max) / $step;
 
 @for $i from 0 through $max{
   $num: $i * $step;

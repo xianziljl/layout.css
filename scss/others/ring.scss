@@ -1,25 +1,26 @@
 @import '../variable';
 
-$unit: $ring-unit;
-$step: $ring-step;
-$max: $ring-max / $step;
+$map: $ring;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 @each $key, $val in $colors{
   $c: transparentize($val, 0.7);
-  .ring-#{$key}{box-shadow: 0 0 0 2px $c;}
+  .ring-#{$key}{box-shadow: 0 0 0 2#{$unit} $c;}
   @for $i from 0 through $max{
     $num: $i * $step;
-    .ring-#{$key}-#{$i}{box-shadow: 0 0 0 #{$num}px $c;}
+    .ring-#{$key}-#{$i}{box-shadow: 0 0 0 #{$num}#{$unit} $c;}
   }
 }
 
 @each $s, $str in $status {
   @each $key, $val in $colors{
     $c: transparentize($val, 0.7);
-    .#{$s}\:ring-#{$key}:#{$str}{box-shadow: 0 0 0 2px $c;}
+    .#{$s}\:ring-#{$key}:#{$str}{box-shadow: 0 0 0 2#{$unit} $c;}
     @for $i from 0 through $max{
       $num: $i * $step;
-      .#{$s}\:ring-#{$key}-#{$i}:#{$str}{box-shadow: 0 0 0 #{$num}px $c;}
+      .#{$s}\:ring-#{$key}-#{$i}:#{$str}{box-shadow: 0 0 0 #{$num}#{$unit} $c;}
     }
   }
 }

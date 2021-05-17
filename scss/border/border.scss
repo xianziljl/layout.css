@@ -1,8 +1,9 @@
 @import '../variable';
 
-$unit: $border-width-unit;
-$step: $border-width-step;
-$max: $border-width-max / $step;
+$map: $border-width;
+$step: map-get($map, step);
+$unit: map-get($map, unit);
+$max: map-get($map, max) / $step;
 
 .bd{border-width: 1px;}
 .bx{border-left-width: 1px;border-right-width: 1px;}
