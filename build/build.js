@@ -4,7 +4,7 @@ const { join } = require('path')
 run()
 
 function run() {
-  const path = join(__dirname, 'dist')
+  const path = join(__dirname, '../dist')
   fs.readdir(path, (err, files) => {
     if (!err && files && files.length) {
       files.forEach(file => fixClassNames(join(path, file)))

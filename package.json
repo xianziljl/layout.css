@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx node-sass --output-style=compact scss/build -o dist && node build.js",
-    "purge": "npm run build && node purge.js"
+    "build": "npx node-sass --output-style=compact scss/build -o dist && node build/build.js",
+    "purge": "npm run build && node build/purge.js"
   },
   "author": "xianziycg@gmail.com",
   "license": "ISC",

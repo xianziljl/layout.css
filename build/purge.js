@@ -6,11 +6,11 @@ const CODE_TYPE = 'utf-8'
 const files = fs.readdirSync('dist')
 const usedNames = getUsedNames()
 files.forEach(f => {
-  const path = join(__dirname, 'dist', f)
+  const path = join(__dirname, '../dist', f)
   const data = fs.readFileSync(path, CODE_TYPE)
   let str = purge(data, usedNames)
   str = mergeMedia(str)
-  const p = join(__dirname, 'css', f)
+  const p = join(__dirname, '../css', f)
   fs.writeFileSync(p, str, CODE_TYPE)
   console.log('write file ' + p)
 })
@@ -18,7 +18,7 @@ files.forEach(f => {
 
 function getUsedNames() {
   const names = new Set()
-  const path = join(__dirname, './')
+  const path = join(__dirname, '../')
   const htmlFiles = fs.readdirSync(path).filter(f => f.match(/\.html$/))
   htmlFiles.forEach(f => {
     const data = fs.readFileSync(join(path, f), CODE_TYPE)
