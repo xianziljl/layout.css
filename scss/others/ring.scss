@@ -5,6 +5,8 @@ $step: map-get($map, step);
 $unit: map-get($map, unit);
 $max: map-get($map, max) / $step;
 
+.ring-current{box-shadow: 0 0 0 2#{$unit} currentColor}
+
 @each $key, $val in $colors{
   $c: transparentize($val, 0.7);
   .ring-#{$key}{box-shadow: 0 0 0 2#{$unit} $c;}
@@ -15,6 +17,7 @@ $max: map-get($map, max) / $step;
 }
 
 @each $s, $str in $status {
+  .#{$s}\:ring-current:#{$str}{box-shadow: 0 0 0 2#{$unit} currentColor}
   @each $key, $val in $colors{
     $c: transparentize($val, 0.7);
     .#{$s}\:ring-#{$key}:#{$str}{box-shadow: 0 0 0 2#{$unit} $c;}

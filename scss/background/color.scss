@@ -4,6 +4,8 @@ $step: map-get($color, step);
 $max: 1 / $step;
 $colors: map-get($color, list);
 
+.bg-current{background-color: currentColor;}
+
 @each $key, $val in $colors{
   .bg-#{$key}{background-color: $val;}
   @for $i from 0 through $max{
@@ -14,6 +16,7 @@ $colors: map-get($color, list);
 
 
 @each $s, $str in $status {
+  .#{$s}\:bg-current:#{str}{background-color: currentColor;}
   @each $key, $val in $colors{
     .#{$s}\:bg-#{$key}:#{$str}{background-color: $val;}
     @for $i from 0 through $max{

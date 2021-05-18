@@ -4,6 +4,14 @@ $step: map-get($color, step);
 $max: 1 / $step;
 $colors: map-get($color, list);
 
+.bc-current{border-color: currentColor;}
+.bxc-current{border-left-color: currentColor;border-right-color: currentColor;}
+.byc-current{border-top-color: currentColor;border-bottom-color: currentColor;}
+.blc-current{border-left-color: currentColor;}
+.brc-current{border-right-color: currentColor;}
+.btc-current{border-top-color: currentColor;}
+.bbc-current{border-bottom-color: currentColor;}
+
 @each $key, $val in $colors{
   .bc-#{$key}{border-color: $val;}
   .bxc-#{$key}{border-left-color: $val;border-right-color: $val;}
@@ -27,6 +35,13 @@ $colors: map-get($color, list);
 
 
 @each $s, $str in $status {
+  .#{$s}\:bc-current:#{$str}{border-color: currentColor;}
+  .#{$s}\:bxc-current:#{$str}{border-left-color: currentColor;border-right-color: currentColor;}
+  .#{$s}\:byc-current:#{$str}{border-top-color: currentColor;border-bottom-color: currentColor;}
+  .#{$s}\:blc-current:#{$str}{border-left-color: currentColor;}
+  .#{$s}\:brc-current:#{$str}{border-right-color: currentColor;}
+  .#{$s}\:btc-current:#{$str}{border-top-color: currentColor;}
+  .#{$s}\:bbc-current:#{$str}{border-bottom-color: currentColor;}
   @each $key, $val in $colors{
     .#{$s}\:bc-#{$key}:#{$str}{border-color: $val;}
     .#{$s}\:bxc-#{$key}:#{$str}{border-left-color: $val;border-right-color: $val;}
